@@ -1,0 +1,359 @@
+{
+  "meta:license": [
+    "Copyright 2020 S1Seven Gmbh. All rights reserved.",
+    "This file is licensed to you under the Apache License, Version 2.0 (the 'License');",
+    "you may not use this file except in compliance with the License. You may obtain a copy",
+    "of the License at http://www.apache.org/licenses/LICENSE-2.0"
+  ],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schemas.en10204.io/plastic-schemas/v0.0.1/schema.json",
+  "definitions": {
+    "Identifier": {
+      "title": "Identifier",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "VAT": {
+          "type": "string"
+        },
+        "DUNS": {
+          "type": "string"
+        },
+        "CageCode": {
+          "type": "string"
+        }
+      },
+      "anyOf": [{ "required": ["VAT"] }, { "required": ["DUNS"] }, { "required": ["CageCode"] }],
+      "additionalProperties": false
+    },
+    "CertificateLanguages": {
+      "type": "array",
+      "items": {
+        "enum": ["EN", "DE"]
+      },
+      "minItems": 1,
+      "maxItems": 2,
+      "default": ["EN"],
+      "uniqueItems": true
+    },
+    "Company": {
+      "title": "Company",
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Street": {
+          "type": "string"
+        },
+        "ZipCode": {
+          "type": "string"
+        },
+        "City": {
+          "type": "string"
+        },
+        "Country": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
+        },
+        "Email": {
+          "type": "string",
+          "format": "email"
+        },
+        "Identifier": {
+          "$ref": "#/definitions/Identifier"
+        },
+        "AdditionalInformation": {
+          "description": "Each entry to the array is rendered as a new line in HTML and PDF",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["CompanyName", "Street", "ZipCode", "City", "Country", "Email", "Identifier"],
+      "additionalProperties": true
+    },
+    "Parties": {
+      "title": "",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "Manufacturer": {
+          "$ref": "#/definitions/Company"
+        },
+        "Customer": {
+          "$ref": "#/definitions/Company"
+        },
+        "ConsigneeOfGoods": {
+          "$ref": "#/definitions/Company"
+        },
+        "ConsigneeOfCertificate": {
+          "$ref": "#/definitions/Company"
+        }
+      },
+      "required": ["Manufacturer", "Customer"],
+      "additionalProperties": false
+    },
+    "BusinessReferences": {
+      "title": "BusinessReferences",
+      "description": "",
+      "type": "object",
+      "properties": {
+        "Order": {
+          "description": "",
+          "type": "object",
+          "properties": {
+            "Number": {
+              "description": "The order number",
+              "type": "string"
+            },
+            "Position": {
+              "description": "The number of the position",
+              "type": "string"
+            },
+            "Date": {
+              "description": "The date of order issuance",
+              "type": "string",
+              "format": "date-time"
+            },
+            "Quantity": {
+              "description": "The order quantity",
+              "type": "number"
+            },
+            "QuantityUnit": {
+              "description": "The unit of the order quantity",
+              "type": "string"
+            }
+          },
+          "required": ["Number", "Position"],
+          "additionalProperties": false
+        },
+        "OrderConfirmation": {
+          "description": "",
+          "type": "object",
+          "properties": {
+            "Number": {
+              "description": "",
+              "type": "string"
+            },
+            "Date": {
+              "description": "",
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": ["Number"],
+          "additionalProperties": false
+        },
+        "Delivery": {
+          "description": "",
+          "type": "object",
+          "properties": {
+            "NoteNumber": {
+              "description": "",
+              "type": "string"
+            },
+            "Date": {
+              "description": "",
+              "type": "string",
+              "format": "date-time"
+            },
+            "Quantity": {
+              "description": "",
+              "type": "number"
+            },
+            "QuantityUnit": {
+              "description": "",
+              "type": "string"
+            }
+          },
+          "required": ["NoteNumber", "Date"],
+          "additionalProperties": false
+        },
+        "GoodsReceiptNumber": {
+          "description": "The number for the goods receipt issued by the Customer or consignee",
+          "type": "string"
+        },
+        "InternalOrderNumber": {
+          "description": "The internal order number at the manufacturer",
+          "type": "string"
+        }
+      },
+      "required": ["Order", "Delivery"],
+      "additionalProperties": false
+    },
+    "Product": {
+      "title": "Validation",
+      "type": "object",
+      "properties": {
+        "Number": {
+          "description": "",
+          "type": "string"
+        },
+        "Name": {
+          "description": "",
+          "type": "string"
+        },
+        "CustomerProductNumber": {
+          "description": "",
+          "type": "string"
+        },
+        "CountryOfOrigin": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
+        },
+        "PlaceOfOrigin": {
+          "description": "",
+          "type": "string"
+        },
+        "ChargeNumber": {
+          "description": "",
+          "type": "string"
+        },
+        "AdditionalInformation": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["Number", "Name", "CustomerProductNumber", "ChargeNumber"],
+      "additionalProperties": false
+    },
+    "Inspections": {
+      "title": "Inspection",
+      "type": "object",
+      "description": "A structure to specify any kind of measurements as defined by https://www.campusplastics.com/campushome/coc",
+      "properties": {
+        "Property": {
+          "description": "The property measured.",
+          "type": "string"
+        },
+        "SubProperty": {
+          "description": "The property measured.",
+          "type": "string"
+        },
+        "Symbol": {
+          "description": "The symbol describing the property.",
+          "type": "string"
+        },
+        "Method": {
+          "description": "The reference to the definition of the method such as EN or ISO norms.",
+          "type": "string"
+        },
+        "Value": {
+          "description": "A measured or calculated Value (e.g. mean of individual measurements).",
+          "type": "number"
+        },
+        "Minimum": {
+          "description": "The lower limit according the specification. If not provided it is 0.",
+          "type": "number"
+        },
+        "Maximum": {
+          "description": "The upper limit according the specification. If not provided it is ∞.",
+          "type": "number"
+        },
+        "Unit": {
+          "description": "The Unit of Value.",
+          "type": "string"
+        },
+        "SupplementaryInstructions": {
+          "description": "Further instructions describing the exact procedure of the measurement.",
+          "type": "string"
+        },
+        "TestConditions": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": ["Property", "Method", "Value", "Unit"],
+      "additionalProperties": false
+    },
+    "DeclarationOfConformity": {
+      "title": "DeclarationOfConformity",
+      "type": "object",
+      "properties": {
+        "Z01": {
+          "description": "Statement of conformity",
+          "type": "string"
+        },
+        "Z02": {
+          "description": "Date of issue and validation",
+          "type": "string",
+          "format": "date-time"
+        },
+        "Z03": {
+          "description": "Stamp of the inspection representative",
+          "type": "string"
+        },
+        "Z04": {
+          "description": "CE marking",
+          "type": "object",
+          "properties": {
+            "CE_Image": {
+              "description": "The CE image as base64 encoded png file. A default with size 90x65 is provided by example",
+              "type": "string",
+              "contentEncoding": "base64",
+              "contentMediaType": "image/png"
+            },
+            "NotifiedBodyNumber": {
+              "description": "The identification number of the Notified body. Refer to https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31993L0068:en:HTML and https://ec.europa.eu/growth/tools-databases/nando/index.cfm?fuseaction=notifiedbody.main",
+              "type": "string"
+            },
+            "DoCYear": {
+              "description": "The year when the declaration of conformance was issued",
+              "type": "string"
+            },
+            "DoCNumber": {
+              "description": "The declaration of conformance document number ",
+              "type": "string"
+            }
+          },
+          "required": ["CE_Image", "NotifiedBodyNumber", "DoCYear", "DoCNumber"]
+        }
+      }
+    }
+  },
+  "title": "Certificate",
+  "description": "",
+  "properties": {
+    "RefSchemaUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "Certificate": {
+      "description": "",
+      "type": "object",
+      "required": ["CertificateLanguages", "BusinessReferences", "Product", "Inspections", "DeclarationOfConformity"],
+      "properties": {
+        "CertificateLanguages": {
+          "$ref": "#/definitions/CertificateLanguages"
+        },
+        "Parties": {
+          "$ref": "#/definitions/Parties"
+        },
+        "BusinessReference": {
+          "$ref": "#/definitions/BusinessReferences"
+        },
+        "Product": {
+          "$ref": "#/definitions/Product"
+        },
+        "Inspections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Inspections"
+          }
+        },
+        "Validation": {
+          "$ref": "#/definitions/DeclarationOfConformity"
+        }
+      }
+    }
+  },
+  "required": ["Certificate", "RefSchemaUrl"],
+  "additionalProperties": false
+}
