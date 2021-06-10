@@ -448,7 +448,7 @@
             "$ref": "#/definitions/Inspections"
           }
         },
-        "Validation": {
+        "DeclarationOfConformity": {
           "description": "",
           "$ref": "#/definitions/DeclarationOfConformity"
         },
