@@ -184,7 +184,7 @@
           "description": "",
           "type": "object",
           "properties": {
-            "NoteNumber": {
+            "Number": {
               "description": "",
               "type": "string"
             },
@@ -314,6 +314,7 @@
           "description": "The text declaring conformity",
           "type": "string"
         },
+        "CE": {
           "description": "CE marking",
           "type": "object",
           "properties": {
@@ -354,6 +355,8 @@
       "required": ["CertificateLanguages", "BusinessReferences", "Product", "Inspections", "DeclarationOfConformity"],
       "properties": {
         "CertificateLanguages": {
+        "Languages": {
+          "description": "",
           "$ref": "#/definitions/CertificateLanguages"
         },
         "Type": {
@@ -365,21 +368,27 @@
           "$ref": "#/definitions/Person"
         },
         "Parties": {
+          "description": "",
           "$ref": "#/definitions/Parties"
         },
         "BusinessReference": {
+        "BusinessReferences": {
+          "description": "",
           "$ref": "#/definitions/BusinessReferences"
         },
         "Product": {
+          "description": "",
           "$ref": "#/definitions/Product"
         },
         "Inspections": {
+          "description": "",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Inspections"
           }
         },
         "Validation": {
+          "description": "",
           "$ref": "#/definitions/DeclarationOfConformity"
         },
         "Logo": {
