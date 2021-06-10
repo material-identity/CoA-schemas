@@ -63,10 +63,11 @@
       "required": ["Algorithm", "Encoding", "Value"]
     },
     "Attachment": {
+      "title": "Attachment",
       "description": "Additional data attached to the certificate",
       "type": "object",
       "properties": {
-        "HashValue": {
+        "Hash": {
           "desription": "The hash of the decoded file.",
           "$ref": "#/definitions/Hash"
         },
@@ -87,7 +88,7 @@
           "type": "string"
         }
       },
-      "required": ["HashValue", "FileName", "MIME-Type", "Encoding", "Data"],
+      "required": ["Hash", "FileName", "MIME-Type", "Encoding", "Data"],
       "additionalProperties": false
     },
     "Person": {
@@ -452,7 +453,7 @@
           "description": "",
           "$ref": "#/definitions/DeclarationOfConformity"
         },
-        "Attachements": {
+        "Attachments": {
           "description": "",
           "type": "array",
           "items": {
