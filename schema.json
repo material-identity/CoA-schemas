@@ -42,6 +42,33 @@
       "enum": ["2.1", "2.2", "3.1", "3.2"],
       "default": "3.1"
     },
+    "Person": {
+      "title": "Person",
+      "type": "object",
+      "prperties": {
+        "Name": {
+          "description": "",
+          "type": "string"
+        },
+        "Role": {
+          "description": "",
+          "type": "string"
+        },
+        "Department": {
+          "description": "",
+          "type": "string"
+        },
+        "Email": {
+          "description": "",
+          "type": "string",
+          "format": "email"
+        },
+        "Phone": {
+          "description": "",
+          "type": "string"
+        }
+      }
+    },
     "Company": {
       "title": "Company",
       "type": "object",
@@ -332,6 +359,10 @@
         "Type": {
           "description": "",
           "$ref": "#/definitions/Types"
+        },
+        "Contact": {
+          "description": "",
+          "$ref": "#/definitions/Person"
         },
         "Parties": {
           "$ref": "#/definitions/Parties"
