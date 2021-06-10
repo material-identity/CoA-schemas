@@ -200,6 +200,10 @@
             "QuantityUnit": {
               "description": "",
               "type": "string"
+            },
+            "Transport": {
+              "description": "A reference to the transport, e.g. the license plate of a truck or a container number",
+              "type": "string"
             }
           },
           "required": ["Number"],
@@ -352,7 +356,6 @@
     "Certificate": {
       "description": "",
       "type": "object",
-      "required": ["CertificateLanguages", "BusinessReferences", "Product", "Inspections", "DeclarationOfConformity"],
       "properties": {
         "CertificateLanguages": {
         "Languages": {
