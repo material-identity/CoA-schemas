@@ -359,6 +359,15 @@
           "description": "",
           "$ref": "#/definitions/CertificateLanguages"
         },
+        "Number": {
+          "description": "",
+          "type": "string"
+        },
+        "Date": {
+          "description": "",
+          "type": "string",
+          "format": "date"
+        },
         "Type": {
           "description": "",
           "$ref": "#/definitions/Types"
@@ -371,7 +380,6 @@
           "description": "",
           "$ref": "#/definitions/Parties"
         },
-        "BusinessReference": {
         "BusinessReferences": {
           "description": "",
           "$ref": "#/definitions/BusinessReferences"
@@ -397,7 +405,18 @@
           "contentEncoding": "base64",
           "contentMediaType": "image/png"
         }
-      }
+      },
+      "required": [
+        "Languages",
+        "Number",
+        "Date",
+        "Parties",
+        "BusinessReferences",
+        "Product",
+        "Inspections",
+        "DeclarationOfConformity"
+      ],
+      "additionalProperties": false
     }
   },
   "required": ["Certificate", "RefSchemaUrl"],
