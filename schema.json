@@ -381,6 +381,12 @@
         },
         "Validation": {
           "$ref": "#/definitions/DeclarationOfConformity"
+        },
+        "Logo": {
+          "description": "The logo of the manufacturer as base64 png file. The maximum size is <TBD>",
+          "type": "string",
+          "contentEncoding": "base64",
+          "contentMediaType": "image/png"
         }
       }
     }
