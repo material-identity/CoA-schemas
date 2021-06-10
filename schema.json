@@ -149,7 +149,7 @@
             "Date": {
               "description": "The date of order issuance",
               "type": "string",
-              "format": "date-time"
+              "format": "date"
             },
             "Quantity": {
               "description": "The order quantity",
@@ -174,7 +174,7 @@
             "Date": {
               "description": "",
               "type": "string",
-              "format": "date-time"
+              "format": "date"
             }
           },
           "required": ["Number"],
@@ -191,7 +191,7 @@
             "Date": {
               "description": "",
               "type": "string",
-              "format": "date-time"
+              "format": "date"
             },
             "Quantity": {
               "description": "",
