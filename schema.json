@@ -277,20 +277,10 @@
       "title": "DeclarationOfConformity",
       "type": "object",
       "properties": {
-        "Z01": {
-          "description": "Statement of conformity",
+        "Declaration": {
+          "description": "The text declaring conformity",
           "type": "string"
         },
-        "Z02": {
-          "description": "Date of issue and validation",
-          "type": "string",
-          "format": "date-time"
-        },
-        "Z03": {
-          "description": "Stamp of the inspection representative",
-          "type": "string"
-        },
-        "Z04": {
           "description": "CE marking",
           "type": "object",
           "properties": {
