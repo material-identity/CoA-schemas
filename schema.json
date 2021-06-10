@@ -160,7 +160,7 @@
               "type": "string"
             }
           },
-          "required": ["Number", "Position"],
+          "required": ["Number"],
           "additionalProperties": false
         },
         "OrderConfirmation": {
@@ -202,7 +202,7 @@
               "type": "string"
             }
           },
-          "required": ["NoteNumber", "Date"],
+          "required": ["Number"],
           "additionalProperties": false
         },
         "GoodsReceiptNumber": {
@@ -254,7 +254,7 @@
           }
         }
       },
-      "required": ["Number", "Name", "CustomerProductNumber", "ChargeNumber"],
+      "required": ["Name", "CustomerProductNumber", "ChargeNumber"],
       "additionalProperties": false
     },
     "Inspections": {
