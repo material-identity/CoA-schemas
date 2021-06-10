@@ -389,9 +389,12 @@
               "type": "string"
             }
           },
-          "required": ["CE_Image", "NotifiedBodyNumber", "DoCYear", "DoCNumber"]
+          "required": ["CE_Image", "NotifiedBodyNumber", "DoCYear", "DoCNumber"],
+          "additionalProperties": false
         }
-      }
+      },
+      "required": ["Declaration"],
+      "additionalProperties": false
     }
   },
   "title": "Certificate",
