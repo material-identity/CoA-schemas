@@ -359,6 +359,14 @@
         "TestConditions": {
           "description": "",
           "type": "string"
+        },
+        "Temperature": {
+          "description": "A field specifically for testing MFR to be provided in degree Celsius",
+          "type": "number"
+        },
+        "Weight": {
+          "description": "A field specifically for testing MFR to be provided in kg",
+          "type": "number"
         }
       },
       "required": ["Property", "Method", "Value", "Unit"],
