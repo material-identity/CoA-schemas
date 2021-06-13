@@ -307,7 +307,7 @@
           }
         }
       },
-      "required": ["Name", "CustomerProductNumber", "ChargeNumber"],
+      "required": ["Name", "ChargeNumber"],
       "additionalProperties": false
     },
     "Inspections": {
