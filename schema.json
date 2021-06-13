@@ -94,7 +94,7 @@
     "Person": {
       "title": "Person",
       "type": "object",
-      "prperties": {
+      "properties": {
         "Name": {
           "description": "",
           "type": "string"
@@ -115,8 +115,13 @@
         "Phone": {
           "description": "",
           "type": "string"
+        },
+        "Fax": {
+          "description": "",
+          "type": "string"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "Company": {
       "title": "Company",
