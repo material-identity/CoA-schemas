@@ -439,9 +439,12 @@
           "description": "",
           "$ref": "#/definitions/Types"
         },
-        "Contact": {
+        "Contacts": {
           "description": "",
-          "$ref": "#/definitions/Person"
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Person"
+          }
         },
         "Parties": {
           "description": "",
