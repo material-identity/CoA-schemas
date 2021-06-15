@@ -257,7 +257,10 @@
             },
             "Transport": {
               "description": "A reference to the transport, e.g. the license plate of a truck or a container number",
-              "type": "string"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           "required": ["Number"],
