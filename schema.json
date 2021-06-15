@@ -422,7 +422,7 @@
       "description": "",
       "type": "object",
       "properties": {
-        "Languages": {
+        "CertificateLanguages": {
           "description": "",
           "$ref": "#/definitions/CertificateLanguages"
         },
@@ -481,7 +481,7 @@
         }
       },
       "required": [
-        "Languages",
+        "CertificateLanguages",
         "Number",
         "Date",
         "Parties",
