@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { promisify } = require('util');
 
-const serverUrl = 'https://schemas.en10204.io/en10168-schemas';
+const serverUrl = 'https://schemas.en10204.io/plastic-schemas';
 const schemaFilePaths = ['schema.json'];
 
 function readFile(path) {
