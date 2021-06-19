@@ -352,7 +352,7 @@
       "required": ["Name", "ChargeNumber"],
       "additionalProperties": false
     },
-    "Inspections": {
+    "Inspection": {
       "title": "Inspection",
       "description": "A structure to specify any kind of measurements as defined by https://www.campusplastics.com/campushome/coc",
       "type": "object",
@@ -498,11 +498,24 @@
           "description": "The product description",
           "$ref": "#/definitions/Product"
         },
-        "Inspections": {
+        "Analysis": {
           "description": "An array with all inspections of the product.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Inspections"
+          "type": "object",
+          "properties": {
+            "Inspections": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Inspection"
+              },
+              "minItems": 1
+            },
+            "AdditionalInformation": {
+              "description": "An array of additional free text information.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
           }
         },
         "DeclarationOfConformity": {
@@ -530,7 +543,7 @@
         "Parties",
         "BusinessReferences",
         "Product",
-        "Inspections",
+        "Analysis",
         "DeclarationOfConformity"
       ],
       "additionalProperties": false
