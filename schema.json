@@ -10,74 +10,63 @@
   "definitions": {
     "Identifier": {
       "title": "Identifier",
-      "description": "",
+      "description": "Identifiers for companies",
       "type": "object",
       "properties": {
         "VAT": {
+          "description": "This is the unique number that identifies a taxable person (business) or non-taxable legal entity that is registered for VAT, see https://ec.europa.eu/taxation_customs/business/vat/eu-vat-rules-topic/vat-identification-numbers_en",
           "type": "string"
         },
         "DUNS": {
+          "description": "The Dun & Bradstreet D‑U‑N‑S Number is a unique nine-digit identifier for businesses, https://www.dnb.com/duns-number.html  ",
           "type": "string"
         },
         "CageCode": {
+          "description": "The Commercial and Government Entity Code (short CAG), is a unique identifier assigned to suppliers to various government or defense agencies, https://en.wikipedia.org/wiki/Commercial_and_Government_Entity_code",
           "type": "string"
         }
       },
       "anyOf": [
         {
-          "required": [
-            "VAT"
-          ]
+          "required": ["VAT"]
         },
         {
-          "required": [
-            "DUNS"
-          ]
+          "required": ["DUNS"]
         },
         {
-          "required": [
-            "CageCode"
-          ]
+          "required": ["CageCode"]
         }
       ],
       "additionalProperties": false
     },
     "CertificateLanguages": {
+      "title": "CertificateLanguages",
+      "description": "For a JSON document one or two translations used in the rendering of HTML and PDF documents can be specificed.",
       "type": "array",
       "items": {
-        "enum": [
-          "EN",
-          "DE"
-        ]
+        "enum": ["EN", "DE"]
       },
       "minItems": 1,
       "maxItems": 2,
-      "default": [
-        "EN"
-      ],
+      "default": ["EN"],
       "uniqueItems": true
     },
     "Types": {
-      "description": "The types of inspection certificates according EN 10204-2004",
+      "title": "Types",
+      "description": "The types of inspection certificates according EN 10204-2004.",
       "type": "string",
-      "enum": [
-        "2.1",
-        "2.2",
-        "3.1",
-        "3.2"
-      ],
+      "enum": ["2.1", "2.2", "3.1", "3.2"],
       "default": "3.1"
     },
     "Hash": {
-      "description": "",
+      "title": "Hash",
+      "description": "For any attachment to the JSON document a hash must be calculated and added to the document before adding the base64 encoded data.",
       "type": "object",
       "properties": {
         "Algorithm": {
+          "description": "The algorithm selected to calculate the hash value.",
           "type": "string",
-          "enum": [
-            "SHA256",
-            "SHA3-256"
-          ],
+          "enum": ["SHA256", "SHA3-256"],
           "default": "SHA256"
         },
         "Encoding": {
