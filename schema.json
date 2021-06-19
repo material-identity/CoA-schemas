@@ -1,9 +1,9 @@
 {
   "meta:license": [
     "Copyright 2020 S1Seven Gmbh. All rights reserved.",
-    "This file is licensed to you under the Apache License, Version 2.0 (the 'License');",
+    "This file is licensed to you under the GNU Affero General Public License v3.0 (the 'License');",
     "you may not use this file except in compliance with the License. You may obtain a copy",
-    "of the License at http://www.apache.org/licenses/LICENSE-2.0"
+    "of the License at https://www.gnu.org/licenses/agpl-3.0.en.html"
   ],
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://schemas.en10204.io/plastic-schemas/v0.0.2-1/schema.json",
@@ -81,85 +81,71 @@
           "default": "SHA256"
         },
         "Encoding": {
+          "description": "The format in which the hash value is encoded.",
           "type": "string",
-          "enum": [
-            "base64",
-            "hex"
-          ],
+          "enum": ["base64", "hex"],
           "default": "base64"
         },
         "Value": {
+          "description": "The hash value.",
           "type": "string"
         }
       },
-      "required": [
-        "Algorithm",
-        "Encoding",
-        "Value"
-      ]
+      "required": ["Algorithm", "Encoding", "Value"]
     },
     "Attachment": {
       "title": "Attachment",
-      "description": "Additional data attached to the certificate",
+      "description": "Additional data in any kind of format attached to JSON document.",
       "type": "object",
       "properties": {
         "Hash": {
-          "desription": "The hash of the decoded file.",
+          "desription": "The hash of unencoded data file.",
           "$ref": "#/definitions/Hash"
         },
         "FileName": {
-          "description": "The name of the file",
+          "description": "The name of the file.",
           "type": "string"
         },
         "MIME-Type": {
-          "description": "The MIME/Type ",
+          "description": "The MIME/Type of the data file.",
           "type": "string"
         },
         "Encoding": {
-          "description": "The MIME/Type ",
+          "description": "The format in which the hash value is encoded.",
           "type": "string"
         },
         "Data": {
-          "description": "The data in encoded as defined in `Encoding`",
+          "description": "The data encoded as defined in `Encoding`",
           "type": "string"
         }
       },
-      "required": [
-        "Hash",
-        "FileName",
-        "MIME-Type",
-        "Encoding",
-        "Data"
-      ],
+      "required": ["Hash", "FileName", "MIME-Type", "Encoding", "Data"],
       "additionalProperties": false
     },
     "Person": {
       "title": "Person",
+      "description": "A brief description of a natural person.",
       "type": "object",
       "properties": {
         "Name": {
-          "description": "",
           "type": "string"
         },
         "Role": {
-          "description": "",
+          "description": "The role of the person in the business process, e.g. 'Quality Manager' or 'Acceptance Office'",
           "type": "string"
         },
         "Department": {
-          "description": "",
+          "description": "The department the person is associated with, eg. 'Factory Production Control'",
           "type": "string"
         },
         "Email": {
-          "description": "",
           "type": "string",
           "format": "email"
         },
         "Phone": {
-          "description": "",
           "type": "string"
         },
         "Fax": {
-          "description": "",
           "type": "string"
         }
       },
@@ -167,6 +153,7 @@
     },
     "Company": {
       "title": "Company",
+      "description": "A company involved in business transaction.",
       "type": "object",
       "properties": {
         "Name": {
@@ -182,6 +169,7 @@
           "type": "string"
         },
         "Country": {
+          "description": "The two-letter ISO country code according https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2.",
           "type": "string",
           "minLength": 2,
           "maxLength": 2
@@ -191,66 +179,61 @@
           "format": "email"
         },
         "Identifier": {
+          "description": "One or more unique company identifiers.",
           "$ref": "#/definitions/Identifier"
         },
         "AdditionalInformation": {
-          "description": "Each entry to the array is rendered as a new line in HTML and PDF",
+          "description": "An array of additional free text information on the company.",
           "type": "array",
           "items": {
             "type": "string"
           }
         }
       },
-      "required": [
-        "CompanyName",
-        "Street",
-        "ZipCode",
-        "City",
-        "Country",
-        "Email",
-        "Identifier"
-      ],
+      "required": ["CompanyName", "Street", "ZipCode", "City", "Country", "Email", "Identifier"],
       "additionalProperties": true
     },
     "Parties": {
-      "title": "",
-      "description": "",
+      "title": "Parties",
+      "description": "The parties and their role in the business transaction.",
       "type": "object",
       "properties": {
         "Manufacturer": {
+          "description": "The party manufacturing the goods and selling them to the customer.",
           "$ref": "#/definitions/Company"
         },
         "Customer": {
+          "description": "The party buying the goods from the manufacturer.",
           "$ref": "#/definitions/Company"
         },
         "ConsigneeOfGoods": {
+          "description": "The party receiving the goods for the customer, e.g. freight fowarding agent.",
           "$ref": "#/definitions/Company"
         },
         "ConsigneeOfCertificate": {
+          "description": "The party receiving the certificates for the customer, e.g. a third party inspection service.",
           "$ref": "#/definitions/Company"
         }
       },
-      "required": [
-        "Manufacturer",
-        "Customer"
-      ],
+      "required": ["Manufacturer", "Customer"],
       "additionalProperties": false
     },
     "BusinessReferences": {
       "title": "BusinessReferences",
-      "description": "",
+      "description": "All information about the underlying commercial transaction such as the order and the delivery.",
       "type": "object",
       "properties": {
         "Order": {
-          "description": "",
+          "title": "Order",
+          "description": "Information about the order submiited by the customer to the manufacturer.",
           "type": "object",
           "properties": {
             "Number": {
-              "description": "The order number",
+              "description": "The order number.",
               "type": "string"
             },
             "Position": {
-              "description": "The number of the position",
+              "description": "The eposition",
               "type": "string"
             },
             "Date": {
@@ -259,141 +242,138 @@
               "format": "date"
             },
             "Quantity": {
-              "description": "The order quantity",
+              "description": "The ordered quantity",
               "type": "number"
             },
             "QuantityUnit": {
-              "description": "The unit of the order quantity",
+              "description": "The unit of the ordered quantity",
               "type": "string"
             }
           },
-          "required": [
-            "Number"
-          ],
+          "required": ["Number"],
           "additionalProperties": false
         },
         "OrderConfirmation": {
-          "description": "",
+          "title": "OrderConfirmation",
+          "description": "Optional information about the order confirmation sent by the manufacturer to the customer.",
           "type": "object",
           "properties": {
             "Number": {
-              "description": "",
+              "description": "The number of the order confirmation.",
               "type": "string"
             },
             "Date": {
-              "description": "",
+              "description": "The date of order confirmation issuance.",
               "type": "string",
               "format": "date"
             }
           },
-          "required": [
-            "Number"
-          ],
+          "required": ["Number"],
           "additionalProperties": false
         },
         "Delivery": {
-          "description": "",
+          "title": "Delivery",
+          "description": "The information from the delivery note",
           "type": "object",
           "properties": {
             "Number": {
-              "description": "",
+              "description": "The number of the delivery note",
               "type": "string"
             },
             "Date": {
-              "description": "",
+              "description": "The date of delivery note issuance",
               "type": "string",
               "format": "date"
             },
             "Quantity": {
-              "description": "",
+              "description": "The shipped quantity.",
               "type": "number"
             },
             "QuantityUnit": {
-              "description": "",
+              "description": "The unit of the shipped quantity.",
               "type": "string"
             },
             "Transport": {
-              "description": "A reference to the transport, e.g. the license plate of a truck or a container number",
+              "description": "A reference to the transport, e.g. the license plates of trucks or container numbers",
               "type": "array",
               "items": {
                 "type": "string"
               }
             }
           },
-          "required": [
-            "Number"
-          ],
+          "required": ["Number"],
           "additionalProperties": false
         },
         "GoodsReceiptNumber": {
-          "description": "The number for the goods receipt issued by the Customer or consignee",
+          "description": "The number for the goods receipt issued by the Customer or ConsigneeOfGoods",
           "type": "string"
         },
         "InternalOrderNumber": {
-          "description": "The internal order number at the manufacturer",
+          "description": "The internal order number issued at the manufacturer.",
           "type": "string"
         }
       },
-      "required": [
-        "Order",
-        "Delivery"
-      ],
+      "required": ["Order", "Delivery"],
       "additionalProperties": false
     },
     "Product": {
-      "title": "Validation",
+      "title": "Product",
+      "description": "The description of the product",
       "type": "object",
       "properties": {
         "Number": {
-          "description": "",
+          "description": "The number of the product at the manufacturer.",
           "type": "string"
         },
         "Name": {
-          "description": "",
+          "description": "The name of the product as given by the manufacturer, the trade name.",
           "type": "string"
         },
         "CustomerProductNumber": {
-          "description": "",
+          "description": "The number for the product issued by the customer.",
           "type": "string"
         },
         "CountryOfOrigin": {
+          "description": "The two-letter ISO country code of the country in which the product was manufactured.",
           "type": "string",
           "minLength": 2,
           "maxLength": 2
         },
         "PlaceOfOrigin": {
-          "description": "",
+          "description": "The location of the plant in which the product was manufactured.",
           "type": "string"
         },
         "ChargeNumber": {
-          "description": "",
+          "description": "The number identifying the batch/lot/charge of production.",
           "type": "string"
         },
+        "ProductionDate": {
+          "description": "The day on which the product was manufactured.",
+          "type": "string",
+          "format": "date"
+        },
         "AdditionalInformation": {
-          "description": "",
+          "description": "An array of additional free text information on the product.",
           "type": "array",
           "items": {
             "type": "string"
           }
         }
       },
-      "required": [
-        "Name",
-        "ChargeNumber"
-      ],
+      "required": ["Name", "ChargeNumber"],
       "additionalProperties": false
     },
     "Inspections": {
       "title": "Inspection",
-      "type": "object",
       "description": "A structure to specify any kind of measurements as defined by https://www.campusplastics.com/campushome/coc",
+      "type": "object",
       "properties": {
         "Property": {
           "description": "The property measured.",
           "type": "string"
         },
         "SubProperty": {
-          "description": "The property measured.",
+          "description": "A subset of the property measured.",
           "type": "string"
         },
         "Symbol": {
@@ -409,7 +389,7 @@
           "type": "number"
         },
         "Minimum": {
-          "description": "The lower limit according the specification. If not provided it is 0.",
+          "description": "The lower limit according the specification. If not provided it could be 0 or -∞.",
           "type": "number"
         },
         "Maximum": {
@@ -417,7 +397,7 @@
           "type": "number"
         },
         "Unit": {
-          "description": "The Unit of Value.",
+          "description": "The unit of the value.",
           "type": "string"
         },
         "SupplementaryInstructions": {
@@ -425,7 +405,7 @@
           "type": "string"
         },
         "TestConditions": {
-          "description": "",
+          "description": "A description of the conditions under which the test was executed.",
           "type": "string"
         },
         "Temperature": {
@@ -437,12 +417,7 @@
           "type": "number"
         }
       },
-      "required": [
-        "Property",
-        "Method",
-        "Value",
-        "Unit"
-      ],
+      "required": ["Property", "Method", "Value", "Unit"],
       "additionalProperties": false
     },
     "DeclarationOfConformity": {
@@ -450,11 +425,12 @@
       "type": "object",
       "properties": {
         "Declaration": {
-          "description": "The text declaring conformity",
+          "description": "The statement declaring conformity",
           "type": "string"
         },
         "CE": {
-          "description": "CE marking",
+          "title": "CE Marking",
+          "description": "In case the manufacturer must ",
           "type": "object",
           "properties": {
             "CE_Image": {
@@ -476,25 +452,20 @@
               "type": "string"
             }
           },
-          "required": [
-            "CE_Image",
-            "NotifiedBodyNumber",
-            "DoCYear",
-            "DoCNumber"
-          ],
+          "required": ["CE_Image", "NotifiedBodyNumber", "DoCYear", "DoCNumber"],
           "additionalProperties": false
         }
       },
-      "required": [
-        "Declaration"
-      ],
+      "required": ["Declaration"],
       "additionalProperties": false
     }
   },
   "title": "Certificate",
-  "description": "",
+  "description": "Certificates of Analysis for plastics and other materials.",
+  "type": "object",
   "properties": {
     "RefSchemaUrl": {
+      "description": "The URL linking to the JSON schema version the certificate JSON is based on.",
       "type": "string",
       "format": "uri"
     },
@@ -503,54 +474,54 @@
       "type": "object",
       "properties": {
         "CertificateLanguages": {
-          "description": "",
+          "description": "The ",
           "$ref": "#/definitions/CertificateLanguages"
         },
         "Number": {
-          "description": "",
+          "description": "The certificate number",
           "type": "string"
         },
         "Date": {
-          "description": "",
+          "description": "The issuing date",
           "type": "string",
           "format": "date"
         },
         "Type": {
-          "description": "",
+          "description": "The type of EN 10204 certificate",
           "$ref": "#/definitions/Types"
         },
         "Contacts": {
-          "description": "",
+          "description": "Contact persons",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Person"
           }
         },
         "Parties": {
-          "description": "",
+          "description": "The companies involved in the transaction",
           "$ref": "#/definitions/Parties"
         },
         "BusinessReferences": {
-          "description": "",
+          "description": "References to order and delivery",
           "$ref": "#/definitions/BusinessReferences"
         },
         "Product": {
-          "description": "",
+          "description": "The product description",
           "$ref": "#/definitions/Product"
         },
         "Inspections": {
-          "description": "",
+          "description": "An array with all inspections of the product.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Inspections"
           }
         },
         "DeclarationOfConformity": {
-          "description": "",
+          "description": "The statements declaring confirmity and optional CE",
           "$ref": "#/definitions/DeclarationOfConformity"
         },
         "Attachments": {
-          "description": "",
+          "description": "An optional array with data attached to the certificate in encoded form.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Attachment"
@@ -576,9 +547,6 @@
       "additionalProperties": false
     }
   },
-  "required": [
-    "Certificate",
-    "RefSchemaUrl"
-  ],
+  "required": ["RefSchemaUrl", "Certificate"],
   "additionalProperties": false
 }
