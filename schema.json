@@ -365,6 +365,10 @@
           "description": "A subset of the property measured.",
           "type": "string"
         },
+        "CAMPUSPropertyId": {
+          "description": "https://www.campusplastics.com defines numeric codes for properties used industry-wide",
+          "type": "integer"
+        },
         "Symbol": {
           "description": "The symbol describing the property.",
           "type": "string"
