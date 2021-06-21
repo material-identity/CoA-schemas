@@ -1,7 +1,7 @@
 {
-  "name": "plastic-schemas",
-  "version": "0.0.2-1",
-  "description": "EN 10204 certificates JSON schema for plastics and dependencies developed by S1Seven",
+  "name": "coa-schemas",
+  "version": "0.0.1",
+  "description": "Certificates of Analysis (CoA) as defined by EN 10204, developed by S1Seven",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./*.js",
@@ -46,12 +46,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/s1seven/plastic-schemas.git"
+    "url": "git+https://github.com/s1seven/CoA-schemas.git"
   },
   "author": "",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/s1seven/plastic-schemas/issues"
+    "url": "https://github.com/s1seven/CoA-schemas/issues"
   },
-  "homepage": "https://github.com/s1seven/plastic-schemas#readme"
+  "homepage": "https://github.com/s1seven/CoA-schemas#readme"
 }
