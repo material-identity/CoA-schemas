@@ -237,6 +237,10 @@
             "QuantityUnit": {
               "description": "The unit of the ordered quantity",
               "type": "string"
+            },
+            "InternalOrderNumber": {
+              "description": "The internal order number issued at the manufacturer.",
+              "type": "string"
             }
           },
           "required": ["Number"],
@@ -288,18 +292,14 @@
               "items": {
                 "type": "string"
               }
+            },
+            "GoodsReceiptNumber": {
+              "description": "The number for the goods receipt issued by the Customer or ConsigneeOfGoods",
+              "type": "string"
             }
           },
           "required": ["Number"],
           "additionalProperties": false
-        },
-        "GoodsReceiptNumber": {
-          "description": "The number for the goods receipt issued by the Customer or ConsigneeOfGoods",
-          "type": "string"
-        },
-        "InternalOrderNumber": {
-          "description": "The internal order number issued at the manufacturer.",
-          "type": "string"
         }
       },
       "required": ["Order", "Delivery"],
