@@ -159,8 +159,12 @@
   <section>
     <table class="main-table">
       <tr class="table-rows">
-        <td class="table-cells" colspan="4"><strong>Customer</strong></td>
-        <td class="table-cells" colspan="6"><strong>ConsigneeOfGoods</strong></td>
+        <td class="table-cells" colspan="4">
+          <strong>{{i18n "Customer" "Certificate" Certificate.CertificateLanguages}}</strong>
+        </td>
+        <td class="table-cells" colspan="6">
+          <strong>{{i18n "ConsigneeOfGoods" "Certificate" Certificate.CertificateLanguages}}</strong>
+        </td>
       </tr>
       <tr class="table-rows">
         <td class="table-cells" colspan="4">
@@ -203,129 +207,259 @@
     </table>
   </section>
   <section>
-    <h2 class="main-title">Certificate of Analysis EN 10204 {{Certificate.Type}}</h2>
+    <h2 class="main-title">
+      {{i18n "Name" "Certificate" Certificate.CertificateLanguages}} {{Certificate.Type}}</h2>
     <table class="main-table">
       <tr class="table-rows">
-        <td class="table-headers" colspan="2">Number</td>
-        <td class="table-cells" colspan="2">{{Certificate.Number}}</td>
-        <td class="table-headers" colspan="2">Date</td>
-        <td class="table-cells" colspan="4">{{localizeDate Certificate.Date Certificate.CertificateLanguages.[0]}}</td>
+        <td class="table-headers" colspan="2">{{i18n "Id" "Certificate" Certificate.CertificateLanguages}}</td>
+        <td class="table-cells" colspan="2">{{Certificate.Id}}</td>
+        <td class="table-headers" colspan="2">{{i18n "Date" "Certificate" Certificate.CertificateLanguages}}</td>
+        <td class="table-cells" colspan="4">{{localizeDate Certificate.Date Certificate.CertificateLanguages}}</td>
       </tr>
     </table>
   </section>
   {{! BUSINESS REFERENCES }}
   <section class="header">
-    <h2 class="main-title">Business References</h2>
+    <h2 class="main-title">{{i18n "BusinessReferences" "Certificate" Certificate.CertificateLanguages}}</h2>
     <table class="main-table">
       <tr class="table-row">
-        <td class="table-cells" colspan="4"><strong>Order</strong></td>
-        <td class="table-cells" colspan="6"><strong>Delivery</strong></td>
-      </tr>
-      <tr class="table-row">
-        <td class="table-headers" colspan="2">Number</td>
-        <td class="table-cells" colspan="2">{{Certificate.BusinessReferences.Order.Number}}</td>
-        <td class="table-headers" colspan="2">Number</td>
-        <td class="table-cells" colspan="2">{{Certificate.BusinessReferences.Delivery.Number}}</td>
-      </tr>
-      <tr class="table-row">
-        <td class="table-headers" colspan="2">Quantity</td>
-        <td class="table-cells" colspan="2">
-          {{localizeNumber Certificate.BusinessReferences.Order.Quantity Certificate.CertificateLanguages.[0]}} {{
-          Certificate.BusinessReferences.Order.QuantityUnit}}</td>
-        <td class="table-headers" colspan="2">Quantity</td>
         <td class="table-cells" colspan="4">
-          {{localizeNumber Certificate.BusinessReferences.Delivery.Quantity Certificate.CertificateLanguages.[0]}} {{
-          Certificate.BusinessReferences.Delivery.QuantityUnit}}</td>
+          <strong>{{i18n "Order" "Certificate" Certificate.CertificateLanguages}}</strong>
+        </td>
+        <td class="table-cells" colspan="6">
+          <strong>{{i18n "Delivery" "Certificate" Certificate.CertificateLanguages}}</strong>
+        </td>
       </tr>
       <tr class="table-row">
-        <td class="table-headers" colspan="2">Date</td>
+        <td class="table-headers" colspan="2">
+          {{i18n "OrderNumber" "Certificate" Certificate.CertificateLanguages}}
+        </td>
+        <td class="table-cells" colspan="2">
+          {{Certificate.BusinessReferences.Order.Number}}
+        </td>
+        <td class="table-headers" colspan="2">
+          {{i18n "DeliveryNumber" "Certificate" Certificate.CertificateLanguages}}
+        </td>
+        <td class="table-cells" colspan="2">
+          {{Certificate.BusinessReferences.Delivery.Number}}
+        </td>
+      </tr>
+      <tr class="table-row">
+        <td class="table-headers" colspan="2">{{i18n "OrderPosition" "Certificate" Certificate.CertificateLanguages}}
+        </td>
+        <td class="table-cells" colspan="2">
+          {{Certificate.BusinessReferences.Order.Position}}
+        </td>
+        <td class="table-headers" colspan="2">
+          {{i18n "DeliveryPosition" "Certificate" Certificate.CertificateLanguages}}
+        </td>
+        <td class="table-cells" colspan="4">
+          {{Certificate.BusinessReferences.Delivery.Position}}
+        </td>
+      </tr>
+      <tr class="table-row">
+        <td class="table-headers" colspan="2">
+          {{i18n "OrderQuantity" "Certificate" Certificate.CertificateLanguages}}
+        </td>
+        <td class="table-cells" colspan="2">
+          {{localizeNumber Certificate.BusinessReferences.Order.Quantity Certificate.CertificateLanguages}} {{
+          Certificate.BusinessReferences.Order.QuantityUnit}}
+        </td>
+        <td class="table-headers" colspan="2">
+          {{i18n "DeliveryQuantity" "Certificate" Certificate.CertificateLanguages}}
+        </td>
+        <td class="table-cells" colspan="4">
+          {{localizeNumber Certificate.BusinessReferences.Delivery.Quantity Certificate.CertificateLanguages}} {{
+          Certificate.BusinessReferences.Delivery.QuantityUnit}}
+        </td>
+      </tr>
+      <tr class="table-row">
+        <td class="table-headers" colspan="2">
+          {{i18n "OrderDate" "Certificate" Certificate.CertificateLanguages}}
+        </td>
         <td class="table-cells" colspan="2">
           {{#if Certificate.BusinessReferences.Order.Date}}
-          {{localizeDate Certificate.BusinessReferences.Order.Date Certificate.CertificateLanguages.[0]}}
+          {{localizeDate Certificate.BusinessReferences.Order.Date Certificate.CertificateLanguages}}
           {{/if}}
         </td>
-        <td class="table-headers" colspan="2">Date</td>
+        <td class="table-headers" colspan="2">{{i18n "DeliveryDate" "Certificate" Certificate.CertificateLanguages}}
+        </td>
         <td class="table-cells" colspan="4">
           {{#if Certificate.BusinessReferences.Delivery.Date}}
-          {{localizeDate Certificate.BusinessReferences.Delivery.Date Certificate.CertificateLanguages.[0]}}
+          {{localizeDate Certificate.BusinessReferences.Delivery.Date Certificate.CertificateLanguages}}
           {{/if}}
         </td>
       </tr>
+
       <tr class="table-row">
-        <td class="table-headers" colspan="2">Position</td>
-        <td class="table-cells" colspan="2">{{Certificate.BusinessReferences.Order.Position}}</td>
-        <td class="table-headers" colspan="2">Position</td>
-        <td class="table-cells" colspan="4">{{Certificate.BusinessReferences.Delivery.Position}}</td>
+        <td class="table-headers" colspan="2">
+          {{i18n "InternalOrderNumber" "Certificate" Certificate.CertificateLanguages}}
+        </td>
+        <td class="table-cells" colspan="2">
+          {{Certificate.BusinessReferences.Order.InternalOrderNumber}}
+        </td>
+        <td class="table-headers" colspan="2">
+          {{i18n "Transport" "Certificate" Certificate.CertificateLanguages}}
+        </td>
+        <td class="table-cells" colspan="4">
+          {{Certificate.BusinessReferences.Delivery.Transport}}
+        </td>
       </tr>
       <tr class="table-row">
-        <td class="table-headers" colspan="2">InternalOrderNumber</td>
-        <td class="table-cells" colspan="2">{{Certificate.BusinessReferences.Order.InternalOrderNumber}}</td>
-        <td class="table-headers" colspan="2">Transport</td>
-        <td class="table-cells" colspan="4">{{Certificate.BusinessReferences.Delivery.Transport}}</td>
-      </tr>
-      <tr class="table-row">
-        <td class="table-headers" colspan="2">InternalOrderPosition</td>
-        <td class="table-cells" colspan="2">{{Certificate.BusinessReferences.Order.InternalOrderPosition}}</td>
-        <td class="table-headers" colspan="2">GoodsReceiptNumber</td>
-        <td class="table-cells" colspan="4">{{Certificate.BusinessReferences.Delivery.GoodsReceiptNumber}}</td>
+        <td class="table-headers" colspan="2">
+          {{i18n "InternalOrderPosition" "Certificate" Certificate.CertificateLanguages}}
+        </td>
+        <td class="table-cells" colspan="2">
+          {{Certificate.BusinessReferences.Order.InternalOrderPosition}}
+        </td>
+        <td class="table-headers" colspan="2">
+          {{i18n "GoodsReceiptNumber" "Certificate" Certificate.CertificateLanguages}}
+        </td>
+        <td class="table-cells" colspan="4">
+          {{Certificate.BusinessReferences.Delivery.GoodsReceiptNumber}}
+        </td>
       </tr>
     </table>
   </section>
   {{! PRODUCT }}
   <section class="header">
     <h2 class="main-title">
-      Product
+      {{i18n "Product" "Certificate" Certificate.CertificateLanguages}}
     </h2>
     <table class="main-table">
-      {{#each Certificate.Product}}
-      <tr class="table-rows">
+      {{#if Certificate.Name}}
+      <tr>
         <th class="table-headers" colspan="4">
-          {{@key}}
+          {{i18n "ProductName" "Certificate" Certificate.CertificateLanguages}}
         </th>
         <td class="table-cells" colspan="6">
-          {{#ifEqual @key "Standards"}}
-          {{join this.this ", " ""}}
-          {{else ifEqual @key "AdditionalInformation"}}
-          {{join this.this "</br>" ""}}
-          {{else}}
-          {{this}}
-          {{/ifEqual}}
+          {{Certificate.Product.Name}}
         </td>
       </tr>
-      {{/each}}
+      {{/if}}
+      {{#if Certificate.Product.Name}}
+      <tr>
+        <th class="table-headers" colspan="4">
+          {{i18n "ProductName" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <td class="table-cells" colspan="6">
+          {{Certificate.Product.Name}}
+        </td>
+      </tr>
+      {{/if}}
+      {{#if Certificate.Product.Number}}
+      <tr>
+        <th class="table-headers" colspan="4">
+          {{i18n "ProductNumber" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <td class="table-cells" colspan="6">
+          {{Certificate.Product.Number}}
+        </td>
+      </tr>
+      {{/if}}
+      {{#if Certificate.Product.CustomerProdcutNumber}}
+      <tr>
+        <th class="table-headers" colspan="4">
+          {{i18n "CustomerProdcutNumber" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <td class="table-cells" colspan="6">
+          {{Certificate.Product.CustomerProdcutNumber}}
+        </td>
+      </tr>
+      {{/if}}
+      {{#if Certificate.Product.CountryOfOrigin}}
+      <tr>
+        <th class="table-headers" colspan="4">
+          {{i18n "CountryOfOrigin" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <td class="table-cells" colspan="6">
+          {{Certificate.Product.CountryOfOrigin}}
+        </td>
+      </tr>
+      {{/if}}
+      {{#if Certificate.Product.PlaceOfOrigin}}
+      <tr>
+        <th class="table-headers" colspan="4">
+          {{i18n "PlaceOfOrigin" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <td class="table-cells" colspan="6">
+          {{Certificate.Product.PlaceOfOrigin}}
+        </td>
+      </tr>
+      {{/if}}
+      {{#if Certificate.Product.ChargeNumber}}
+      <tr>
+        <th class="table-headers" colspan="4">
+          {{i18n "ChargeNumber" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <td class="table-cells" colspan="6">
+          {{Certificate.Product.ChargeNumber}}
+        </td>
+      </tr>
+      {{/if}}
+      {{#if Certificate.Product.ProductionDate}}
+      <tr>
+        <th class="table-headers" colspan="4">
+          {{i18n "ProductionDate" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <td class="table-cells" colspan="6">
+          {{localizeDate Certificate.Product.ProductionDate Certificate.CertificateLanguages}}
+        </td>
+      </tr>
+      {{/if}}
+      {{#if Certificate.Product.Standards}}
+      <tr>
+        <th class="table-headers" colspan="4">
+          {{i18n "Standards" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <td class="table-cells" colspan="6">
+          {{join Certificate.Product.Standards ", " ""}}
+        </td>
+      </tr>
+      {{/if}}
+      {{#if Certificate.Product.AdditionalInformation}}
+      <tr>
+        <th class="table-headers" colspan="4">
+          {{i18n "AdditionalInformation" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <td class="table-cells" colspan="6">
+          {{join Certificate.Product.AdditionalInformation "</br>" ""}}
+        </td>
+      </tr>
+      {{/if}}
     </table>
   </section>
 
   {{! INSPECTIONS }}
   <section class="header">
     <h2 class="main-title">
-      Inspections
+      {{i18n "Inspections" "Certificate" Certificate.CertificateLanguages}}
     </h2>
     <table class="main-table">
       <tr class="table-rows">
         <th class="table-headers" colspan="2">
-          Property
+          {{i18n "Property" "Certificate" Certificate.CertificateLanguages}}
         </th>
         <th class="table-headers" colspan="2">
-          Method
+          {{i18n "Method" "Certificate" Certificate.CertificateLanguages}}
         </th>
         <th class="table-headers">
-          Unit
+          {{i18n "Unit" "Certificate" Certificate.CertificateLanguages}}
         </th>
         <th class="table-headers">
-          Value
+          {{i18n "Value" "Certificate" Certificate.CertificateLanguages}}
         </th>
         <th class="table-headers">
-          Minium
+          {{i18n "Minimum" "Certificate" Certificate.CertificateLanguages}}
         </th>
         <th class="table-headers">
-          Maximum
+          {{i18n "Maximum" "Certificate" Certificate.CertificateLanguages}}
         </th>
         <th class="table-headers">
-          Temperature
+          {{i18n "Temperature" "Certificate" Certificate.CertificateLanguages}}
         </th>
         <th class="table-headers">
-          Weight
+          {{i18n "Weight" "Certificate" Certificate.CertificateLanguages}}
         </th>
       </tr>
       {{#each Certificate.Analysis.Inspections}}
@@ -340,24 +474,24 @@
           {{this.Unit}}
         </td>
         <td class="table-cells">
-          {{localizeNumber this.Value ../Certificate.CertificateLanguages.[0]}}
+          {{localizeNumber this.Value Certificate.CertificateLanguages}}
         </td>
         <td class="table-cells">
-          {{localizeNumber this.Minimum ../Certificate.CertificateLanguages.[0]}}
+          {{localizeNumber this.Minimum Certificate.CertificateLanguages}}
         </td>
         <td class="table-cells">
-          {{localizeNumber this.Maximum ../Certificate.CertificateLanguages.[0]}}
+          {{localizeNumber this.Maximum Certificate.CertificateLanguages}}
         </td>
         {{#if this.Temperature}}
         <td class="table-cells">
-          {{localizeNumber this.Temperature ../Certificate.CertificateLanguages.[0]}} °C
+          {{localizeNumber this.Temperature Certificate.CertificateLanguages}} °C
         </td>
         {{else}}
         <td class="table-cells"></td>
         {{/if}}
         {{#if this.Weight}}
         <td class="table-cells">
-          {{localizeNumber this.Weight ../Certificate.CertificateLanguages.[0]}} kg
+          {{localizeNumber this.Weight Certificate.CertificateLanguages}} kg
         </td>
         {{else}}
         <td class="table-cells"></td>
@@ -366,18 +500,22 @@
       {{/each}}
       {{#if Certificate.Analysis.AdditionalInformation}}
       <tr class="table-rows">
-        <td class="table-cells" colspan="10"><strong>AdditionalInformation</strong></td>
+        <td class="table-cells" colspan="10">
+          <strong>{{i18n "AdditionalInformation" "Certificate" Certificate.CertificateLanguages}}</strong>
+        </td>
       </tr>
       <tr class="table-rows">
         <td class="table-cells" colspan="10">
-          {{join Certificate.Analysis.AdditionalInformation "</br>" ""}}</td>
+          {{join Certificate.Analysis.AdditionalInformation "</br>" ""}}
+        </td>
       </tr>
       {{/if}}
     </table>
   </section>
   {{! DECLARATION OF CONFORMITY }}
   <section>
-    <h2 class="main-title">DeclarationOfConformity</h2>
+    <h2 class="main-title">
+      {{i18n "DeclarationOfConformity" "Certificate" Certificate.CertificateLanguages}}</h2>
     <table class="main-table">
       <tr class="table-rows">
         <td class="table-cells" colspan="10">
@@ -391,7 +529,7 @@
   <section>
     <section>
       <h2 class="main-title">
-        Contacts
+        {{i18n "Contacts" "Certificate" Certificate.CertificateLanguages}}
       </h2>
       <table class="main-table">
         <tr class="table-rows">
@@ -410,7 +548,7 @@
     {{#if Certificate.Attachments}}
     <section>
       <h2 class="main-title">
-        Attachments
+        {{i18n "Attachments" "Certificate" Certificate.CertificateLanguages}}
       </h2>
       <table class="main-table">
         <tr class="table-rows">
