@@ -349,6 +349,13 @@
           "type": "string",
           "format": "date"
         },
+        "Standards": {
+          "description": "The list of standards to which the product conforms.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "AdditionalInformation": {
           "description": "An array of additional free text information on the product.",
           "type": "array",
