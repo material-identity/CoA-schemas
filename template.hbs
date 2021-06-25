@@ -181,6 +181,7 @@
           </ol>
         </td>
         <td class="table-cells" colspan="6">
+          {{#if Certificate.Parties.ConsigneeOfGoods}}
           <ol>
             <li>
               <h1>{{Certificate.Parties.ConsigneeOfGoods.CompanyName}}
@@ -196,6 +197,7 @@
               {{Certificate.Parties.ConsigneeOfGoods.Email}}
             </li>
           </ol>
+          {{/if}}
         </td>
       </tr>
     </table>
