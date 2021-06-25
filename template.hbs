@@ -367,7 +367,8 @@
         <td class="table-cells" colspan="10"><strong>AdditionalInformation</strong></td>
       </tr>
       <tr class="table-rows">
-        <td class="table-cells" colspan="10">{{Certificate.Analysis.AdditionalInformation}}</td>
+        <td class="table-cells" colspan="10">
+          {{join Certificate.Analysis.AdditionalInformation "</br>" ""}}</td>
       </tr>
       {{/if}}
     </table>
