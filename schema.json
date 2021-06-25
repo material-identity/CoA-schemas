@@ -222,20 +222,20 @@
               "type": "string"
             },
             "Position": {
-              "description": "The eposition",
+              "description": "The order position number.",
               "type": "string"
             },
             "Date": {
-              "description": "The date of order issuance",
+              "description": "The date of issuing the order",
               "type": "string",
               "format": "date"
             },
             "Quantity": {
-              "description": "The ordered quantity",
+              "description": "The order quantity",
               "type": "number"
             },
             "QuantityUnit": {
-              "description": "The unit of the ordered quantity",
+              "description": "The unit of the order quantity",
               "type": "string"
             },
             "InternalOrderNumber": {
@@ -270,15 +270,15 @@
         },
         "Delivery": {
           "title": "Delivery",
-          "description": "The information from the delivery note",
+          "description": "The information from the delivery note.",
           "type": "object",
           "properties": {
             "Number": {
-              "description": "The number of the delivery note",
+              "description": "The number of the delivery note.",
               "type": "string"
             },
             "Date": {
-              "description": "The date of delivery note issuance",
+              "description": "The date of issuing the delivery note.",
               "type": "string",
               "format": "date"
             },
@@ -292,7 +292,7 @@
             },
             "Position": {
               "description": "The position on the delivery note.",
-              "type": "string"             
+              "type": "string"
             },
             "Transport": {
               "description": "A reference to the transport, e.g. the license plates of trucks or container numbers",
