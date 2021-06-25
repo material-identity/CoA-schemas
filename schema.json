@@ -241,6 +241,10 @@
             "InternalOrderNumber": {
               "description": "The internal order number issued at the manufacturer.",
               "type": "string"
+            },
+            "InternalOrderPosition": {
+              "description": "The position on the internal order issued at the manufacturer.",
+              "type": "string"
             }
           },
           "required": ["Number"],
@@ -285,6 +289,10 @@
             "QuantityUnit": {
               "description": "The unit of the shipped quantity.",
               "type": "string"
+            },
+            "Position": {
+              "description": "The position on the delivery note.",
+              "type": "string"             
             },
             "Transport": {
               "description": "A reference to the transport, e.g. the license plates of trucks or container numbers",
