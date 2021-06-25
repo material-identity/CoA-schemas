@@ -475,8 +475,8 @@
           "description": "The ",
           "$ref": "#/definitions/CertificateLanguages"
         },
-        "Number": {
-          "description": "The certificate number",
+        "Id": {
+          "description": "The certificate identifier, usually a number.",
           "type": "string"
         },
         "Date": {
@@ -547,7 +547,7 @@
       },
       "required": [
         "CertificateLanguages",
-        "Number",
+        "Id",
         "Date",
         "Parties",
         "BusinessReferences",
