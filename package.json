@@ -1,6 +1,6 @@
 {
   "name": "coa-schemas",
-  "version": "0.0.2-2",
+  "version": "0.0.2-3",
   "description": "Certificates of Analysis (CoA) as defined by EN 10204, developed by S1Seven",
   "main": "index.js",
   "scripts": {
