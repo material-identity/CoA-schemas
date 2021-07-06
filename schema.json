@@ -26,9 +26,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "VAT"
-      ],
+      "required": ["VAT"],
       "additionalProperties": false
     },
     "CertificateLanguages": {
@@ -36,28 +34,18 @@
       "description": "For a JSON document one or two translations used in the rendering of HTML and PDF documents can be specificed.",
       "type": "array",
       "items": {
-        "enum": [
-          "EN",
-          "DE"
-        ]
+        "enum": ["EN", "DE", "FR", "ES", "PL", "CN"]
       },
       "minItems": 1,
       "maxItems": 2,
-      "default": [
-        "EN"
-      ],
+      "default": ["EN"],
       "uniqueItems": true
     },
     "Types": {
       "title": "Types",
       "description": "The types of inspection certificates according EN 10204-2004.",
       "type": "string",
-      "enum": [
-        "2.1",
-        "2.2",
-        "3.1",
-        "3.2"
-      ],
+      "enum": ["2.1", "2.2", "3.1", "3.2"],
       "default": "3.1"
     },
     "Hash": {
@@ -68,19 +56,13 @@
         "Algorithm": {
           "description": "The algorithm selected to calculate the hash value.",
           "type": "string",
-          "enum": [
-            "SHA256",
-            "SHA3-256"
-          ],
+          "enum": ["SHA256", "SHA3-256"],
           "default": "SHA256"
         },
         "Encoding": {
           "description": "The format in which the hash value is encoded.",
           "type": "string",
-          "enum": [
-            "base64",
-            "hex"
-          ],
+          "enum": ["base64", "hex"],
           "default": "base64"
         },
         "Value": {
@@ -88,11 +70,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "Algorithm",
-        "Encoding",
-        "Value"
-      ]
+      "required": ["Algorithm", "Encoding", "Value"]
     },
     "Attachment": {
       "title": "Attachment",
@@ -120,13 +98,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "Hash",
-        "FileName",
-        "MIME-Type",
-        "Encoding",
-        "Data"
-      ],
+      "required": ["Hash", "FileName", "MIME-Type", "Encoding", "Data"],
       "additionalProperties": false
     },
     "Person": {
@@ -197,15 +169,7 @@
           }
         }
       },
-      "required": [
-        "CompanyName",
-        "Street",
-        "ZipCode",
-        "City",
-        "Country",
-        "Email",
-        "Identifier"
-      ],
+      "required": ["CompanyName", "Street", "ZipCode", "City", "Country", "Email", "Identifier"],
       "additionalProperties": true
     },
     "Parties": {
@@ -230,10 +194,7 @@
           "$ref": "#/definitions/Company"
         }
       },
-      "required": [
-        "Manufacturer",
-        "Customer"
-      ],
+      "required": ["Manufacturer", "Customer"],
       "additionalProperties": false
     },
     "BusinessReferences": {
@@ -276,9 +237,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "Number"
-          ],
+          "required": ["Number"],
           "additionalProperties": false
         },
         "OrderConfirmation": {
@@ -296,9 +255,7 @@
               "format": "date"
             }
           },
-          "required": [
-            "Number"
-          ],
+          "required": ["Number"],
           "additionalProperties": false
         },
         "Delivery": {
@@ -339,16 +296,11 @@
               "type": "string"
             }
           },
-          "required": [
-            "Number"
-          ],
+          "required": ["Number"],
           "additionalProperties": false
         }
       },
-      "required": [
-        "Order",
-        "Delivery"
-      ],
+      "required": ["Order", "Delivery"],
       "additionalProperties": false
     },
     "Product": {
@@ -402,10 +354,7 @@
           }
         }
       },
-      "required": [
-        "Name",
-        "ChargeNumber"
-      ],
+      "required": ["Name", "ChargeNumber"],
       "additionalProperties": false
     },
     "Inspection": {
@@ -466,12 +415,7 @@
           "type": "number"
         }
       },
-      "required": [
-        "Property",
-        "Method",
-        "Value",
-        "Unit"
-      ],
+      "required": ["Property", "Method", "Value", "Unit"],
       "additionalProperties": false
     },
     "DeclarationOfConformity": {
@@ -506,18 +450,11 @@
               "type": "string"
             }
           },
-          "required": [
-            "CE_Image",
-            "NotifiedBodyNumber",
-            "DoCYear",
-            "DoCNumber"
-          ],
+          "required": ["CE_Image", "NotifiedBodyNumber", "DoCYear", "DoCNumber"],
           "additionalProperties": false
         }
       },
-      "required": [
-        "Declaration"
-      ],
+      "required": ["Declaration"],
       "additionalProperties": false
     }
   },
@@ -621,9 +558,6 @@
       "additionalProperties": false
     }
   },
-  "required": [
-    "RefSchemaUrl",
-    "Certificate"
-  ],
+  "required": ["RefSchemaUrl", "Certificate"],
   "additionalProperties": false
 }
