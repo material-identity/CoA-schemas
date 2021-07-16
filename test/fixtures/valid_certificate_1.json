@@ -1,0 +1,90 @@
+{
+  "RefSchemaUrl": "https://schemas.en10204.io/coa-schemas/v0.0.2-3/schema.json",
+  "Certificate": {
+    "Id": "certificate_id",
+    "Date": "2021-12-01",
+    "CertificateLanguages": ["DE"],
+    "Parties": {
+      "Manufacturer": {
+        "Name": "Plastic Productions AG",
+        "Street": "Kunststoff 1",
+        "ZipCode": "10003",
+        "City": "Berlin",
+        "Country": "DE",
+        "Email": "hannes@s1seven.com",
+        "Identifier": {
+          "VAT": "",
+          "DUNS": "",
+          "CageCode": ""
+        }
+      },
+      "Customer": {
+        "Name": "Plastic Processor SE",
+        "Street": "Plastik 1",
+        "ZipCode": "1230",
+        "City": "Wien",
+        "Country": "AT",
+        "Email": "hannes@s1seven.com",
+        "Identifier": {
+          "VAT": ""
+        }
+      }
+    },
+    "BusinessReferences": {
+      "Order": {
+        "Number": "1",
+        "Position": "1",
+        "Date": "2021-12-01",
+        "Quantity": 100.0,
+        "QuantityUnit": "kg"
+      },
+      "OrderConfirmation": {
+        "Number": "22",
+        "Date": "2021-12-01"
+      },
+      "Delivery": {
+        "Number": "3",
+        "Date": "2021-12-01",
+        "Quantity": 90.0,
+        "QuantityUnit": "kg",
+        "Transport": ["W345678"]
+      }
+    },
+    "Product": {
+      "Number": "",
+      "Name": "",
+      "AdditionalInformation": ["1", "2"],
+      "CustomerProductNumber": "",
+      "CountryOfOrigin": "DE",
+      "PlaceOfOrigin": "Berlin",
+      "ChargeNumber": ""
+    },
+    "Analysis": {
+      "Inspections": [
+        {
+          "Property": "MFR",
+          "SubProperty": "",
+          "Symbol": "",
+          "Method": "DIN EN ISO 1133",
+          "Unit": "g/10m_",
+          "Value": 31.0,
+          "Minimum": 15.0,
+          "Maximum": 35.0,
+          "SupplementaryInstructions": "",
+          "TestConditions": ""
+        },
+        {
+          "Property": "Dichte",
+          "Method": "DIN EN ISO 1183-1A",
+          "Unit": "g/cm3",
+          "Value": 85.0,
+          "Minimum": 85.0,
+          "Maximum": 89.0
+        }
+      ]
+    },
+    "DeclarationOfConformity": {
+      "Declaration": ""
+    }
+  }
+}
