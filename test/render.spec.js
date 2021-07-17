@@ -3,6 +3,7 @@ const { generateHtml } = require('@s1seven/schema-tools-generate-html');
 const { readFileSync } = require('fs');
 const { HtmlDiffer } = require('html-differ');
 const { resolve } = require('path');
+var htmlCompare = require('html-compare');
 
 describe('Render', function () {
   const testSuitesMap = [
@@ -21,6 +22,7 @@ describe('Render', function () {
         templatePath,
         templateType: 'hbs',
       });
+
       const htmlDiffer = new HtmlDiffer({
         ignoreAttributes: [],
         ignoreWhitespaces: true,
@@ -28,8 +30,12 @@ describe('Render', function () {
         ignoreEndTags: false,
         ignoreDuplicateAttributes: false,
       });
-      const isEqual = htmlDiffer.isEqual(expectedHTML, html);
-      expect(isEqual).toBe(false);
+
+      const isEqualComp = htmlCompare.compare(expectedHTML, html);
+      const isEqualDiffer = htmlDiffer.isEqual(expectedHTML, html);
+      expect(isEqualComp.changes).toHaveLength(0);
+      expect(isEqualComp.different).toBe(false);
+      expect(isEqualDiffer).toBe(true);
     });
   });
 });

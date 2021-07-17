@@ -70,5 +70,8 @@
       "json",
       "node"
     ]
+  },
+  "dependencies": {
+    "html-compare": "^0.0.1"
   }
 }
