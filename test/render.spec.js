@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
 const { generateHtml } = require('@s1seven/schema-tools-generate-html');
 const { readFileSync } = require('fs');
+const htmlCompare = require('html-compare');
 const { HtmlDiffer } = require('html-differ');
 const { resolve } = require('path');
-var htmlCompare = require('html-compare');
 
 describe('Render', function () {
   const testSuitesMap = [
