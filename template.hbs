@@ -423,7 +423,7 @@
           {{i18n "AdditionalInformation" "Certificate" Certificate.CertificateLanguages}}
         </th>
         <td class="table-cells" colspan="6">
-          {{join Certificate.Product.AdditionalInformation "</br>" ""}}
+          {{join Certificate.Product.AdditionalInformation "<br>" ""}}
         </td>
       </tr>
       {{/if}}
@@ -506,7 +506,7 @@
       </tr>
       <tr class="table-rows">
         <td class="table-cells" colspan="10">
-          {{join Certificate.Analysis.AdditionalInformation "</br>" ""}}
+          {{join Certificate.Analysis.AdditionalInformation "<br>" ""}}
         </td>
       </tr>
       {{/if}}
@@ -527,47 +527,46 @@
   {{! CONTACTS }}
   {{#if Certificate.Contacts}}
   <section>
-    <section>
-      <h2 class="main-title">
-        {{i18n "Contacts" "Certificate" Certificate.CertificateLanguages}}
-      </h2>
-      <table class="main-table">
-        <tr class="table-rows">
-          <td class="table-cells" colspan="10">
-            {{#each Certificate.Contacts}}
-            {{#each this}}
-            {{#if @last}} {{this}} {{else}} {{this}},&nbsp;{{/if}}
-            {{/each}}
-            {{/each}}</br>
-          </td>
-        </tr>
-      </table>
-    </section>
-    {{/if}}
-    {{! ATTACHEMENTS}}
-    {{#if Certificate.Attachments}}
-    <section>
-      <h2 class="main-title">
-        {{i18n "Attachments" "Certificate" Certificate.CertificateLanguages}}
-      </h2>
-      <table class="main-table">
-        <tr class="table-rows">
-          <td class="table-cells" colspan="10">
-            {{#each Certificate.Attachments}}
-            {{this.FileName}}</br>
-            {{/each}}
-          </td>
-        </tr>
-      </table>
-    </section>
-    {{/if}}
-    <footer style="float: left;">
-      <p>
-        <em class="caption">Powered by <a href="https://en10204.io">en10204.io</a></em>
-        <em style="color:lightgray; margin-left: 35%;" class="caption">{{RefSchemaUrl}}</em>
-        <br />
-      </p>
-    </footer>
+    <h2 class="main-title">
+      {{i18n "Contacts" "Certificate" Certificate.CertificateLanguages}}
+    </h2>
+    <table class="main-table">
+      <tr class="table-rows">
+        <td class="table-cells" colspan="10">
+          {{#each Certificate.Contacts}}
+          {{#each this}}
+          {{#if @last}} {{this}} {{else}} {{this}},&nbsp;{{/if}}
+          {{/each}}
+          {{/each}}<br>
+        </td>
+      </tr>
+    </table>
+  </section>
+  {{/if}}
+  {{! ATTACHEMENTS}}
+  {{#if Certificate.Attachments}}
+  <section>
+    <h2 class="main-title">
+      {{i18n "Attachments" "Certificate" Certificate.CertificateLanguages}}
+    </h2>
+    <table class="main-table">
+      <tr class="table-rows">
+        <td class="table-cells" colspan="10">
+          {{#each Certificate.Attachments}}
+          {{this.FileName}}<br>
+          {{/each}}
+        </td>
+      </tr>
+    </table>
+  </section>
+  {{/if}}
+  <footer style="float: left;">
+    <p>
+      <em class="caption">Powered by <a href="https://en10204.io">en10204.io</a></em>
+      <em style="color:lightgray; margin-left: 35%;" class="caption">{{RefSchemaUrl}}</em>
+      <br>
+    </p>
+  </footer>
 </body>
 
 </html>
