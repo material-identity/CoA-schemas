@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 const { generateHtml } = require('@s1seven/schema-tools-generate-html');
 const { readFileSync } = require('fs');
-const htmlCompare = require('html-compare');
 const { HtmlDiffer } = require('html-differ');
 const { resolve } = require('path');
 
@@ -31,10 +30,7 @@ describe('Render', function () {
         ignoreDuplicateAttributes: false,
       });
 
-      const isEqualComp = htmlCompare.compare(expectedHTML, html);
       const isEqualDiffer = htmlDiffer.isEqual(expectedHTML, html);
-      expect(isEqualComp.changes).toHaveLength(0);
-      expect(isEqualComp.different).toBe(false);
       expect(isEqualDiffer).toBe(true);
     });
   });
