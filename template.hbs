@@ -220,7 +220,7 @@
   </section>
   {{! BUSINESS REFERENCES }}
   <section class="header">
-    <h2 class="main-title">{{i18n "BusinessReferences" "Certificate" Certificate.CertificateLanguages}}</h2>
+    <h2 class="main-title">{{i18n "BusinessTransaction" "Certificate" Certificate.CertificateLanguages}}</h2>
     <table class="main-table">
       <tr class="table-row">
         <td class="table-cells" colspan="4">
@@ -235,26 +235,26 @@
           {{i18n "OrderNumber" "Certificate" Certificate.CertificateLanguages}}
         </td>
         <td class="table-cells" colspan="2">
-          {{Certificate.BusinessReferences.Order.Number}}
+          {{Certificate.BusinessTransaction.Order.Number}}
         </td>
         <td class="table-headers" colspan="2">
           {{i18n "DeliveryNumber" "Certificate" Certificate.CertificateLanguages}}
         </td>
         <td class="table-cells" colspan="2">
-          {{Certificate.BusinessReferences.Delivery.Number}}
+          {{Certificate.BusinessTransaction.Delivery.Number}}
         </td>
       </tr>
       <tr class="table-row">
         <td class="table-headers" colspan="2">{{i18n "OrderPosition" "Certificate" Certificate.CertificateLanguages}}
         </td>
         <td class="table-cells" colspan="2">
-          {{Certificate.BusinessReferences.Order.Position}}
+          {{Certificate.BusinessTransaction.Order.Position}}
         </td>
         <td class="table-headers" colspan="2">
           {{i18n "DeliveryPosition" "Certificate" Certificate.CertificateLanguages}}
         </td>
         <td class="table-cells" colspan="4">
-          {{Certificate.BusinessReferences.Delivery.Position}}
+          {{Certificate.BusinessTransaction.Delivery.Position}}
         </td>
       </tr>
       <tr class="table-row">
@@ -262,15 +262,15 @@
           {{i18n "OrderQuantity" "Certificate" Certificate.CertificateLanguages}}
         </td>
         <td class="table-cells" colspan="2">
-          {{localizeNumber Certificate.BusinessReferences.Order.Quantity Certificate.CertificateLanguages}} {{
-          Certificate.BusinessReferences.Order.QuantityUnit}}
+          {{localizeNumber Certificate.BusinessTransaction.Order.Quantity Certificate.CertificateLanguages}} {{
+          Certificate.BusinessTransaction.Order.QuantityUnit}}
         </td>
         <td class="table-headers" colspan="2">
           {{i18n "DeliveryQuantity" "Certificate" Certificate.CertificateLanguages}}
         </td>
         <td class="table-cells" colspan="4">
-          {{localizeNumber Certificate.BusinessReferences.Delivery.Quantity Certificate.CertificateLanguages}} {{
-          Certificate.BusinessReferences.Delivery.QuantityUnit}}
+          {{localizeNumber Certificate.BusinessTransaction.Delivery.Quantity Certificate.CertificateLanguages}} {{
+          Certificate.BusinessTransaction.Delivery.QuantityUnit}}
         </td>
       </tr>
       <tr class="table-row">
@@ -278,15 +278,15 @@
           {{i18n "OrderDate" "Certificate" Certificate.CertificateLanguages}}
         </td>
         <td class="table-cells" colspan="2">
-          {{#if Certificate.BusinessReferences.Order.Date}}
-          {{localizeDate Certificate.BusinessReferences.Order.Date Certificate.CertificateLanguages}}
+          {{#if Certificate.BusinessTransaction.Order.Date}}
+          {{localizeDate Certificate.BusinessTransaction.Order.Date Certificate.CertificateLanguages}}
           {{/if}}
         </td>
         <td class="table-headers" colspan="2">{{i18n "DeliveryDate" "Certificate" Certificate.CertificateLanguages}}
         </td>
         <td class="table-cells" colspan="4">
-          {{#if Certificate.BusinessReferences.Delivery.Date}}
-          {{localizeDate Certificate.BusinessReferences.Delivery.Date Certificate.CertificateLanguages}}
+          {{#if Certificate.BusinessTransaction.Delivery.Date}}
+          {{localizeDate Certificate.BusinessTransaction.Delivery.Date Certificate.CertificateLanguages}}
           {{/if}}
         </td>
       </tr>
@@ -296,13 +296,13 @@
           {{i18n "InternalOrderNumber" "Certificate" Certificate.CertificateLanguages}}
         </td>
         <td class="table-cells" colspan="2">
-          {{Certificate.BusinessReferences.Order.InternalOrderNumber}}
+          {{Certificate.BusinessTransaction.Order.InternalOrderNumber}}
         </td>
         <td class="table-headers" colspan="2">
           {{i18n "Transport" "Certificate" Certificate.CertificateLanguages}}
         </td>
         <td class="table-cells" colspan="4">
-          {{Certificate.BusinessReferences.Delivery.Transport}}
+          {{Certificate.BusinessTransaction.Delivery.Transport}}
         </td>
       </tr>
       <tr class="table-row">
@@ -310,13 +310,13 @@
           {{i18n "InternalOrderPosition" "Certificate" Certificate.CertificateLanguages}}
         </td>
         <td class="table-cells" colspan="2">
-          {{Certificate.BusinessReferences.Order.InternalOrderPosition}}
+          {{Certificate.BusinessTransaction.Order.InternalOrderPosition}}
         </td>
         <td class="table-headers" colspan="2">
           {{i18n "GoodsReceiptNumber" "Certificate" Certificate.CertificateLanguages}}
         </td>
         <td class="table-cells" colspan="4">
-          {{Certificate.BusinessReferences.Delivery.GoodsReceiptNumber}}
+          {{Certificate.BusinessTransaction.Delivery.GoodsReceiptNumber}}
         </td>
       </tr>
     </table>

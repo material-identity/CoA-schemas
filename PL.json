@@ -5,7 +5,7 @@
     "Name": "Analysezertifikat EN 10204",
     "Id": "numer certyfikatu",
     "Date": "data",
-    "BusinessReferences": "dane firmy",
+    "BusinessTransaction": "dane firmy",
     "Order": "zamówienie",
     "OrderNumber": "numer",
     "OrderQuantity": "ilość",

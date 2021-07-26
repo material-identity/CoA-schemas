@@ -28,7 +28,7 @@
         }
       }
     },
-    "BusinessReferences": {
+    "BusinessTransaction": {
       "Order": {
         "Number": "1",
         "Position": "1",

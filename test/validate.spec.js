@@ -50,22 +50,22 @@ describe('Validate', function () {
           schemaPath: '#/definitions/Identifier/required',
         },
         {
-          instancePath: '/Certificate/BusinessReferences/OrderConfirmation/Date',
+          instancePath: '/Certificate/BusinessTransaction/OrderConfirmation/Date',
           keyword: 'format',
           message: 'must match format "date"',
           params: {
             format: 'date',
           },
-          schemaPath: '#/definitions/BusinessReferences/properties/OrderConfirmation/properties/Date/format',
+          schemaPath: '#/definitions/BusinessTransaction/properties/OrderConfirmation/properties/Date/format',
         },
         {
-          instancePath: '/Certificate/BusinessReferences/Delivery/Number',
+          instancePath: '/Certificate/BusinessTransaction/Delivery/Number',
           keyword: 'type',
           message: 'must be string',
           params: {
             type: 'string',
           },
-          schemaPath: '#/definitions/BusinessReferences/properties/Delivery/properties/Number/type',
+          schemaPath: '#/definitions/BusinessTransaction/properties/Delivery/properties/Number/type',
         },
         {
           instancePath: '/Certificate/Analysis/Inspections/1',
