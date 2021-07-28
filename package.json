@@ -22,8 +22,8 @@
     "release": "read -p 'GITHUB_TOKEN: ' GITHUB_TOKEN && export GITHUB_TOKEN=$GITHUB_TOKEN && release-it"
   },
   "devDependencies": {
-    "@s1seven/schema-tools-generate-html": "^0.0.21",
-    "@s1seven/schema-tools-utils": "^0.0.18",
+    "@s1seven/schema-tools-generate-html": "^0.0.22",
+    "@s1seven/schema-tools-utils": "^0.0.19",
     "ajv": "^8.6.0",
     "ajv-formats": "^2.1.0",
     "eslint": "^7.30.0",
@@ -70,8 +70,5 @@
       "json",
       "node"
     ]
-  },
-  "dependencies": {
-    "html-compare": "^0.0.1"
   }
 }
