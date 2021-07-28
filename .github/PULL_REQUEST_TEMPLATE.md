@@ -21,3 +21,4 @@ Please delete options that are not relevant.
 - [ ] My changes generate no new warnings
 - [ ] I have added tests that prove my fix is effective or that my feature works
 - [ ] New and existing unit tests pass locally with my changes
+- [ ] ⚠️ I ensured that the changes to the schema will be compatible with [schema-tools library](https://github.com/s1seven/schema-tools)
