@@ -5,7 +5,7 @@
     "Name": "Certificat de reception selon EN 10204",
     "Id": "No certificate",
     "Date": "Date",
-    "BusinessReferences": "Geschäftsdaten",
+    "BusinessTransaction": "Geschäftsdaten",
     "Order": "Ordre",
     "OrderNumber": "Numero",
     "OrderQuantity": "Quantité",

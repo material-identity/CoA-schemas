@@ -197,8 +197,8 @@
       "required": ["Manufacturer", "Customer"],
       "additionalProperties": false
     },
-    "BusinessReferences": {
-      "title": "BusinessReferences",
+    "BusinessTransaction": {
+      "title": "BusinessTransaction",
       "description": "All information about the underlying commercial transaction such as the order and the delivery.",
       "type": "object",
       "properties": {
@@ -499,9 +499,9 @@
           "description": "The companies involved in the transaction",
           "$ref": "#/definitions/Parties"
         },
-        "BusinessReferences": {
+        "BusinessTransaction": {
           "description": "References to order and delivery",
-          "$ref": "#/definitions/BusinessReferences"
+          "$ref": "#/definitions/BusinessTransaction"
         },
         "Product": {
           "description": "The product description",
@@ -550,7 +550,7 @@
         "Id",
         "Date",
         "Parties",
-        "BusinessReferences",
+        "BusinessTransaction",
         "Product",
         "Analysis",
         "DeclarationOfConformity"

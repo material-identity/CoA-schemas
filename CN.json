@@ -5,7 +5,7 @@
     "Name": "分析证书 EN 10204",
     "Id": "产品编号",
     "Date": "客户产品编号",
-    "BusinessReferences": "原产国",
+    "BusinessTransaction": "原产国",
     "Order": "原产地",
     "OrderNumber": "批号",
     "OrderQuantity": "生产日期",

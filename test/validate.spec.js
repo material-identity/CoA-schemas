@@ -50,22 +50,22 @@ describe('Validate', function () {
           schemaPath: '#/definitions/Identifier/required',
         },
         {
-          instancePath: '/Certificate/BusinessReferences/OrderConfirmation/Date',
+          instancePath: '/Certificate/BusinessTransaction/OrderConfirmation/Date',
           keyword: 'format',
           message: 'must match format "date"',
           params: {
             format: 'date',
           },
-          schemaPath: '#/definitions/BusinessReferences/properties/OrderConfirmation/properties/Date/format',
+          schemaPath: '#/definitions/BusinessTransaction/properties/OrderConfirmation/properties/Date/format',
         },
         {
-          instancePath: '/Certificate/BusinessReferences/Delivery/Number',
+          instancePath: '/Certificate/BusinessTransaction/Delivery/Number',
           keyword: 'type',
           message: 'must be string',
           params: {
             type: 'string',
           },
-          schemaPath: '#/definitions/BusinessReferences/properties/Delivery/properties/Number/type',
+          schemaPath: '#/definitions/BusinessTransaction/properties/Delivery/properties/Number/type',
         },
         {
           instancePath: '/Certificate/Analysis/Inspections/1',
@@ -79,6 +79,57 @@ describe('Validate', function () {
       ],
     },
   ];
+
+  const languages = ['CN', 'DE', 'EN', 'FR', 'PL'];
+  const translationProperties = {
+    Certificate: [
+      'Customer',
+      'ConsigneeOfGoods',
+      'Name',
+      'Id',
+      'Date',
+      'BusinessTransaction',
+      'Order',
+      'OrderNumber',
+      'OrderQuantity',
+      'OrderPosition',
+      'OrderDate',
+      'InternalOrderNumber',
+      'InternalOrderPosition',
+      'Delivery',
+      'DeliveryNumber',
+      'DeliveryPosition',
+      'DeliveryQuantity',
+      'DeliveryDate',
+      'Transport',
+      'GoodsReceiptNumber',
+      'Product',
+      'ProductName',
+      'ProductNumber',
+      'CustomerProductNumber',
+      'CountryOfOrigin',
+      'PlaceOfOrigin',
+      'ChargeNumber',
+      'ProduktionDate',
+      'Standards',
+      'AdditionalInformation',
+      'Inspections',
+      'Property',
+      'Symbol',
+      'Method',
+      'Value',
+      'Minimum',
+      'Maximum',
+      'Unit',
+      'SupplementaryInstructions',
+      'TestConditions',
+      'Temperature',
+      'Weight',
+      'DeclarationOfConformity',
+      'Contacts',
+      'Attachments',
+    ],
+  };
 
   it('should validate schema', () => {
     const validateSchema = createAjvInstance().compile(localSchema);
@@ -106,6 +157,16 @@ describe('Validate', function () {
       const isValid = await validator(certificate);
       expect(isValid).toBe(false);
       expect(validator.errors).toEqual(expectedErrors);
+    });
+  });
+
+  languages.forEach((language) => {
+    it(`${language} translations should contain all required properties`, () => {
+      const translationsPath = resolve(__dirname, `../${language}.json`);
+      const translations = JSON.parse(readFileSync(translationsPath, 'utf8'));
+      const certificateProperties = Object.keys(translations.Certificate);
+      //
+      expect(certificateProperties).toEqual(translationProperties.Certificate);
     });
   });
 });

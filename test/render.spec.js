@@ -5,6 +5,11 @@ const { HtmlDiffer } = require('html-differ');
 const { resolve } = require('path');
 
 describe('Render', function () {
+  const translations = ['CN', 'DE', 'EN', 'FR', 'PL'].reduce((acc, ln) => {
+    acc[ln] = JSON.parse(readFileSync(resolve(__dirname, `../${ln}.json`), 'utf-8'));
+    return acc;
+  }, {});
+
   const testSuitesMap = [
     {
       certificateName: `valid_certificate_1`,
@@ -16,11 +21,6 @@ describe('Render', function () {
       const templatePath = resolve(__dirname, '../template.hbs');
       const certificatePath = resolve(__dirname, `./fixtures/${certificateName}.json`);
       const expectedHTML = readFileSync(resolve(__dirname, `./fixtures/${certificateName}.html`), 'utf-8');
-      //
-      const html = await generateHtml(certificatePath, {
-        templatePath,
-        templateType: 'hbs',
-      });
       const htmlDiffer = new HtmlDiffer({
         ignoreAttributes: [],
         ignoreWhitespaces: true,
@@ -28,8 +28,14 @@ describe('Render', function () {
         ignoreEndTags: false,
         ignoreDuplicateAttributes: false,
       });
-      const isEqual = htmlDiffer.isEqual(expectedHTML, html);
-      expect(isEqual).toBe(false);
+      //
+      const html = await generateHtml(certificatePath, {
+        templatePath,
+        templateType: 'hbs',
+        translations,
+      });
+      const isEqualDiffer = htmlDiffer.isEqual(expectedHTML, html);
+      expect(isEqualDiffer).toBe(true);
     });
   });
 });
