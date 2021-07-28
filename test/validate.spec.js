@@ -80,6 +80,57 @@ describe('Validate', function () {
     },
   ];
 
+  const languages = ['CN', 'DE', 'EN', 'FR', 'PL'];
+  const translationProperties = {
+    Certificate: [
+      'Customer',
+      'ConsigneeOfGoods',
+      'Name',
+      'Id',
+      'Date',
+      'BusinessTransaction',
+      'Order',
+      'OrderNumber',
+      'OrderQuantity',
+      'OrderPosition',
+      'OrderDate',
+      'InternalOrderNumber',
+      'InternalOrderPosition',
+      'Delivery',
+      'DeliveryNumber',
+      'DeliveryPosition',
+      'DeliveryQuantity',
+      'DeliveryDate',
+      'Transport',
+      'GoodsReceiptNumber',
+      'Product',
+      'ProductName',
+      'ProductNumber',
+      'CustomerProductNumber',
+      'CountryOfOrigin',
+      'PlaceOfOrigin',
+      'ChargeNumber',
+      'ProduktionDate',
+      'Standards',
+      'AdditionalInformation',
+      'Inspections',
+      'Property',
+      'Symbol',
+      'Method',
+      'Value',
+      'Minimum',
+      'Maximum',
+      'Unit',
+      'SupplementaryInstructions',
+      'TestConditions',
+      'Temperature',
+      'Weight',
+      'DeclarationOfConformity',
+      'Contacts',
+      'Attachments',
+    ],
+  };
+
   it('should validate schema', () => {
     const validateSchema = createAjvInstance().compile(localSchema);
     expect(() => validateSchema()).not.toThrow();
@@ -106,6 +157,16 @@ describe('Validate', function () {
       const isValid = await validator(certificate);
       expect(isValid).toBe(false);
       expect(validator.errors).toEqual(expectedErrors);
+    });
+  });
+
+  languages.forEach((language) => {
+    it(`${language} translations should contain all required properties`, () => {
+      const translationsPath = resolve(__dirname, `../${language}.json`);
+      const translations = JSON.parse(readFileSync(translationsPath, 'utf8'));
+      const certificateProperties = Object.keys(translations.Certificate);
+      //
+      expect(certificateProperties).toEqual(translationProperties.Certificate);
     });
   });
 });
