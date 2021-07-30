@@ -110,7 +110,7 @@ describe('Validate', function () {
       'CountryOfOrigin',
       'PlaceOfOrigin',
       'ChargeNumber',
-      'ProduktionDate',
+      'ProductionDate',
       'Standards',
       'AdditionalInformation',
       'Inspections',
