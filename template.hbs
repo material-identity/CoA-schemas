@@ -522,14 +522,47 @@
     </h2>
     <table class="main-table">
       <tr class="table-rows">
-        <td class="table-cells" colspan="10">
-          {{#each Certificate.Contacts}}
-          {{#each this}}
-          {{#if @last}} {{this}} {{else}} {{this}},&nbsp;{{/if}}
-          {{/each}}
-          {{/each}}<br>
+        <th class="table-headers">
+          {{i18n "ContactName" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <th class="table-headers">
+          {{i18n "ContactRole" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <th class="table-headers">
+          {{i18n "ContactDepartment" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <th class="table-headers">
+          {{i18n "ContactEmail" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <th class="table-headers">
+          {{i18n "ContactPhone" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <th class="table-headers">
+          {{i18n "ContactFax" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+      </tr>
+      {{#each Certificate.Contacts}}
+      <tr class="table-rows">
+        <td class="table-cells">
+          {{this.Name}}
+        </td>
+        <td class="table-cells">
+          {{this.Role}}
+        </td>
+        <td class="table-cells">
+          {{this.Department}}
+        </td>
+        <td class="table-cells">
+          {{this.Email}}
+        </td>
+        <td class="table-cells">
+          {{this.Phone}}
+        </td>
+        <td class="table-cells">
+          {{this.Fax}}
         </td>
       </tr>
+      {{/each}}
     </table>
   </section>
   {{/if}}
