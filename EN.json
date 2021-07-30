@@ -27,7 +27,7 @@
     "CountryOfOrigin": "Country of origin",
     "PlaceOfOrigin": "Place of origin",
     "ChargeNumber": "Charge number",
-    "ProduktionDate": "Production date",
+    "ProductionDate": "Production date",
     "Standards": "Standards",
     "AdditionalInformation": "Additional Information",
     "Inspections": "Inspections",
@@ -44,6 +44,12 @@
     "Weight": "Weight",
     "DeclarationOfConformity": "Declaration",
     "Contacts": "Contacts",
+    "ContactName": "Name",
+    "ContactRole": "Role",
+    "ContactDepartment": "Department",
+    "ContactEmail": "Email",
+    "ContactPhone": "Phone",
+    "ContactFax": "Fax",
     "Attachments": "Attachments"
   }
 }

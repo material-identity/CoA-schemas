@@ -27,7 +27,7 @@
     "CountryOfOrigin": "Herkunftsland",
     "PlaceOfOrigin": "Herkunftsort",
     "ChargeNumber": "Chargennummer",
-    "ProduktionDate": "Herstellungsdatum",
+    "ProductionDate": "Herstellungsdatum",
     "Standards": "Normen",
     "AdditionalInformation": "Zusätzliche Informationen",
     "Inspections": "Prüfungen",
@@ -44,6 +44,12 @@
     "Weight": "Gewicht",
     "DeclarationOfConformity": "Erklärung",
     "Contacts": "Ansprechpartner",
+    "ContactName": "Name",
+    "ContactRole": "Rolle",
+    "ContactDepartment": "Abteilung",
+    "ContactEmail": "Email",
+    "ContactPhone": "Telefon",
+    "ContactFax": "Fax",
     "Attachments": "Anlagen"
   }
 }

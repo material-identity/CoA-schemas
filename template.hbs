@@ -327,16 +327,6 @@
       {{i18n "Product" "Certificate" Certificate.CertificateLanguages}}
     </h2>
     <table class="main-table">
-      {{#if Certificate.Name}}
-      <tr>
-        <th class="table-headers" colspan="4">
-          {{i18n "ProductName" "Certificate" Certificate.CertificateLanguages}}
-        </th>
-        <td class="table-cells" colspan="6">
-          {{Certificate.Product.Name}}
-        </td>
-      </tr>
-      {{/if}}
       {{#if Certificate.Product.Name}}
       <tr>
         <th class="table-headers" colspan="4">
@@ -357,13 +347,13 @@
         </td>
       </tr>
       {{/if}}
-      {{#if Certificate.Product.CustomerProdcutNumber}}
+      {{#if Certificate.Product.CustomerProductNumber}}
       <tr>
         <th class="table-headers" colspan="4">
-          {{i18n "CustomerProdcutNumber" "Certificate" Certificate.CertificateLanguages}}
+          {{i18n "CustomerProductNumber" "Certificate" Certificate.CertificateLanguages}}
         </th>
         <td class="table-cells" colspan="6">
-          {{Certificate.Product.CustomerProdcutNumber}}
+          {{Certificate.Product.CustomerProductNumber}}
         </td>
       </tr>
       {{/if}}
@@ -532,14 +522,47 @@
     </h2>
     <table class="main-table">
       <tr class="table-rows">
-        <td class="table-cells" colspan="10">
-          {{#each Certificate.Contacts}}
-          {{#each this}}
-          {{#if @last}} {{this}} {{else}} {{this}},&nbsp;{{/if}}
-          {{/each}}
-          {{/each}}<br>
+        <th class="table-headers">
+          {{i18n "ContactName" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <th class="table-headers">
+          {{i18n "ContactRole" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <th class="table-headers">
+          {{i18n "ContactDepartment" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <th class="table-headers">
+          {{i18n "ContactEmail" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <th class="table-headers">
+          {{i18n "ContactPhone" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+        <th class="table-headers">
+          {{i18n "ContactFax" "Certificate" Certificate.CertificateLanguages}}
+        </th>
+      </tr>
+      {{#each Certificate.Contacts}}
+      <tr class="table-rows">
+        <td class="table-cells">
+          {{this.Name}}
+        </td>
+        <td class="table-cells">
+          {{this.Role}}
+        </td>
+        <td class="table-cells">
+          {{this.Department}}
+        </td>
+        <td class="table-cells">
+          {{this.Email}}
+        </td>
+        <td class="table-cells">
+          {{this.Phone}}
+        </td>
+        <td class="table-cells">
+          {{this.Fax}}
         </td>
       </tr>
+      {{/each}}
     </table>
   </section>
   {{/if}}
