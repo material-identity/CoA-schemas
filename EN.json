@@ -44,6 +44,12 @@
     "Weight": "Weight",
     "DeclarationOfConformity": "Declaration",
     "Contacts": "Contacts",
+    "ContactName": "Name",
+    "ContactRole": "Role",
+    "ContactDepartment": "Department",
+    "ContactEmail": "Email",
+    "ContactPhone": "Phone",
+    "ContactFax": "Fax",
     "Attachments": "Attachments"
   }
 }

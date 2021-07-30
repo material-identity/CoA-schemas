@@ -127,6 +127,12 @@ describe('Validate', function () {
       'Weight',
       'DeclarationOfConformity',
       'Contacts',
+      'ContactName',
+      'ContactRole',
+      'ContactDepartment',
+      'ContactEmail',
+      'ContactPhone',
+      'ContactFax',
       'Attachments',
     ],
   };

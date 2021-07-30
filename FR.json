@@ -43,6 +43,13 @@
     "Temperature": "Température",
     "Weight": "Poids",
     "DeclarationOfConformity": "Déclaration",
+    "Contacts": "Contacts",
+    "ContactName": "Nom",
+    "ContactRole": "Role",
+    "ContactDepartment": "Départment",
+    "ContactEmail": "Email",
+    "ContactPhone": "Téléphone",
+    "ContactFax": "Fax",
     "Attachments": "Pièces jointes"
   }
 }

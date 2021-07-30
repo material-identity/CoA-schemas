@@ -44,6 +44,12 @@
     "Weight": "客户产品编号5",
     "DeclarationOfConformity": "客户产品编号6",
     "Contacts": "客户产品编号7",
+    "ContactName": "命名",
+    "ContactRole": "角色",
+    "ContactDepartment": "部门",
+    "ContactEmail": "电子邮件",
+    "ContactPhone": "电话",
+    "ContactFax": "传真",
     "Attachments": "客户产品编号8"
   }
 }

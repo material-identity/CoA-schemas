@@ -43,7 +43,13 @@
     "Temperature": "data4",
     "Weight": "data5",
     "DeclarationOfConformity": "data6",
-    "Contacts": "data7",
+    "Contacts": "Kontakty",
+    "ContactName": "Nazwa",
+    "ContactRole": "Rola",
+    "ContactDepartment": "Dział",
+    "ContactEmail": "Email",
+    "ContactPhone": "Telefon",
+    "ContactFax": "Faks",
     "Attachments": "data8"
   }
 }
