@@ -1,11 +1,15 @@
 /* eslint-disable no-undef */
 const { generateHtml } = require('@s1seven/schema-tools-generate-html');
+const { generatePdf } = require('@s1seven/schema-tools-generate-pdf');
 const { readFileSync } = require('fs');
-const { HtmlDiffer } = require('html-differ');
+const { HtmlDiffer } = require('@markedjs/html-differ');
+const logger = require('@markedjs/html-differ/lib/logger');
 const { resolve } = require('path');
+const { fromBuffer } = require('pdf2pic');
+const { languages } = require('./constants');
 
 describe('Render', function () {
-  const translations = ['CN', 'DE', 'EN', 'FR', 'PL'].reduce((acc, ln) => {
+  const translations = languages.reduce((acc, ln) => {
     acc[ln] = JSON.parse(readFileSync(resolve(__dirname, `../${ln}.json`), 'utf-8'));
     return acc;
   }, {});
@@ -22,7 +26,7 @@ describe('Render', function () {
       const certificatePath = resolve(__dirname, `./fixtures/${certificateName}.json`);
       const expectedHTML = readFileSync(resolve(__dirname, `./fixtures/${certificateName}.html`), 'utf-8');
       const htmlDiffer = new HtmlDiffer({
-        ignoreAttributes: [],
+        ignoreAttributes: ['src'],
         ignoreWhitespaces: true,
         ignoreComments: true,
         ignoreEndTags: false,
@@ -34,8 +38,51 @@ describe('Render', function () {
         templateType: 'hbs',
         translations,
       });
-      const isEqualDiffer = htmlDiffer.isEqual(expectedHTML, html);
-      expect(isEqualDiffer).toBe(true);
+      const isEqual = await htmlDiffer.isEqual(expectedHTML, html);
+      if (!isEqual) {
+        const diff = await htmlDiffer.diffHtml(expectedHTML, html);
+        logger.logDiffText(diff, { charsAroundDiff: 40 });
+      }
+      expect(isEqual).toBe(true);
     });
+
+    it(`${certificateName} should be rendered as a valid PDF`, async () => {
+      const generatorPath = resolve(__dirname, '../generate-pdf.min.js');
+      const certificatePath = resolve(__dirname, `./fixtures/${certificateName}.json`);
+      const certificate = JSON.parse(readFileSync(certificatePath, 'utf8'));
+      const styles = JSON.parse(readFileSync(resolve(__dirname, '../generate-pdf.styles.json'), 'utf8'));
+      const docDefinition = {
+        pageSize: 'A4',
+        pageMargins: [20, 20, 20, 40],
+        footer: (currentPage, pageCount) => ({
+          text: currentPage.toString() + ' / ' + pageCount,
+          style: 'footer',
+          alignment: 'center',
+        }),
+        defaultStyle: {
+          font: 'Lato',
+          fontSize: 10,
+        },
+        styles,
+      };
+      const options = {
+        density: 100,
+        width: 600,
+        height: 600,
+      };
+      const expectedPDFBuffer = readFileSync(resolve(__dirname, `./fixtures/${certificateName}.pdf`));
+      const expectedPDF = await fromBuffer(expectedPDFBuffer, options)(1, true);
+      //
+      const buffer = await generatePdf(certificate, {
+        docDefinition,
+        inputType: 'json',
+        outputType: 'buffer',
+        generatorPath,
+        translations,
+      });
+      const result = await fromBuffer(buffer, options)(1, true);
+      expect(buffer instanceof Buffer).toEqual(true);
+      expect(result.base64).toEqual(expectedPDF.base64);
+    }, 8000);
   });
 });
