@@ -4,6 +4,7 @@ const Ajv = require('ajv');
 const addFormats = require('ajv-formats');
 const { readFileSync } = require('fs');
 const { resolve } = require('path');
+const { languages, translationProperties } = require('./constants');
 
 const createAjvInstance = () => {
   const ajv = new Ajv({
@@ -79,63 +80,6 @@ describe('Validate', function () {
       ],
     },
   ];
-
-  const languages = ['CN', 'DE', 'EN', 'FR', 'PL'];
-  const translationProperties = {
-    Certificate: [
-      'Customer',
-      'ConsigneeOfGoods',
-      'Name',
-      'Id',
-      'Date',
-      'BusinessTransaction',
-      'Order',
-      'OrderNumber',
-      'OrderQuantity',
-      'OrderPosition',
-      'OrderDate',
-      'InternalOrderNumber',
-      'InternalOrderPosition',
-      'Delivery',
-      'DeliveryNumber',
-      'DeliveryPosition',
-      'DeliveryQuantity',
-      'DeliveryDate',
-      'Transport',
-      'GoodsReceiptNumber',
-      'Product',
-      'ProductName',
-      'ProductNumber',
-      'CustomerProductNumber',
-      'CountryOfOrigin',
-      'PlaceOfOrigin',
-      'ChargeNumber',
-      'ProductionDate',
-      'Standards',
-      'AdditionalInformation',
-      'Inspections',
-      'Property',
-      'Symbol',
-      'Method',
-      'Value',
-      'Minimum',
-      'Maximum',
-      'Unit',
-      'SupplementaryInstructions',
-      'TestConditions',
-      'Temperature',
-      'Weight',
-      'DeclarationOfConformity',
-      'Contacts',
-      'ContactName',
-      'ContactRole',
-      'ContactDepartment',
-      'ContactEmail',
-      'ContactPhone',
-      'ContactFax',
-      'Attachments',
-    ],
-  };
 
   it('should validate schema', () => {
     const validateSchema = createAjvInstance().compile(localSchema);

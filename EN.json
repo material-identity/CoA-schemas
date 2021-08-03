@@ -5,7 +5,7 @@
     "Name": "Certificate of analysis EN 10204",
     "Id": "Certificate number",
     "Date": "Date",
-    "BusinessTransaction": "Business references",
+    "BusinessTransaction": "Business transaction",
     "Order": "Order",
     "OrderNumber": "Number",
     "OrderQuantity": "Quantity",
