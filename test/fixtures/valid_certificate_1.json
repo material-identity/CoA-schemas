@@ -1,5 +1,5 @@
 {
-  "RefSchemaUrl": "https://schemas.en10204.io/coa-schemas/v0.0.2/schema.json",
+  "RefSchemaUrl": "https://schemas.en10204.io/coa-schemas/v0.0.4/schema.json",
   "Certificate": {
     "CertificateLanguages": ["EN", "DE"],
     "Id": "43",
