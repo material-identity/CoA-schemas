@@ -278,6 +278,10 @@
             "InternalOrderPosition": {
               "description": "The position on the internal order issued at the manufacturer.",
               "type": "string"
+            },
+            "PortOfDischarge": {
+              "description": "",
+              "type": "string"           
             }
           },
           "required": [
@@ -339,6 +343,10 @@
               }
             },
             "GoodsReceiptNumber": {
+              "description": "The number for the goods receipt issued by the Customer or ConsigneeOfGoods",
+              "type": "string"
+            },
+            "PortOfLoading": {
               "description": "The number for the goods receipt issued by the Customer or ConsigneeOfGoods",
               "type": "string"
             }
