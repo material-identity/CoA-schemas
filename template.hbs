@@ -319,6 +319,20 @@
           {{Certificate.BusinessTransaction.Delivery.GoodsReceiptNumber}}
         </td>
       </tr>
+       <tr class="table-row">
+        <td class="table-headers" colspan="2">
+          {{i18n "PortOfDischarge" "Certificate" Certificate.CertificateLanguages}}
+        </td>
+        <td class="table-cells" colspan="2">
+          {{Certificate.BusinessTransaction.Order.PortOfDischarge}}
+        </td>
+        <td class="table-headers" colspan="2">
+          {{i18n "PortOfLoading" "Certificate" Certificate.CertificateLanguages}}
+        </td>
+        <td class="table-cells" colspan="4">
+          {{Certificate.BusinessTransaction.Delivery.PortOfLoading}}
+        </td>
+      </tr>
     </table>
   </section>
   {{! PRODUCT }}
@@ -422,6 +436,25 @@
 
   {{! INSPECTIONS }}
   <section class="header">
+    {{#if Certificate.Analysis.ChemicalAnalysis}}
+    <h2 class="main-title">
+      {{i18n "ChemicalAnalysis" "Certificate" Certificate.CertificateLanguages}}
+    </h2>
+    <table class="main-table">
+      <tr class="table-rows">
+        {{#each Certificate.Analysis.ChemicalAnalysis}}
+        <th class="table-headers">{{this.Symbol}}</th>
+        {{/each}}
+      </tr>
+      <tr>
+        {{#each Certificate.Analysis.ChemicalAnalysis}}
+        <td class="table-cells">
+          {{localizeNumber this.Actual Certificate.CertificateLanguages}}
+        </td>
+        {{/each}}
+      </tr>
+    </table>
+    {{/if}}
     <h2 class="main-title">
       {{i18n "Inspections" "Certificate" Certificate.CertificateLanguages}}
     </h2>

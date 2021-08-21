@@ -478,6 +478,40 @@
       ],
       "additionalProperties": false
     },
+    "ChemicalElement": {
+      "title": "ChemicalElement",
+      "type": "object",
+      "description": "The chemical elements of the product.",
+      "properties": {
+        "Symbol": {
+          "description": "The symbol of the element",
+          "type": "string"
+        },
+        "Actual": {
+          "description": "The measured part of the element in percentage.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Minimum": {
+          "description": "The minimum if defined by the product specification, otherwise the element must not provided.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "Maximum": {
+          "description": "The maximum as defined by the product specification.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "Symbol",
+        "Actual"
+      ],
+      "additionalProperties": false
+    },
     "DeclarationOfConformity": {
       "title": "DeclarationOfConformity",
       "type": "object",
@@ -590,6 +624,14 @@
               "type": "array",
               "items": {
                 "type": "string"
+              }
+            },
+            "ChemicalAnalysis": {
+              "description": "",
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/definitions/ChemicalElement"
               }
             }
           }

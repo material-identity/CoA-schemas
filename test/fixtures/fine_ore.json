@@ -1,0 +1,102 @@
+{
+  "RefSchemaUrl": "https://schemas.en10204.io/coa-schemas/v0.0.3/schema.json",
+  "Certificate": {
+    "CertificateLanguages": ["EN"],
+    "Id": "",
+    "Date": "2021-03-21",
+    "Type": "3.1",
+    "Parties": {
+      "Manufacturer": {
+        "Name": "Some Mining Company",
+        "Street": "Some Street",
+        "ZipCode": "2000011",
+        "City": "Shanghai",
+        "Country": "CN",
+        "Email": "s1seven.certificates@gmail.com",
+        "Identifier": {
+          "VAT": "CN814000384"
+        }
+      },
+      "Customer": {
+        "Name": "Some Buyer",
+        "Street": "Buying anywhere",
+        "ZipCode": "100-0011",
+        "City": "Tokio",
+        "Country": "JP",
+        "Email": "s1seven.certificates@gmail.com",
+        "Identifier": {
+          "VAT": "JPU35695903"
+        }
+      }
+    },
+    "BusinessTransaction": {
+      "Order": {
+        "Number": "4500785432",
+        "PortOfDischarge": "MAIN PORT{S), JAPAN"
+      },
+      "Delivery": {
+        "Number": "216917900",
+        "Position": "1",
+        "Transport": ["CSK ZEPH"],
+        "PortOfLoading": "TIANJIN, CHINA"
+      }
+    },
+    "Product": {
+      "Name": "Fine Ore",
+      "CountryOfOrigin": "CN",
+      "ChargeNumber": "2169179_20"
+    },
+    "Analysis": {
+      "ChemicalAnalysis": [
+        {
+          "Symbol": "Al2O3",
+          "Actual": 1.79
+        },
+        {
+          "Symbol": "Cu",
+          "Actual": 0.002
+        },
+        {
+          "Symbol": "Fe",
+          "Actual": 57.14
+        },
+        {
+          "Symbol": "LOI",
+          "Actual": 9.92
+        },
+        {
+          "Symbol": "Oth Metals",
+          "Actual": 0.086
+        },
+        {
+          "Symbol": "P",
+          "Actual": 0.042
+        },
+        {
+          "Symbol": "S",
+          "Actual": 0.007
+        },
+        {
+          "Symbol": "SIO2",
+          "Actual": 6.18
+        }
+      ],
+      "Inspections": [
+        {
+          "Property": "Moisture",
+          "Method": "",
+          "Unit": "%",
+          "Value": 8.83,
+          "Temperature": 105.0
+        }
+      ],
+      "AdditionalInformation": [
+        "Representative samples of the Iron Ore loaded on the above vessel have been taken at the above mentioned Port of Loading and tested with the above results."
+      ]
+    },
+    "DeclarationOfConformity": {
+      "Declaration": "We hereby certify that the above results have been determined using methods comparable with the applicable standards of the Industrial Standards Organisation as amended."
+    },
+    "Logo": "data:image/png;base64,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"
+  }
+}
