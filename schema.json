@@ -6,7 +6,7 @@
     "of the License at https://www.gnu.org/licenses/agpl-3.0.en.html"
   ],
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://schemas.en10204.io/coa-schemas/v0.0.4/schema.json",
+  "$id": "https://schemas.s1seven.com/coa-schemas/v0.0.4/schema.json",
   "definitions": {
     "Identifier": {
       "title": "Identifier",
