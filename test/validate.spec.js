@@ -4,7 +4,7 @@ const Ajv = require('ajv');
 const addFormats = require('ajv-formats');
 const { readFileSync } = require('fs');
 const { resolve } = require('path');
-const { languages, translationProperties } = require('./constants');
+const { languages, translationProperties } = require('../utils/constants');
 
 const createAjvInstance = () => {
   const ajv = new Ajv({

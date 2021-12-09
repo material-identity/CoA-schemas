@@ -1,5 +1,5 @@
 {
-  "RefSchemaUrl": "https://schemas.en10204.io/coa-schemas/v0.0.2/schema.json",
+  "RefSchemaUrl": "https://schemas.s1seven.com/coa-schemas/v0.0.4/schema.json",
   "Certificate": {
     "Id": "certificate_id",
     "Date": "2021-12-01",
@@ -33,7 +33,7 @@
         "Number": "1",
         "Position": "1",
         "Date": "2021-12-01",
-        "Quantity": 100.0,
+        "Quantity": 100,
         "QuantityUnit": "kg"
       },
       "OrderConfirmation": {
@@ -43,7 +43,7 @@
       "Delivery": {
         "Number": 3,
         "Date": "2021-12-01",
-        "Quantity": 90.0,
+        "Quantity": 90,
         "QuantityUnit": "kg",
         "Transport": ["W345678"]
       }
@@ -65,18 +65,18 @@
           "Symbol": "",
           "Method": "DIN EN ISO 1133",
           "Unit": "g/10m_",
-          "Value": 31.0,
-          "Minimum": 15.0,
-          "Maximum": 35.0,
+          "Value": 31,
+          "Minimum": 15,
+          "Maximum": 35,
           "SupplementaryInstructions": "",
           "TestConditions": ""
         },
         {
           "Method": "DIN EN ISO 1183-1A",
           "Unit": "g/cm3",
-          "Value": 85.0,
-          "Minimum": 85.0,
-          "Maximum": 89.0
+          "Value": 85,
+          "Minimum": 85,
+          "Maximum": 89
         }
       ]
     },
