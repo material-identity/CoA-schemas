@@ -8,6 +8,7 @@
       "Norm": "EN 10204:2004",
       "Type": "3.1"
     },
+    "PropertiesStandard": "CAMPUS",
     "Parties": {
       "Manufacturer": {
         "Name": "Green Plastics AG",
@@ -86,8 +87,10 @@
       "AdditionalInformation": ["Information 1", "Information 2"]
     },
     "Analysis": {
+      "LotId": "123456789 10",
       "Inspections": [
         {
+          "PropertyId": "1038",
           "Property": "MFR",
           "SubProperty": "",
           "Symbol": "",
@@ -100,6 +103,7 @@
           "TestConditions": "According customer specification."
         },
         {
+          "PropertyId": "1039",
           "Property": "Density",
           "Method": "DIN EN ISO 1183-1A",
           "Unit": "g/cm3",

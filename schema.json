@@ -396,9 +396,13 @@
     },
     "Inspection": {
       "title": "Inspection",
-      "description": "A structure to specify any kind of measurements as defined by https://www.campusplastics.com/campushome/coc",
+      "description": "A structure to specify any kind of measurements as specified by https://www.campusplastics.com/campushome/coc",
       "type": "object",
       "properties": {
+        "PropertyId": {
+          "description": "The identifier of the property as defined by the definition provided in 'PropertiesStandard'.",
+          "type": "string"
+        },
         "Property": {
           "description": "The property measured.",
           "type": "string",
@@ -407,10 +411,6 @@
         "SubProperty": {
           "description": "A subset of the property measured.",
           "type": "string"
-        },
-        "CAMPUSPropertyId": {
-          "description": "https://www.campusplastics.com defines numeric codes for properties used industry-wide",
-          "type": "integer"
         },
         "Symbol": {
           "description": "The symbol describing the property.",
@@ -556,6 +556,8 @@
         },
         "PropertiesStandard": {
           "description": "The inspection properties of the certificate according to a standard. Not rendered on the certificate.",
+          "type": "string",
+          "enum": ["CAMPUS"]
         },
         "Contacts": {
           "description": "Contact persons",
