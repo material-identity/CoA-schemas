@@ -34,7 +34,7 @@
       "description": "For a JSON document one or two translations used in the rendering of HTML and PDF documents can be specificed.",
       "type": "array",
       "items": {
-        "enum": ["EN", "DE", "FR", "ES", "PL", "CN"]
+        "enum": ["EN", "DE", "FR", "ES", "PL", "CN", "TR", "IT"]
       },
       "minItems": 1,
       "maxItems": 2,

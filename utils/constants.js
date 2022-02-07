@@ -1,7 +1,7 @@
 const { readFileSync } = require('fs');
 const { resolve } = require('path');
 
-const languages = ['CN', 'DE', 'EN', 'FR', 'PL'];
+const languages = ['CN', 'DE', 'EN', 'FR', 'PL', 'IT', 'TR', 'ES'];
 
 const translations = languages.reduce((acc, ln) => {
   acc[ln] = JSON.parse(readFileSync(resolve(`${ln}.json`), 'utf-8'));
