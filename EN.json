@@ -3,6 +3,7 @@
     "Customer": "Customer",
     "Receiver": "Receiver of goods",
     "Id": "Certificate number",
+    "Certificate": "Certificate",
     "Date": "Date",
     "BusinessTransaction": "Business transaction",
     "Order": "Order",

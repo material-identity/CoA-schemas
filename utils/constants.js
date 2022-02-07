@@ -14,6 +14,7 @@ const translationProperties = {
     'ConsigneeOfGoods',
     'Name',
     'Id',
+    'Certificate',
     'Date',
     'BusinessTransaction',
     'Order',

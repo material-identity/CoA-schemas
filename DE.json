@@ -3,6 +3,7 @@
     "Customer": "Kunde",
     "Receiver": "Warenempfänger",
     "Id": "Zertifikatsnummer",
+    "Certificate": "Zertifikat",
     "Date": "Datum",
     "BusinessTransaction": "Geschäftsdaten",
     "Order": "Bestellung",

@@ -3,6 +3,7 @@
     "Customer": "Müşteriler", 
     "Receiver": "Alıcılar", 
     "Id": "Id", 
+    "Certificate": "Sertifika",
     "Date": "Tarih",
     "BusinessTransaction": "Ticari işlem",
     "Order": "Emirler",

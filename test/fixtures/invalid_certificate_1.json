@@ -3,6 +3,10 @@
   "Certificate": {
     "Id": "certificate_id",
     "Date": "2021-12-01",
+    "Standard": {
+      "Norm": "EN 10204:2004",
+      "Type": "3.1"
+    },
     "CertificateLanguages": ["DE"],
     "Parties": {
       "Manufacturer": {

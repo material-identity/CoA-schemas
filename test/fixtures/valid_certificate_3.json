@@ -4,9 +4,8 @@
     "CertificateLanguages": ["EN", "DE"],
     "Id": "43",
     "Date": "2021-12-12",
-    "Type": {
-      "Description": "Inspection Certificate 3.1 according to EN 10204",
-      "Standard": "EN 10204:2004",
+    "Standard": {
+      "Norm": "EN 10204:2004",
       "Type": "3.1"
     },
     "PropertiesStandard": "CAMPUS",

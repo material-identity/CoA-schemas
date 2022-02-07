@@ -3,6 +3,7 @@
     "Customer": "Cliente",
     "Receiver": "Destinatario",
     "Id": "Id",
+    "Certificate": "Certificado",
     "Date": "Dati",
     "BusinessTransaction": "usiness References",
     "Order": "Ordine",

@@ -3,6 +3,7 @@
     "Customer": "Client",
     "Receiver": "Réceptionnaire",
     "Id": "Numéro certificat",
+    "Certificate": "Certificat",
     "Date": "Date",
     "BusinessTransaction": "Références commerciales",
     "Order": "Ordre",

@@ -44,13 +44,6 @@
       "default": ["EN"],
       "uniqueItems": true
     },
-    "Types": {
-      "title": "Types",
-      "description": "The types of inspection certificates according EN 10204-2004.",
-      "type": "string",
-      "enum": ["2.1", "2.2", "3.1", "3.2"],
-      "default": "3.1"
-    },
     "Hash": {
       "title": "Hash",
       "description": "For any attachment to the JSON document a hash must be calculated and added to the document before adding the base64 encoded data.",
@@ -492,6 +485,24 @@
       },
       "required": ["Declaration"],
       "additionalProperties": false
+    },
+    "Standard": {
+      "title": "Certificate Type",
+      "description": "The type of the certificate.",
+      "type": "object",
+      "properties": {
+        "Norm": {
+          "description": "The standard on which the certificate is based. Not rendered on the certificate.",
+          "type": "string",
+          "examples": ["EN 10204", "DIN 55350-18-4.2.2"]
+        },
+        "Type": {
+          "description": "In case the standard defines categories of certificates e.g. EN 10204 3.1",
+          "type": "string",
+          "examples": ["2.2", "3.1"]
+        }
+      },
+      "required": ["Norm"]
     }
   },
   "title": "Certificate",
@@ -525,6 +536,11 @@
         "Type": {
           "description": "The type of EN 10204 certificate",
           "$ref": "#/definitions/Types"
+          "description": "The type of the certificate.",
+          "$ref": "#/definitions/Standard"
+        },
+        "PropertiesStandard": {
+          "description": "The inspection properties of the certificate according to a standard. Not rendered on the certificate.",
         },
         "Contacts": {
           "description": "Contact persons",
