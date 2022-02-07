@@ -15,15 +15,18 @@
       "properties": {
         "VAT": {
           "description": "This is the unique number that identifies a taxable person (business) or non-taxable legal entity that is registered for VAT, see https://ec.europa.eu/taxation_customs/business/vat/eu-vat-rules-topic/vat-identification-numbers_en",
-          "type": "string"
+          "type": "string",
+          "examples": ["ATU12345678"]
         },
         "DUNS": {
-          "description": "The Dun & Bradstreet D‑U‑N‑S Number is a unique nine-digit identifier for businesses, https://www.dnb.com/duns-number.html  ",
-          "type": "string"
+          "description": "The Dun & Bradstreet D-U-N-S Number is a unique nine-digit identifier for businesses, https://www.dnb.com/duns-number.html  ",
+          "type": "string",
+          "examples": ["30-058-5430"]
         },
         "CageCode": {
           "description": "The Commercial and Government Entity Code (short CAG), is a unique identifier assigned to suppliers to various government or defense agencies, https://en.wikipedia.org/wiki/Commercial_and_Government_Entity_code",
-          "type": "string"
+          "type": "string",
+          "examples": ["N1950#"]
         }
       },
       "required": ["VAT"],
@@ -83,15 +86,18 @@
         },
         "FileName": {
           "description": "The name of the file.",
-          "type": "string"
+          "type": "string",
+          "examples": ["file.pdf"]
         },
         "MIME-Type": {
           "description": "The MIME/Type of the data file.",
-          "type": "string"
+          "type": "string",
+          "examples": ["application/json", "application/pdf", "image/png"]
         },
         "Encoding": {
           "description": "The format in which the hash value is encoded.",
-          "type": "string"
+          "type": "string",
+          "examples": ["base64", "hex"]
         },
         "Data": {
           "description": "The data encoded as defined in `Encoding`",
@@ -218,7 +224,8 @@
             "Date": {
               "description": "The date of issuing the order",
               "type": "string",
-              "format": "date"
+              "format": "date",
+              "examples": ["2018-01-01"]
             },
             "Quantity": {
               "description": "The order quantity",
@@ -226,6 +233,11 @@
             },
             "QuantityUnit": {
               "description": "The unit of the order quantity",
+              "type": "string",
+              "examples": ["kg", "l", "m", "m²", "m³", "t"]
+            },
+            "CustomerProductId": {
+              "description": "The internal prdocut identifer of the Customer",
               "type": "string"
             },
             "InternalOrderNumber": {
@@ -252,7 +264,8 @@
             "Date": {
               "description": "The date of order confirmation issuance.",
               "type": "string",
-              "format": "date"
+              "format": "date",
+              "examples": ["2018-01-01"]
             }
           },
           "required": ["Number"],
@@ -270,7 +283,8 @@
             "Date": {
               "description": "The date of issuing the delivery note.",
               "type": "string",
-              "format": "date"
+              "format": "date",
+              "examples": ["2018-01-01"]
             },
             "Quantity": {
               "description": "The shipped quantity.",
@@ -278,6 +292,11 @@
             },
             "QuantityUnit": {
               "description": "The unit of the shipped quantity.",
+              "type": "string",
+              "examples": ["kg", "l", "m", "m²", "m³", "t", "tonne", "piece"]
+            },
+            "InternalOrderId": {
+              "description": "The internal order number issued at the manufacturer.",
               "type": "string"
             },
             "Position": {
@@ -324,10 +343,17 @@
           "description": "The two-letter ISO country code of the country in which the product was manufactured.",
           "type": "string",
           "minLength": 2,
-          "maxLength": 2
+          "maxLength": 2,
+          "pattern": "^[A-Z]{2}$",
+          "examples": ["DE", "AT", "CH"]
         },
         "PlaceOfOrigin": {
           "description": "The location of the plant in which the product was manufactured.",
+          "type": "string",
+          "examples": ["Vienna", "Graz", "Salzburg"]
+        },
+        "FillingBatchId": {
+          "description": "The identifer of the batch/lot/charge of filling into transport.",
           "type": "string"
         },
         "ChargeNumber": {
@@ -337,7 +363,8 @@
         "ProductionDate": {
           "description": "The day on which the product was manufactured.",
           "type": "string",
-          "format": "date"
+          "format": "date",
+          "examples": ["2018-01-01"]
         },
         "Standards": {
           "description": "The list of standards to which the product conforms.",
@@ -351,7 +378,9 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "uniqueItems": true,
+          "minItems": 1
         }
       },
       "required": ["Name", "ChargeNumber"],
@@ -364,7 +393,8 @@
       "properties": {
         "Property": {
           "description": "The property measured.",
-          "type": "string"
+          "type": "string",
+          "examples": ["MVR"]
         },
         "SubProperty": {
           "description": "A subset of the property measured.",
@@ -380,7 +410,8 @@
         },
         "Method": {
           "description": "The reference to the definition of the method such as EN or ISO norms.",
-          "type": "string"
+          "type": "string",
+          "examples": ["DIN ISO 1133"]
         },
         "Value": {
           "description": "A measured or calculated Value (e.g. mean of individual measurements).",
@@ -388,15 +419,18 @@
         },
         "Minimum": {
           "description": "The lower limit according the specification. If not provided it could be 0 or -∞.",
-          "type": "number"
+          "type": "number",
+          "examples": ["0.1"]
         },
         "Maximum": {
           "description": "The upper limit according the specification. If not provided it is ∞.",
-          "type": "number"
+          "type": "number",
+          "examples": ["0.2"]
         },
         "Unit": {
           "description": "The unit of the value.",
-          "type": "string"
+          "type": "string",
+          "examples": ["㎤/10min"]
         },
         "SupplementaryInstructions": {
           "description": "Further instructions describing the exact procedure of the measurement.",
@@ -470,21 +504,23 @@
       "format": "uri"
     },
     "Certificate": {
-      "description": "",
+      "description": "The certificate itself.",
       "type": "object",
       "properties": {
         "CertificateLanguages": {
-          "description": "The ",
+          "description": "The languages in which the certificate should be rendered in HTML and PDF.",
           "$ref": "#/definitions/CertificateLanguages"
         },
         "Id": {
           "description": "The certificate identifier, usually a number.",
-          "type": "string"
+          "type": "string",
+          "examples": ["100010", "10000/11/12/2018"]
         },
         "Date": {
-          "description": "The issuing date",
+          "description": "The certificate issuing date.",
           "type": "string",
-          "format": "date"
+          "format": "date",
+          "examples": ["2018-12-12"]
         },
         "Type": {
           "description": "The type of EN 10204 certificate",
@@ -495,14 +531,16 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Person"
-          }
+          },
+          "uniqueItems": true,
+          "minItems": 0
         },
         "Parties": {
-          "description": "The companies involved in the transaction",
+          "description": "The companies involved in the transaction.",
           "$ref": "#/definitions/Parties"
         },
         "BusinessTransaction": {
-          "description": "References to order and delivery",
+          "description": "References to order and delivery.",
           "$ref": "#/definitions/BusinessTransaction"
         },
         "Product": {
@@ -510,7 +548,7 @@
           "$ref": "#/definitions/Product"
         },
         "Analysis": {
-          "description": "An array with all inspections of the product.",
+          "description": "All inspections of the product.",
           "type": "object",
           "properties": {
             "Inspections": {
@@ -518,6 +556,7 @@
               "items": {
                 "$ref": "#/definitions/Inspection"
               },
+              "uniqueItems": true,
               "minItems": 1
             },
             "AdditionalInformation": {
@@ -525,7 +564,9 @@
               "type": "array",
               "items": {
                 "type": "string"
-              }
+              },
+              "uniqueItems": true,
+              "minItems": 1
             }
           }
         },
@@ -538,10 +579,12 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Attachment"
-          }
+          },
+          "uniqueItems": true,
+          "minItems": 1
         },
         "Logo": {
-          "description": "The logo of the manufacturer as base64 png file. The maximum size is <TBD>",
+          "description": "The logo of the manufacturer as base64 png file.",
           "type": "string",
           "contentEncoding": "base64",
           "contentMediaType": "image/png"
