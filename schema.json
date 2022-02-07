@@ -127,6 +127,7 @@
           "type": "string"
         }
       },
+      "required": ["Name", "Department", "Role", "Email", "Phone"],
       "additionalProperties": false
     },
     "Company": {
