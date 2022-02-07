@@ -476,6 +476,20 @@
     <h2 class="main-title">
       {{i18n "Inspections" "Certificate" Certificate.CertificateLanguages}}
     </h2>
+    {{#if Certificate.Analysis.LotId}}
+    <table class="main-table">
+      <tbody>
+        <tr class="table-rows">
+          <th class="table-cells" colspan="4">
+            <strong>{{i18n "LotId" "Certificate" Certificate.CertificateLanguages}}</strong>
+          </th>
+          <td class="table-cells" colspan="6">
+            {{Certificate.Analysis.LotId}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    {{/if}}
     <table class="main-table">
       <tbody>
         <tr class="table-rows">

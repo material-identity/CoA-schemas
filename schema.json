@@ -582,6 +582,10 @@
           "description": "All inspections of the product.",
           "type": "object",
           "properties": {
+            "LotId": {
+              "description": "The lot identifier of the inspection example.",
+              "type": "string"
+            },
             "Inspections": {
               "type": "array",
               "items": {
