@@ -449,12 +449,14 @@
           "type": "string"
         },
         "Temperature": {
-          "description": "A field specifically for testing MFR to be provided in degree Celsius",
-          "type": "number"
+          "description": "A field specifically for testing MFR to be provided in degree Celsius.",
+          "type": "number",
+          "examples": ["25"]
         },
         "Weight": {
-          "description": "A field specifically for testing MFR to be provided in kg",
-          "type": "number"
+          "description": "A field specifically for testing MFR to be provided in kg.",
+          "type": "number",
+          "examples": ["0.1"]
         }
       },
       "required": ["Property", "Method", "Value", "Unit"],
@@ -548,9 +550,7 @@
           "format": "date",
           "examples": ["2018-12-12"]
         },
-        "Type": {
-          "description": "The type of EN 10204 certificate",
-          "$ref": "#/definitions/Types"
+        "Standard": {
           "description": "The type of the certificate.",
           "$ref": "#/definitions/Standard"
         },
@@ -630,12 +630,14 @@
       "required": [
         "CertificateLanguages",
         "Id",
+        "Standard",
         "Date",
         "Parties",
         "BusinessTransaction",
         "Product",
         "Analysis",
-        "DeclarationOfConformity"
+        "DeclarationOfConformity",
+        "Logo"
       ],
       "additionalProperties": false
     }
