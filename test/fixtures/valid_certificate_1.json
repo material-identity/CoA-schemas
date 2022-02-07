@@ -119,16 +119,17 @@
     },
     "Contacts": [
       {
-        "Name": "Contact Name",
+        "Name": "Josef Manager",
         "Role": "Quality Manager",
         "Department": "Factory Production Control",
-        "Email": "contact@email.com",
-        "Phone": ""
+        "Email": "contact1@email.com",
+        "Phone": "+31 6 12345678",
+        "Fax": "+31 6 12345679"
       },
       {
+        "Name": "Joe Inspector",
         "Role": "Inspector",
         "Department": "Factory Production Control",
-        "Name": "Contact Name2",
         "Email": "contact2@email.com"
       }
     ],
