@@ -428,7 +428,7 @@
         },
         "CE": {
           "title": "CE Marking",
-          "description": "In case the manufacturer must ",
+          "description": "For products which require CE marking.",
           "type": "object",
           "properties": {
             "CE_Image": {
@@ -439,18 +439,20 @@
             },
             "NotifiedBodyNumber": {
               "description": "The identification number of the Notified body. Refer to https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31993L0068:en:HTML and https://ec.europa.eu/growth/tools-databases/nando/index.cfm?fuseaction=notifiedbody.main",
-              "type": "string"
+              "type": "string",
+              "examples": ["0780"]
             },
-            "DoCYear": {
+            "YearDocumentIssued": {
               "description": "The year when the declaration of conformance was issued",
-              "type": "string"
+              "type": "string",
+              "examples": ["19", "20"]
             },
-            "DoCNumber": {
+            "DocumentNumber": {
               "description": "The declaration of conformance document number ",
               "type": "string"
             }
           },
-          "required": ["CE_Image", "NotifiedBodyNumber", "DoCYear", "DoCNumber"],
+          "required": ["CE_Image", "NotifiedBodyNumber", "YearDocumentIssued", "DocumentNumber"],
           "additionalProperties": false
         }
       },

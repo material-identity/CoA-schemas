@@ -27,6 +27,9 @@ describe('Validate', function () {
     {
       certificateName: `valid_certificate_1`,
     },
+    {
+      certificateName: `valid_certificate_3`,
+    },
   ];
   const invalidCertTestSuitesMap = [
     {
@@ -60,13 +63,13 @@ describe('Validate', function () {
           schemaPath: '#/definitions/BusinessTransaction/properties/OrderConfirmation/properties/Date/format',
         },
         {
-          instancePath: '/Certificate/BusinessTransaction/Delivery/Number',
+          instancePath: '/Certificate/BusinessTransaction/Delivery/Id',
           keyword: 'type',
           message: 'must be string',
           params: {
             type: 'string',
           },
-          schemaPath: '#/definitions/BusinessTransaction/properties/Delivery/properties/Number/type',
+          schemaPath: '#/definitions/BusinessTransaction/properties/Delivery/properties/Id/type',
         },
         {
           instancePath: '/Certificate/Analysis/Inspections/1',

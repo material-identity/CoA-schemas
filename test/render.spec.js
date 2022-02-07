@@ -13,6 +13,9 @@ describe('Render', function () {
     {
       certificateName: `valid_certificate_1`,
     },
+    {
+      certificateName: `valid_certificate_3`,
+    },
   ];
 
   testSuitesMap.forEach(({ certificateName }) => {

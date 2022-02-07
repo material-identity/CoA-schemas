@@ -111,6 +111,12 @@
     section:not(.header) {
       margin-top: 10px;
     }
+    
+    .ce-table-cells {
+      padding: 0.325em;
+      text-align: center;
+      vertical-align: top;
+    }
   </style>
 </head>
 
@@ -507,6 +513,37 @@
   <section>
     <h2 class="main-title">
       {{i18n "DeclarationOfConformity" "Certificate" Certificate.CertificateLanguages}}</h2>
+    {{#if Certificate.DeclarationOfConformity.CE}}
+    <table class="main-table" >
+      <tbody>
+        <tr class="table-rows">
+          <td class="table-cells" colspan="6" rowspan="5" >
+            {{Certificate.DeclarationOfConformity.Declaration}}
+          </td>
+        </tr>
+        <tr class="table-rows">
+          <td class="ce-table-cells" colspan="4" text-align="center">
+            <img class="ce" alt="Company CE" src="{{Certificate.DeclarationOfConformity.CE.CE_Image}}"/>
+          </td>
+        </tr>
+        <tr class="table-rows">
+          <td class="ce-table-cells" colspan="4" text-align="center">
+            {{Certificate.DeclarationOfConformity.CE.NotifiedBodyNumber}}
+          </td>
+        </tr>
+        <tr class="table-rows">
+          <td class="ce-table-cells" colspan="4" text-align="center">
+            {{Certificate.DeclarationOfConformity.CE.YearDocumentIssued}}
+          </td>
+        </tr>
+        <tr class="table-rows" >
+          <td class="ce-table-cells" colspan="4" text-align="center">
+            {{Certificate.DeclarationOfConformity.CE.DocumentNumber}}
+          </td>
+        </tr>
+      </tbody>
+    </table> 
+    {{else}}
     <table class="main-table">
       <tbody>
         <tr class="table-rows">
@@ -516,6 +553,7 @@
         </tr>
       </tbody>
     </table>
+    {{/if}}
   </section>
 
   {{! CONTACTS }}
