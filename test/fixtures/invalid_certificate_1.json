@@ -34,18 +34,18 @@
     },
     "BusinessTransaction": {
       "Order": {
-        "Number": "1",
+        "Id": "1",
         "Position": "1",
         "Date": "2021-12-01",
         "Quantity": 100,
         "QuantityUnit": "kg"
       },
       "OrderConfirmation": {
-        "Number": "22",
+        "Id": "22",
         "Date": "invalid_date"
       },
       "Delivery": {
-        "Number": 3,
+        "Id": 3,
         "Date": "2021-12-01",
         "Quantity": 90,
         "QuantityUnit": "kg",

@@ -209,8 +209,8 @@
           "description": "Information about the order submiited by the customer to the manufacturer.",
           "type": "object",
           "properties": {
-            "Number": {
-              "description": "The order number.",
+            "Id": {
+              "description": "The order identification.",
               "type": "string"
             },
             "Position": {
@@ -236,16 +236,16 @@
               "description": "The internal prdocut identifer of the Customer",
               "type": "string"
             },
-            "InternalOrderNumber": {
-              "description": "The internal order number issued at the manufacturer.",
+            "CustomerProductName": {
+              "description": "The number for the goods receipt issued by the Customer or ConsigneeOfGoods",
               "type": "string"
             },
-            "InternalOrderPosition": {
-              "description": "The position on the internal order issued at the manufacturer.",
+            "GoodsReceiptId": {
+              "description": "The identifier for the goods receipt issued by the Customer.",
               "type": "string"
             }
           },
-          "required": ["Number"],
+          "required": ["Id", "Quantity", "QuantityUnit"],
           "additionalProperties": false
         },
         "OrderConfirmation": {
@@ -253,8 +253,8 @@
           "description": "Optional information about the order confirmation sent by the manufacturer to the customer.",
           "type": "object",
           "properties": {
-            "Number": {
-              "description": "The number of the order confirmation.",
+            "Id": {
+              "description": "The identifier of the order confirmation.",
               "type": "string"
             },
             "Date": {
@@ -264,7 +264,7 @@
               "examples": ["2018-01-01"]
             }
           },
-          "required": ["Number"],
+          "required": ["Id"],
           "additionalProperties": false
         },
         "Delivery": {
@@ -272,8 +272,12 @@
           "description": "The information from the delivery note.",
           "type": "object",
           "properties": {
-            "Number": {
-              "description": "The number of the delivery note.",
+            "Id": {
+              "description": "The identifier of the delivery note.",
+              "type": "string"
+            },
+            "Position": {
+              "description": "The position on the delivery note.",
               "type": "string"
             },
             "Date": {
@@ -295,8 +299,8 @@
               "description": "The internal order number issued at the manufacturer.",
               "type": "string"
             },
-            "Position": {
-              "description": "The position on the delivery note.",
+            "InternalOrderPosition": {
+              "description": "The position on the internal order issued at the manufacturer.",
               "type": "string"
             },
             "Transport": {
@@ -304,14 +308,12 @@
               "type": "array",
               "items": {
                 "type": "string"
-              }
-            },
-            "GoodsReceiptNumber": {
-              "description": "The number for the goods receipt issued by the Customer or ConsigneeOfGoods",
-              "type": "string"
+              },
+              "uniqueItems": true,
+              "minItems": 0
             }
           },
-          "required": ["Number"],
+          "required": ["Id", "Quantity", "QuantityUnit"],
           "additionalProperties": false
         }
       },

@@ -48,32 +48,34 @@
     },
     "BusinessTransaction": {
       "Order": {
-        "Number": "1",
-        "Position": "1",
+        "Id": "1000/12/12/2021",
+        "Position": "000010",
         "Date": "2021-12-01",
         "Quantity": 100,
         "QuantityUnit": "kg",
-        "InternalOrderNumber": "3384048234",
-        "InternalOrderPosition": "000020"
+        "CustomerProductId": "10011",
+        "CustomerProductName": "Plastic",
+        "GoodsReceiptId": "1000_10_10"
       },
       "OrderConfirmation": {
-        "Number": "22",
+        "Id": "22",
         "Date": "2021-12-01"
       },
       "Delivery": {
-        "Number": "3",
-        "Date": "2021-12-12",
+        "Id": "3000/20",
+        "Position": "1",
+        "Date": "2021-12-13",
         "Quantity": 90,
         "QuantityUnit": "kg",
-        "Transport": ["W345678"],
-        "GoodsReceiptNumber": "ddd"
+        "InternalOrderId": "3384048234",
+        "InternalOrderPosition": "000020",
+        "Transport": ["W345678"]
       }
     },
     "Product": {
       "Number": "2",
       "Name": "Product Number 2",
       "AdditionalInformation": ["Information 1", "Information 2"],
-      "CustomerProductNumber": "00003",
       "CountryOfOrigin": "DE",
       "PlaceOfOrigin": "Berlin",
       "ChargeNumber": "210000"

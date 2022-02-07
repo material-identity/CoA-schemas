@@ -224,11 +224,12 @@
       </tbody>
     </table>
   </section>
-  {{! BUSINESS REFERENCES }}
+  {{! Business Transaction}}
   <section class="header">
     <h2 class="main-title">{{i18n "BusinessTransaction" "Certificate" Certificate.CertificateLanguages}}</h2>
     <table class="main-table">
       <tbody>
+        {{! Columns headers }}
         <tr class="table-row">
           <td class="table-cells" colspan="4">
             <strong>{{i18n "Order" "Certificate" Certificate.CertificateLanguages}}</strong>
@@ -237,20 +238,22 @@
             <strong>{{i18n "Delivery" "Certificate" Certificate.CertificateLanguages}}</strong>
           </td>
         </tr>
+        {{! Order Id and Delivery Id }}
         <tr class="table-row">
           <td class="table-headers" colspan="2">
-            {{i18n "OrderNumber" "Certificate" Certificate.CertificateLanguages}}
+            {{i18n "OrderId" "Certificate" Certificate.CertificateLanguages}}
           </td>
           <td class="table-cells" colspan="2">
-            {{Certificate.BusinessTransaction.Order.Number}}
+            {{Certificate.BusinessTransaction.Order.Id}}
           </td>
           <td class="table-headers" colspan="2">
-            {{i18n "DeliveryNumber" "Certificate" Certificate.CertificateLanguages}}
+            {{i18n "DeliveryId" "Certificate" Certificate.CertificateLanguages}}
           </td>
           <td class="table-cells" colspan="2">
-            {{Certificate.BusinessTransaction.Delivery.Number}}
+            {{Certificate.BusinessTransaction.Delivery.Id}}
           </td>
         </tr>
+        {{! Order Position Number and Delivery Position Number }}
         <tr class="table-row">
           <td class="table-headers" colspan="2">{{i18n "OrderPosition" "Certificate" Certificate.CertificateLanguages}}
           </td>
@@ -264,6 +267,7 @@
             {{Certificate.BusinessTransaction.Delivery.Position}}
           </td>
         </tr>
+        {{! Order Quantity and Delivery Quantity }}
         <tr class="table-row">
           <td class="table-headers" colspan="2">
             {{i18n "OrderQuantity" "Certificate" Certificate.CertificateLanguages}}
@@ -280,6 +284,7 @@
             Certificate.BusinessTransaction.Delivery.QuantityUnit}}
           </td>
         </tr>
+        {{! Order Date and Delivery Date }}
         <tr class="table-row">
           <td class="table-headers" colspan="2">
             {{i18n "OrderDate" "Certificate" Certificate.CertificateLanguages}}
@@ -297,33 +302,49 @@
             {{/if}}
           </td>
         </tr>
-
+        {{! Material identifier and job identifier }}
         <tr class="table-row">
           <td class="table-headers" colspan="2">
-            {{i18n "InternalOrderNumber" "Certificate" Certificate.CertificateLanguages}}
+            {{i18n "CustomerProductId" "Certificate" Certificate.CertificateLanguages}}
           </td>
           <td class="table-cells" colspan="2">
-            {{Certificate.BusinessTransaction.Order.InternalOrderNumber}}
+            {{Certificate.BusinessTransaction.Order.CustomerProductId}}
+          </td>
+           <td class="table-headers" colspan="2">
+            {{i18n "InternalOrderId" "Certificate" Certificate.CertificateLanguages}}
+          </td>
+          <td class="table-cells" colspan="4">
+            {{Certificate.BusinessTransaction.Delivery.InternalOrderId}}
+          </td>
+        </tr>
+        {{! Material name and job position }}
+         <tr class="table-row">
+          <td class="table-headers" colspan="2">
+            {{i18n "CustomerProductName" "Certificate" Certificate.CertificateLanguages}}
+          </td>
+          <td class="table-cells" colspan="2">
+            {{Certificate.BusinessTransaction.Order.CustomerProductName}}
+          </td>
+          <td class="table-headers" colspan="2">
+            {{i18n "InternalOrderPosition" "Certificate" Certificate.CertificateLanguages}}
+          </td>
+          <td class="table-cells" colspan="4">
+            {{Certificate.BusinessTransaction.Delivery.InternalOrderPosition}}
+          </td>
+        </tr>
+        {{! Goodsreceived number and transport number }}
+        <tr class="table-row">
+          <td class="table-headers" colspan="2">
+            {{i18n "GoodsReceiptId" "Certificate" Certificate.CertificateLanguages}}
+          </td>
+          <td class="table-cells" colspan="2">
+            {{Certificate.BusinessTransaction.Order.GoodsReceiptId}}
           </td>
           <td class="table-headers" colspan="2">
             {{i18n "Transport" "Certificate" Certificate.CertificateLanguages}}
           </td>
           <td class="table-cells" colspan="4">
             {{Certificate.BusinessTransaction.Delivery.Transport}}
-          </td>
-        </tr>
-        <tr class="table-row">
-          <td class="table-headers" colspan="2">
-            {{i18n "InternalOrderPosition" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="2">
-            {{Certificate.BusinessTransaction.Order.InternalOrderPosition}}
-          </td>
-          <td class="table-headers" colspan="2">
-            {{i18n "GoodsReceiptNumber" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="4">
-            {{Certificate.BusinessTransaction.Delivery.GoodsReceiptNumber}}
           </td>
         </tr>
       </tbody>
