@@ -121,7 +121,7 @@
 </head>
 
 <body>
-  {{! COMPANIES HEADERS }}
+  {{! Manufacturer header section }}
   <section class="header">
     <table class="main-table">
       <tbody>
@@ -135,7 +135,8 @@
                 <h1>{{Certificate.Parties.Manufacturer.Name}}</h1>
               </li>
               <li>
-                {{Certificate.Parties.Manufacturer.Street}}
+                {{Certificate.Parties.Manufacturer.AddressLine1}}
+                {{Certificate.Parties.Manufacturer.AddressLine2}}
               </li>
               <li>
                 {{Certificate.Parties.Manufacturer.ZipCode}} {{Certificate.Parties.Manufacturer.City}},
@@ -150,27 +151,29 @@
       </tbody>
     </table>
   </section>
-
-  {{! Parties}}
+  {{! Customer header and receiver section }}
   <section>
     <table class="main-table">
-      <tbody>
+      <tbody>   
         <tr class="table-rows">
-          <td class="table-cells" colspan="4">
-            <strong>{{i18n "Customer" "Certificate" Certificate.CertificateLanguages}}</strong>
-          </td>
-          <td class="table-cells" colspan="6">
-            <strong>{{i18n "ConsigneeOfGoods" "Certificate" Certificate.CertificateLanguages}}</strong>
-          </td>
+          <th class="table-cells" colspan="4">
+            {{i18n "Customer" "Certificate" Certificate.CertificateLanguages}}
+          </th>
+          <th class="table-cells" colspan="6">
+            {{i18n "Receiver" "Certificate" Certificate.CertificateLanguages}}
+          </th>
         </tr>
         <tr class="table-rows">
           <td class="table-cells" colspan="4">
             <ol>
               <li>
-                <h1>{{Certificate.Parties.Customer.Name}}</h1>
+                <h3>{{Certificate.Parties.Customer.Name}}</h3>
               </li>
               <li>
-                {{Certificate.Parties.Customer.Street}}
+                {{Certificate.Parties.Customer.AddressLine1}}
+              </li>
+              <li>
+                {{Certificate.Parties.Customer.AddressLine2}}&nbsp;
               </li>
               <li>
                 {{Certificate.Parties.Customer.ZipCode}} {{Certificate.Parties.Customer.City}},
@@ -182,20 +185,23 @@
             </ol>
           </td>
           <td class="table-cells" colspan="6">
-            {{#if Certificate.Parties.ConsigneeOfGoods}}
+            {{#if Certificate.Parties.Receiver}}
             <ol>
               <li>
-                <h1>{{Certificate.Parties.ConsigneeOfGoods.Name}}</h1>
+                <h3>{{Certificate.Parties.Receiver.Name}}</h3>
               </li>
               <li>
-                {{Certificate.Parties.ConsigneeOfGoods.Street}}
+                {{Certificate.Parties.Receiver.AddressLine1}}
               </li>
               <li>
-                {{Certificate.Parties.ConsigneeOfGoods.ZipCode}} {{Certificate.Parties.ConsigneeOfGoods.City}},
-                {{Certificate.Parties.ConsigneeOfGoods.Country}}
+                {{Certificate.Parties.Receiver.AddressLine2}}
               </li>
               <li>
-                {{Certificate.Parties.ConsigneeOfGoods.Email}}
+                {{Certificate.Parties.Receiver.ZipCode}} {{Certificate.Parties.Receiver.City}},
+                {{Certificate.Parties.Receiver.Country}}
+              </li>
+              <li>
+                {{Certificate.Parties.Receiver.Email}}
               </li>
             </ol>
             {{/if}}

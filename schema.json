@@ -137,7 +137,10 @@
         "Name": {
           "type": "string"
         },
-        "Street": {
+        "AddressLine1": {
+          "type": "string"
+        },
+        "AddressLine2": {
           "type": "string"
         },
         "ZipCode": {
@@ -150,7 +153,9 @@
           "description": "The two-letter ISO country code according https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2.",
           "type": "string",
           "minLength": 2,
-          "maxLength": 2
+          "maxLength": 2,
+          "pattern": "^[A-Z]{2}$",
+          "examples": ["AT", "DE", "FR", "ES", "PL", "CN"]
         },
         "Email": {
           "type": "string",
@@ -165,10 +170,12 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "uniqueItems": true,
+          "minItems": 1
         }
       },
-      "required": ["Name", "Street", "ZipCode", "City", "Country", "Email", "Identifier"],
+      "required": ["Name", "AddressLine1", "ZipCode", "City", "Country", "Email", "Identifier"],
       "additionalProperties": true
     },
     "Parties": {
@@ -184,12 +191,8 @@
           "description": "The party buying the goods from the manufacturer.",
           "$ref": "#/definitions/Company"
         },
-        "ConsigneeOfGoods": {
-          "description": "The party receiving the goods for the customer, e.g. freight fowarding agent.",
-          "$ref": "#/definitions/Company"
-        },
-        "ConsigneeOfCertificate": {
-          "description": "The party receiving the certificates for the customer, e.g. a third party inspection service.",
+        "Receiver": {
+          "description": "The party receiving the goods for the customer, e.g. a freight fowarding agent or a subsisduary of the customer.",
           "$ref": "#/definitions/Company"
         }
       },

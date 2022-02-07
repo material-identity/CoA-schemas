@@ -11,8 +11,7 @@ const translations = languages.reduce((acc, ln) => {
 const translationProperties = {
   Certificate: [
     'Customer',
-    'ConsigneeOfGoods',
-    'Name',
+    'Receiver',
     'Id',
     'Certificate',
     'Date',
