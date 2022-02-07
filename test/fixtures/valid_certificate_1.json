@@ -130,7 +130,8 @@
         "Name": "Joe Inspector",
         "Role": "Inspector",
         "Department": "Factory Production Control",
-        "Email": "contact2@email.com"
+        "Email": "contact2@email.com",
+        "Phone": "+31 6 12345678"
       }
     ],
     "Attachments": [
