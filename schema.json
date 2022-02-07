@@ -325,16 +325,12 @@
       "description": "The description of the product",
       "type": "object",
       "properties": {
-        "Number": {
+        "Id": {
           "description": "The number of the product at the manufacturer.",
           "type": "string"
         },
         "Name": {
           "description": "The name of the product as given by the manufacturer, the trade name.",
-          "type": "string"
-        },
-        "CustomerProductNumber": {
-          "description": "The number for the product issued by the customer.",
           "type": "string"
         },
         "CountryOfOrigin": {
@@ -354,8 +350,14 @@
           "description": "The identifer of the batch/lot/charge of filling into transport.",
           "type": "string"
         },
-        "ChargeNumber": {
-          "description": "The number identifying the batch/lot/charge of production.",
+        "FillingBatchDate": {
+          "description": "The date of filling into transport container.",
+          "type": "string",
+          "format": "date",
+          "examples": ["2018-01-01"]
+        },
+        "ProductionBatchId": {
+          "description": "The production batch identifer.",
           "type": "string"
         },
         "ProductionDate": {
@@ -369,7 +371,15 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "ExpirationDate": {
+          "description": "The day on which the product becomes unusable.",
+          "type": "string",
+          "format": "date",
+          "examples": ["2018-01-01"]
         },
         "AdditionalInformation": {
           "description": "An array of additional free text information on the product.",
@@ -381,7 +391,7 @@
           "minItems": 1
         }
       },
-      "required": ["Name", "ChargeNumber"],
+      "required": ["Name", "FillingBatchId"],
       "additionalProperties": false
     },
     "Inspection": {

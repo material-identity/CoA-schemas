@@ -350,13 +350,23 @@
       </tbody>
     </table>
   </section>
-  {{! PRODUCT }}
+  {{! Product }}
   <section class="header">
     <h2 class="main-title">
       {{i18n "Product" "Certificate" Certificate.CertificateLanguages}}
     </h2>
     <table class="main-table">
       <tbody>
+        {{#if Certificate.Product.Id}}
+        <tr>
+          <th class="table-headers" colspan="4">
+            {{i18n "ProductId" "Certificate" Certificate.CertificateLanguages}}
+          </th>
+          <td class="table-cells" colspan="6">
+            {{Certificate.Product.Id}}
+          </td>
+        </tr>
+        {{/if}}
         {{#if Certificate.Product.Name}}
         <tr>
           <th class="table-headers" colspan="4">
@@ -367,23 +377,13 @@
           </td>
         </tr>
         {{/if}}
-        {{#if Certificate.Product.Number}}
+        {{#if Certificate.Product.Standards}}
         <tr>
           <th class="table-headers" colspan="4">
-            {{i18n "ProductNumber" "Certificate" Certificate.CertificateLanguages}}
+            {{i18n "Standards" "Certificate" Certificate.CertificateLanguages}}
           </th>
           <td class="table-cells" colspan="6">
-            {{Certificate.Product.Number}}
-          </td>
-        </tr>
-        {{/if}}
-        {{#if Certificate.Product.CustomerProductNumber}}
-        <tr>
-          <th class="table-headers" colspan="4">
-            {{i18n "CustomerProductNumber" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <td class="table-cells" colspan="6">
-            {{Certificate.Product.CustomerProductNumber}}
+            {{join Certificate.Product.Standards ", " ""}}
           </td>
         </tr>
         {{/if}}
@@ -407,13 +407,33 @@
           </td>
         </tr>
         {{/if}}
-        {{#if Certificate.Product.ChargeNumber}}
+        {{#if Certificate.Product.FillingBatchId}}
         <tr>
           <th class="table-headers" colspan="4">
-            {{i18n "ChargeNumber" "Certificate" Certificate.CertificateLanguages}}
+            {{i18n "FillingBatchId" "Certificate" Certificate.CertificateLanguages}}
           </th>
           <td class="table-cells" colspan="6">
-            {{Certificate.Product.ChargeNumber}}
+            {{Certificate.Product.FillingBatchId}}
+          </td>
+        </tr>
+        {{/if}}
+        {{#if Certificate.Product.FillingBatchDate}}
+        <tr>
+          <th class="table-headers" colspan="4">
+            {{i18n "FillingBatchDate" "Certificate" Certificate.CertificateLanguages}}
+          </th>
+          <td class="table-cells" colspan="6">
+            {{Certificate.Product.FillingBatchDate}}
+          </td>
+        </tr>
+        {{/if}}
+        {{#if Certificate.Product.ProductionBatchId}}
+        <tr>
+          <th class="table-headers" colspan="4">
+            {{i18n "ProductionBatchId" "Certificate" Certificate.CertificateLanguages}}
+          </th>
+          <td class="table-cells" colspan="6">
+            {{Certificate.Product.ProductionBatchId}}
           </td>
         </tr>
         {{/if}}
@@ -427,13 +447,13 @@
           </td>
         </tr>
         {{/if}}
-        {{#if Certificate.Product.Standards}}
+        {{#if Certificate.Product.ExpirationDate}}
         <tr>
           <th class="table-headers" colspan="4">
-            {{i18n "Standards" "Certificate" Certificate.CertificateLanguages}}
+            {{i18n "ExpirationDate" "Certificate" Certificate.CertificateLanguages}}
           </th>
           <td class="table-cells" colspan="6">
-            {{join Certificate.Product.Standards ", " ""}}
+            {{localizeDate Certificate.Product.ExpirationDate Certificate.CertificateLanguages}}
           </td>
         </tr>
         {{/if}}

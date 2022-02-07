@@ -53,13 +53,12 @@
       }
     },
     "Product": {
-      "Number": "",
+      "Id": "",
       "Name": "",
       "AdditionalInformation": ["1", "2"],
-      "CustomerProductNumber": "",
       "CountryOfOrigin": "DE",
       "PlaceOfOrigin": "Berlin",
-      "ChargeNumber": ""
+      "FillingBatchId": ""
     },
     "Analysis": {
       "Inspections": [

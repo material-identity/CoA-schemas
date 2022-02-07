@@ -73,12 +73,17 @@
       }
     },
     "Product": {
-      "Number": "2",
-      "Name": "Product Number 2",
-      "AdditionalInformation": ["Information 1", "Information 2"],
+      "Id": "20000 01",
+      "Name": "Manufactured Product Name",
       "CountryOfOrigin": "DE",
       "PlaceOfOrigin": "Berlin",
-      "ChargeNumber": "210000"
+      "FillingBatchId": "210000",
+      "FillingBatchDate": "2021-12-12",
+      "Standards": ["ASTM D-4066 PA0111", "ASTM D-4066 PA0121"],
+      "ProductionBatchId": "100001",
+      "ProductionDate": "2017-12-01",
+      "ExpirationDate": "2021-12-12",
+      "AdditionalInformation": ["Information 1", "Information 2"]
     },
     "Analysis": {
       "Inspections": [
