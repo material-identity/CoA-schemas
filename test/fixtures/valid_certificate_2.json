@@ -58,7 +58,8 @@
           "Property": "MFR",
           "Method": "DIN EN ISO 1133",
           "Unit": "g/10m_",
-          "Value": 31
+          "Value": "31",
+          "ValueType": "number"
        }
       ]
     },

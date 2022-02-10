@@ -53,8 +53,6 @@ const translationProperties = {
     'Maximum',
     'Unit',
     'TestConditions',
-    'Temperature',
-    'Weight',
     'DeclarationOfConformity',
     'Contacts',
     'ContactName',

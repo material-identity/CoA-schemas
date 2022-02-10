@@ -501,9 +501,6 @@
             {{i18n "Method" "Certificate" Certificate.CertificateLanguages}}
           </th>
           <th class="table-headers">
-            {{i18n "Unit" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <th class="table-headers">
             {{i18n "Value" "Certificate" Certificate.CertificateLanguages}}
           </th>
           <th class="table-headers">
@@ -513,10 +510,7 @@
             {{i18n "Maximum" "Certificate" Certificate.CertificateLanguages}}
           </th>
           <th class="table-headers">
-            {{i18n "Temperature" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <th class="table-headers">
-            {{i18n "Weight" "Certificate" Certificate.CertificateLanguages}}
+            {{i18n "TestConditions" "Certificate" Certificate.CertificateLanguages}}
           </th>
         </tr>
         {{#each Certificate.Analysis.Inspections}}
@@ -528,10 +522,7 @@
             {{this.Method}}
           </td>
           <td class="table-cells">
-            {{this.Unit}}
-          </td>
-          <td class="table-cells">
-            {{localizeNumber this.Value Certificate.CertificateLanguages}}
+            {{localizeValue this.Value this.ValueType Certificate.CertificateLanguages}}  {{this.Unit}}
           </td>
           <td class="table-cells">
             {{localizeNumber this.Minimum Certificate.CertificateLanguages}}
@@ -539,20 +530,9 @@
           <td class="table-cells">
             {{localizeNumber this.Maximum Certificate.CertificateLanguages}}
           </td>
-          {{#if this.Temperature}}
-          <td class="table-cells">
-            {{localizeNumber this.Temperature Certificate.CertificateLanguages}} °C
+          <td class="table-cells" colspan="2">
+            {{this.TestConditions}}
           </td>
-          {{else}}
-          <td class="table-cells"></td>
-          {{/if}}
-          {{#if this.Weight}}
-          <td class="table-cells">
-            {{localizeNumber this.Weight Certificate.CertificateLanguages}} kg
-          </td>
-          {{else}}
-          <td class="table-cells"></td>
-          {{/if}}
         </tr>
         {{/each}}
         {{#if Certificate.Analysis.AdditionalInformation}}

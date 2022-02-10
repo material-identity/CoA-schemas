@@ -394,11 +394,11 @@
     },
     "Inspection": {
       "title": "Inspection",
-      "description": "A structure to specify any kind of measurements as specified by https://www.campusplastics.com/campushome/coc",
+      "description": "A structure to specify any kind of measurements. It follows the structure as defined by CAMPUS (https://www.campusplastics.com)",
       "type": "object",
       "properties": {
         "PropertyId": {
-          "description": "The identifier of the property as defined by the definition provided in 'PropertiesStandard'.",
+          "description": "The identifier of the property according to the definition provided in 'PropertiesStandard'. Used for mapping of translations of `Property`.",
           "type": "string"
         },
         "Property": {
@@ -407,21 +407,26 @@
           "examples": ["MVR"]
         },
         "Method": {
-          "description": "The reference to the definition of the method such as EN or ISO norms.",
+          "description": "The reference to the definition of the method such as EN, ISO or factory standards.",
           "type": "string",
           "examples": ["DIN ISO 1133"]
         },
         "Value": {
           "description": "A measured or calculated Value (e.g. mean of individual measurements).",
-          "type": "number"
+          "type": "string"
+        },
+        "ValueType": {
+          "description": "The data type of the measured value.",
+          "enum": ["string", "number", "date", "date-time", "boolean"],
+          "default": "number"
         },
         "Minimum": {
-          "description": "The lower limit according the specification. If not provided it could be 0 or -∞.",
+          "description": "The lower limit according the specification. If a numeric value and not provided it can be 0 or -∞.",
           "type": "number",
           "examples": ["0.1"]
         },
         "Maximum": {
-          "description": "The upper limit according the specification. If not provided it is ∞.",
+          "description": "The upper limit according the specification. If a numeric value and not provided it can be ∞.",
           "type": "number",
           "examples": ["0.2"]
         },
@@ -433,19 +438,9 @@
         "TestConditions": {
           "description": "A description of the conditions under which the test was executed.",
           "type": "string"
-        },
-        "Temperature": {
-          "description": "A field specifically for testing MFR to be provided in degree Celsius.",
-          "type": "number",
-          "examples": ["25"]
-        },
-        "Weight": {
-          "description": "A field specifically for testing MFR to be provided in kg.",
-          "type": "number",
-          "examples": ["0.1"]
         }
       },
-      "required": ["Property", "Method", "Value", "Unit"],
+      "required": ["Property", "Method", "Value", "ValueType"],
       "additionalProperties": false
     },
     "DeclarationOfConformity": {
