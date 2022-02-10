@@ -406,14 +406,6 @@
           "type": "string",
           "examples": ["MVR"]
         },
-        "SubProperty": {
-          "description": "A subset of the property measured.",
-          "type": "string"
-        },
-        "Symbol": {
-          "description": "The symbol describing the property.",
-          "type": "string"
-        },
         "Method": {
           "description": "The reference to the definition of the method such as EN or ISO norms.",
           "type": "string",
@@ -437,10 +429,6 @@
           "description": "The unit of the value.",
           "type": "string",
           "examples": ["㎤/10min"]
-        },
-        "SupplementaryInstructions": {
-          "description": "Further instructions describing the exact procedure of the measurement.",
-          "type": "string"
         },
         "TestConditions": {
           "description": "A description of the conditions under which the test was executed.",

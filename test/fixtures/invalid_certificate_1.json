@@ -64,8 +64,6 @@
       "Inspections": [
         {
           "Property": "MFR",
-          "SubProperty": "",
-          "Symbol": "",
           "Method": "DIN EN ISO 1133",
           "Unit": "g/10m_",
           "Value": 31,
