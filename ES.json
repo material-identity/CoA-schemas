@@ -49,12 +49,11 @@
     "Weight": "Peso",
     "DeclarationOfConformity": "Declaración de conformidad",
     "Contacts": "Contactos",
-    "ContactName": "Nombre de contacto",
-    "ContactRole": "Rol de contacto",
-    "ContactDepartment": "Departamento de contacto",
-    "ContactEmail": "Correo electrónico de contacto",
-    "ContactPhone": "Teléfono de contacto",
-    "ContactFax": "Fax de contacto",
+    "ContactName": "Nombre",
+    "ContactRole": "Rol",
+    "ContactDepartment": "Departamento",
+    "ContactEmail": "Correo electrónico",
+    "ContactPhone": "Teléfono",
     "Attachments": "Archivos adjuntos"
   }
 }

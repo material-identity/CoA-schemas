@@ -64,7 +64,6 @@ const translationProperties = {
     'ContactDepartment',
     'ContactEmail',
     'ContactPhone',
-    'ContactFax',
     'Attachments',
   ],
 };

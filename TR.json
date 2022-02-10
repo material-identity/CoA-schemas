@@ -49,12 +49,11 @@
     "Weight": "Ağırlık",
     "DeclarationOfConformity": "Uygunluk bildirimi",
     "Contacts": "İletişim",
-    "ContactName": "İletişim Adı",
-    "ContactRole": "İletişim Rolü",
-    "ContactDepartment": "İletişim Departmanı",
-    "ContactEmail": "İletişim E-posta",
-    "ContactPhone": "İletişim Telefon",
-    "ContactFax": "İletişim Faks",
+    "ContactName": "Adı",
+    "ContactRole": "Rolü",
+    "ContactDepartment": "Departmanı",
+    "ContactEmail": "E-posta",
+    "ContactPhone": "Telefon",
     "Attachments": "Ekler"
   }
 }
