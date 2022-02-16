@@ -8,7 +8,6 @@
       "Norm": "EN 10204:2004",
       "Type": "3.1"
     },
-    "PropertiesStandard": "CAMPUS",
     "Parties": {
       "Manufacturer": {
         "Name": "Green Plastics AG",
@@ -88,6 +87,7 @@
     },
     "Analysis": {
       "LotId": "123456789 10",
+      "PropertiesStandard": "CAMPUS",
       "Inspections": [
         {
           "PropertyId": "1038",

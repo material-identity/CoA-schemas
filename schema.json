@@ -231,11 +231,11 @@
               "examples": ["kg", "l", "m", "m²", "m³", "t"]
             },
             "CustomerProductId": {
-              "description": "The internal prdocut identifer of the Customer",
+              "description": "The internal product identifer of the Customer",
               "type": "string"
             },
             "CustomerProductName": {
-              "description": "The number for the goods receipt issued by the Customer or ConsigneeOfGoods",
+              "description": "The number for the goods receipt issued by the Customer or Receiver",
               "type": "string"
             },
             "GoodsReceiptId": {
@@ -535,11 +535,6 @@
           "description": "The type of the certificate.",
           "$ref": "#/definitions/Standard"
         },
-        "PropertiesStandard": {
-          "description": "The inspection properties of the certificate according to a standard. Not rendered on the certificate.",
-          "type": "string",
-          "enum": ["CAMPUS"]
-        },
         "Contacts": {
           "description": "Contact persons",
           "type": "array",
@@ -568,6 +563,11 @@
             "LotId": {
               "description": "The lot identifier of the inspection example.",
               "type": "string"
+            },
+            "PropertiesStandard": {
+              "description": "The inspection properties of the certificate according to a standard. Not rendered on the certificate.",
+              "type": "string",
+              "enum": ["CAMPUS"]
             },
             "Inspections": {
               "type": "array",
