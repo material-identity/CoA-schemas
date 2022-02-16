@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 const { generateHtml } = require('@s1seven/schema-tools-generate-html');
 const { generatePdf } = require('@s1seven/schema-tools-generate-pdf');
+const { createHash } = require('crypto');
 const { readFileSync } = require('fs');
 const { HtmlDiffer } = require('@markedjs/html-differ');
 const logger = require('@markedjs/html-differ/lib/logger');
@@ -84,7 +85,9 @@ describe('Render', function () {
       });
       const result = await fromBuffer(buffer, options)(1, true);
       expect(buffer instanceof Buffer).toEqual(true);
-      expect(result.base64).toEqual(expectedPDF.base64);
+      const resultHash = createHash('sha256').update(result.base64).digest('hex');
+      const expectedHash = createHash('sha256').update(expectedPDF.base64).digest('hex');
+      expect(resultHash).toEqual(expectedHash);
     }, 8000);
   });
 });
