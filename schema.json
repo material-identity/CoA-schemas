@@ -513,7 +513,7 @@
       "format": "uri"
     },
     "Certificate": {
-      "description": "The certificate itself.",
+      "description": "The certificate information object",
       "type": "object",
       "properties": {
         "CertificateLanguages": {
