@@ -1,5 +1,5 @@
 {
-  "RefSchemaUrl": "https://schemas.s1seven.com/coa-schemas/v0.0.4/schema.json",
+  "RefSchemaUrl": "https://schemas.s1seven.com/coa-schemas/v0.1.0/schema.json",
   "Certificate": {
     "Id": "certificate_id",
     "Date": "2021-12-01",
