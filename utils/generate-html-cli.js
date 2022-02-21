@@ -1,11 +1,13 @@
-const glob = require('glob');
-const { generateHtmlCertificate } = require('./generate-html');
+const { SchemaRepositoryVersion } = require('@s1seven/schema-tools-versioning');
+const { defaultServerUrl, translations, htmlTemplatePath } = require('./constants');
+const { version: pkgVersion } = require('../package.json');
 
 (async function (argv) {
   const certificatePattern = argv[2] || 'test/fixtures/valid_certificate_*.json';
   try {
-    const filePaths = glob.sync(certificatePattern);
-    await Promise.all(filePaths.map((filePath) => generateHtmlCertificate(filePath)));
+    const updater = new SchemaRepositoryVersion(defaultServerUrl, [], pkgVersion, translations, 'schema.json');
+    await updater.updateSchemasVersion();
+    await updater.updateHtmlFixturesVersion(certificatePattern, htmlTemplatePath);
   } catch (error) {
     console.error(error.message);
   }
