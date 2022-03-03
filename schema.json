@@ -243,7 +243,7 @@
               "type": "string"
             }
           },
-          "required": ["Id", "Quantity", "QuantityUnit"],
+          "required": ["Id"],
           "additionalProperties": false
         },
         "OrderConfirmation": {
@@ -311,7 +311,7 @@
               "minItems": 0
             }
           },
-          "required": ["Id", "Quantity", "QuantityUnit"],
+          "required": ["Id"],
           "additionalProperties": false
         }
       },
