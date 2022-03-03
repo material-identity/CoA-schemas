@@ -1,1 +1,1387 @@
-{}
+[
+  {
+    "Id": "38",
+    "Property": "熔体体积流速",
+    "TestConditions": "MVR"
+  },
+  {
+    "Id": "39",
+    "Property": " 温度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "40",
+    "Property": " 载荷",
+    "TestConditions": ""
+  },
+  {
+    "Id": "44",
+    "Property": "成型收缩率",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "45",
+    "Property": "成型收缩率",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "107",
+    "Property": "拉伸模量",
+    "TestConditions": ""
+  },
+  {
+    "Id": "7",
+    "Property": "拉伸模量",
+    "TestConditions": ""
+  },
+  {
+    "Id": "101",
+    "Property": "屈服应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "1",
+    "Property": "屈服应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "102",
+    "Property": "屈服应变",
+    "TestConditions": ""
+  },
+  {
+    "Id": "2",
+    "Property": "屈服应变",
+    "TestConditions": ""
+  },
+  {
+    "Id": "103",
+    "Property": "标称断裂应变",
+    "TestConditions": ""
+  },
+  {
+    "Id": "3",
+    "Property": "标称断裂应变",
+    "TestConditions": ""
+  },
+  {
+    "Id": "104",
+    "Property": "应变为 50% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "4",
+    "Property": "应变为 50% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "105",
+    "Property": "断裂应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "5",
+    "Property": "断裂应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "106",
+    "Property": "断裂应变",
+    "TestConditions": ""
+  },
+  {
+    "Id": "6",
+    "Property": "断裂应变",
+    "TestConditions": ""
+  },
+  {
+    "Id": "8",
+    "Property": "拉伸蠕变模量",
+    "TestConditions": "1 h"
+  },
+  {
+    "Id": "9",
+    "Property": "拉伸蠕变模量",
+    "TestConditions": "1000 h"
+  },
+  {
+    "Id": "111",
+    "Property": "夏比冲击强度",
+    "TestConditions": "+23 °C"
+  },
+  {
+    "Id": "11",
+    "Property": "夏比冲击强度",
+    "TestConditions": "+23 °C"
+  },
+  {
+    "Id": "239",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "543",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "112",
+    "Property": "夏比冲击强度",
+    "TestConditions": "-30 °C"
+  },
+  {
+    "Id": "12",
+    "Property": "夏比冲击强度",
+    "TestConditions": "-30 °C"
+  },
+  {
+    "Id": "546",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "544",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "113",
+    "Property": "夏比缺口冲击强度",
+    "TestConditions": "+23 °C"
+  },
+  {
+    "Id": "13",
+    "Property": "夏比缺口冲击强度",
+    "TestConditions": "+23 °C"
+  },
+  {
+    "Id": "548",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "547",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "114",
+    "Property": "夏比缺口冲击强度",
+    "TestConditions": "-30 °C"
+  },
+  {
+    "Id": "14",
+    "Property": "夏比缺口冲击强度",
+    "TestConditions": "-30 °C"
+  },
+  {
+    "Id": "550",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "549",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "110",
+    "Property": "拉伸缺口冲击强度",
+    "TestConditions": "+23 °C"
+  },
+  {
+    "Id": "10",
+    "Property": "拉伸缺口冲击强度",
+    "TestConditions": "+23 °C"
+  },
+  {
+    "Id": "165",
+    "Property": "穿刺 - 最大力",
+    "TestConditions": "+23 °C"
+  },
+  {
+    "Id": "65",
+    "Property": "穿刺 - 最大力",
+    "TestConditions": "+23 °C"
+  },
+  {
+    "Id": "167",
+    "Property": "穿刺 - 最大力",
+    "TestConditions": "-30 °C"
+  },
+  {
+    "Id": "67",
+    "Property": "穿刺 - 最大力",
+    "TestConditions": "-30 °C"
+  },
+  {
+    "Id": "166",
+    "Property": "穿刺能量",
+    "TestConditions": "+23 °C"
+  },
+  {
+    "Id": "66",
+    "Property": "穿刺能量",
+    "TestConditions": "+23 °C"
+  },
+  {
+    "Id": "168",
+    "Property": "穿刺能量",
+    "TestConditions": "-30 °C"
+  },
+  {
+    "Id": "68",
+    "Property": "穿刺能量",
+    "TestConditions": "-30 °C"
+  },
+  {
+    "Id": "15",
+    "Property": "熔化温度",
+    "TestConditions": "10 °C/min"
+  },
+  {
+    "Id": "16",
+    "Property": "玻璃化转变温度",
+    "TestConditions": "10 °C/min"
+  },
+  {
+    "Id": "17",
+    "Property": "载荷下的挠曲温度",
+    "TestConditions": "1.80 MPa"
+  },
+  {
+    "Id": "18",
+    "Property": "载荷下的挠曲温度",
+    "TestConditions": "0.45 MPa"
+  },
+  {
+    "Id": "19",
+    "Property": "载荷下的挠曲温度",
+    "TestConditions": "8.00 MPa"
+  },
+  {
+    "Id": "20",
+    "Property": "维卡软化温度",
+    "TestConditions": "50°C/h 50N"
+  },
+  {
+    "Id": "191",
+    "Property": "维卡软化温度",
+    "TestConditions": "50°C/h 10N"
+  },
+  {
+    "Id": "121",
+    "Property": "线性热膨胀系数，23°C 到 55°C",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "122",
+    "Property": "线性热膨胀系数，23°C 到 55°C",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "23",
+    "Property": "1.5 mm 标称厚度时的燃烧性状",
+    "TestConditions": ""
+  },
+  {
+    "Id": "24",
+    "Property": " 厚度已测试",
+    "TestConditions": ""
+  },
+  {
+    "Id": "62",
+    "Property": "      黄卡有效",
+    "TestConditions": ""
+  },
+  {
+    "Id": "25",
+    "Property": "厚度为 h 时的燃烧性状",
+    "TestConditions": ""
+  },
+  {
+    "Id": "26",
+    "Property": " 厚度已测试",
+    "TestConditions": ""
+  },
+  {
+    "Id": "63",
+    "Property": "      黄卡有效",
+    "TestConditions": ""
+  },
+  {
+    "Id": "27",
+    "Property": "燃烧性状厚度为 h 时 5V",
+    "TestConditions": ""
+  },
+  {
+    "Id": "28",
+    "Property": " 厚度已测试",
+    "TestConditions": ""
+  },
+  {
+    "Id": "64",
+    "Property": "黄卡有效",
+    "TestConditions": ""
+  },
+  {
+    "Id": "29",
+    "Property": "氧指数",
+    "TestConditions": ""
+  },
+  {
+    "Id": "130",
+    "Property": "相对介电常数",
+    "TestConditions": "100 Hz"
+  },
+  {
+    "Id": "30",
+    "Property": "相对介电常数",
+    "TestConditions": "100 Hz"
+  },
+  {
+    "Id": "131",
+    "Property": "相对介电常数",
+    "TestConditions": "1 MHz"
+  },
+  {
+    "Id": "31",
+    "Property": "相对介电常数",
+    "TestConditions": "1 MHz"
+  },
+  {
+    "Id": "132",
+    "Property": "耗散因数",
+    "TestConditions": "100 Hz"
+  },
+  {
+    "Id": "32",
+    "Property": "耗散因数",
+    "TestConditions": "100 Hz"
+  },
+  {
+    "Id": "133",
+    "Property": "耗散因数",
+    "TestConditions": "1 MHz"
+  },
+  {
+    "Id": "33",
+    "Property": "耗散因数",
+    "TestConditions": "1 MHz"
+  },
+  {
+    "Id": "136",
+    "Property": "体积电阻率",
+    "TestConditions": ""
+  },
+  {
+    "Id": "36",
+    "Property": "体积电阻率",
+    "TestConditions": ""
+  },
+  {
+    "Id": "37",
+    "Property": "表面电阻率",
+    "TestConditions": ""
+  },
+  {
+    "Id": "134",
+    "Property": "电气强度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "34",
+    "Property": "电气强度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "135",
+    "Property": "相比漏电起痕指数",
+    "TestConditions": ""
+  },
+  {
+    "Id": "35",
+    "Property": "相比漏电起痕指数",
+    "TestConditions": ""
+  },
+  {
+    "Id": "49",
+    "Property": "吸水率",
+    "TestConditions": ""
+  },
+  {
+    "Id": "50",
+    "Property": "吸湿性",
+    "TestConditions": ""
+  },
+  {
+    "Id": "151",
+    "Property": "密度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "51",
+    "Property": "密度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "46",
+    "Property": "黏数",
+    "TestConditions": ""
+  },
+  {
+    "Id": "47",
+    "Property": "指示密度",
+    "TestConditions": "仅限 PE"
+  },
+  {
+    "Id": "41",
+    "Property": "透光率",
+    "TestConditions": ""
+  },
+  {
+    "Id": "83",
+    "Property": "夏比缺口冲击强度",
+    "TestConditions": "+23°C，3mm"
+  },
+  {
+    "Id": "551",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "84",
+    "Property": "夏比缺口冲击强度",
+    "TestConditions": "-30°C，3mm"
+  },
+  {
+    "Id": "553",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "85",
+    "Property": "悬臂梁冲击强度",
+    "TestConditions": "+23°C，4mm"
+  },
+  {
+    "Id": "555",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "90",
+    "Property": "悬臂梁冲击强度",
+    "TestConditions": "-30°C，4mm"
+  },
+  {
+    "Id": "557",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "120",
+    "Property": "悬臂梁缺口冲击强度",
+    "TestConditions": "+23°C，4mm"
+  },
+  {
+    "Id": "559",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "97",
+    "Property": "悬臂梁缺口冲击强度",
+    "TestConditions": "-30°C，4mm"
+  },
+  {
+    "Id": "561",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "98",
+    "Property": "悬臂梁缺口冲击强度",
+    "TestConditions": "+23°C，3mm"
+  },
+  {
+    "Id": "563",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "100",
+    "Property": "悬臂梁缺口冲击强度",
+    "TestConditions": "-30°C，3mm"
+  },
+  {
+    "Id": "565",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "79",
+    "Property": "熔体密度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "78",
+    "Property": "熔体热导率",
+    "TestConditions": ""
+  },
+  {
+    "Id": "77",
+    "Property": "熔体比热容",
+    "TestConditions": ""
+  },
+  {
+    "Id": "76",
+    "Property": "热扩散率",
+    "TestConditions": ""
+  },
+  {
+    "Id": "75",
+    "Property": "顶出温度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "230",
+    "Property": "最低模具温度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "231",
+    "Property": "最高模具温度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "232",
+    "Property": "最低熔化温度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "233",
+    "Property": "最高熔化温度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "52",
+    "Property": "检测条件根据ISO",
+    "TestConditions": ""
+  },
+  {
+    "Id": "53",
+    "Property": "注射成型，熔化温度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "54",
+    "Property": "模具温度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "55",
+    "Property": " 注射速度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "60",
+    "Property": " 保持压力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "56",
+    "Property": "压缩成型，成型温度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "57",
+    "Property": " 冷却速率",
+    "TestConditions": ""
+  },
+  {
+    "Id": "58",
+    "Property": " 成型时间",
+    "TestConditions": ""
+  },
+  {
+    "Id": "59",
+    "Property": " 脱模温度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "48",
+    "Property": "检测条件根据ISO",
+    "TestConditions": ""
+  },
+  {
+    "Id": "61",
+    "Property": "注射成型，注射温度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "69",
+    "Property": "模具温度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "70",
+    "Property": "注射速度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "71",
+    "Property": "保持压力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "72",
+    "Property": "固化时间",
+    "TestConditions": ""
+  },
+  {
+    "Id": "73",
+    "Property": "压缩成型，模具温度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "74",
+    "Property": "固化时间",
+    "TestConditions": ""
+  },
+  {
+    "Id": "196",
+    "Property": "屈服应力",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "197",
+    "Property": "屈服应力",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "198",
+    "Property": "屈服应变",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "199",
+    "Property": "屈服应变",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "200",
+    "Property": "最大应力",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "201",
+    "Property": "最大应力",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "202",
+    "Property": "最大应变",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "203",
+    "Property": "最大应变",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "204",
+    "Property": "埃尔门多夫抗撕裂性",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "205",
+    "Property": "埃尔门多夫抗撕裂性",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "206",
+    "Property": "分岔裤抗撕裂性",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "207",
+    "Property": "分岔裤抗撕裂性",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "208",
+    "Property": "落镖 A",
+    "TestConditions": ""
+  },
+  {
+    "Id": "209",
+    "Property": "落镖 B",
+    "TestConditions": ""
+  },
+  {
+    "Id": "210",
+    "Property": "动摩擦系数",
+    "TestConditions": ""
+  },
+  {
+    "Id": "211",
+    "Property": "光泽，20°",
+    "TestConditions": ""
+  },
+  {
+    "Id": "212",
+    "Property": "光泽，45°",
+    "TestConditions": ""
+  },
+  {
+    "Id": "213",
+    "Property": "光泽，60°",
+    "TestConditions": ""
+  },
+  {
+    "Id": "214",
+    "Property": "薄雾",
+    "TestConditions": ""
+  },
+  {
+    "Id": "215",
+    "Property": "WVTR",
+    "TestConditions": "23°C/85% 相对湿度"
+  },
+  {
+    "Id": "216",
+    "Property": "透氧率",
+    "TestConditions": "23 °C/0% 相对湿度"
+  },
+  {
+    "Id": "217",
+    "Property": "透氧率",
+    "TestConditions": "23°C/85% 相对湿度"
+  },
+  {
+    "Id": "218",
+    "Property": "二氧化碳转化率",
+    "TestConditions": "23 °C/0% 相对湿度"
+  },
+  {
+    "Id": "219",
+    "Property": "二氧化碳转化率",
+    "TestConditions": "23°C/85% 相对湿度"
+  },
+  {
+    "Id": "220",
+    "Property": "最小可达厚度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "221",
+    "Property": "挤压类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "222",
+    "Property": "试样厚度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "80",
+    "Property": "延伸率为 10% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "81",
+    "Property": "延伸率为 100% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "82",
+    "Property": "延伸率为 300% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "86",
+    "Property": "断裂应变 TPE",
+    "TestConditions": ""
+  },
+  {
+    "Id": "96",
+    "Property": "断裂应力 TPE",
+    "TestConditions": ""
+  },
+  {
+    "Id": "87",
+    "Property": "23 °C、24h 时的压缩形变",
+    "TestConditions": ""
+  },
+  {
+    "Id": "88",
+    "Property": "70 °C、24h 时的压缩形变",
+    "TestConditions": ""
+  },
+  {
+    "Id": "89",
+    "Property": "100 °C、24h 时的压缩形变",
+    "TestConditions": ""
+  },
+  {
+    "Id": "94",
+    "Property": "撕裂强度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "95",
+    "Property": "耐磨性",
+    "TestConditions": ""
+  },
+  {
+    "Id": "92",
+    "Property": "邵尔硬度 A",
+    "TestConditions": "3s"
+  },
+  {
+    "Id": "93",
+    "Property": "邵尔硬度 D",
+    "TestConditions": "15s"
+  },
+  {
+    "Id": "412",
+    "Property": "延伸率为 5% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "411",
+    "Property": "延伸率为 5% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "414",
+    "Property": "延伸率为 10% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "413",
+    "Property": "延伸率为 10% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "416",
+    "Property": "延伸率为 20% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "415",
+    "Property": "延伸率为 20% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "418",
+    "Property": "延伸率为 50% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "417",
+    "Property": "延伸率为 50% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "420",
+    "Property": "延伸率为 100% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "419",
+    "Property": "延伸率为 100% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "422",
+    "Property": "延伸率为 300% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "421",
+    "Property": "延伸率为 300% 时的应力",
+    "TestConditions": ""
+  },
+  {
+    "Id": "424",
+    "Property": "断裂应变 TPE",
+    "TestConditions": ""
+  },
+  {
+    "Id": "423",
+    "Property": "断裂应变 TPE",
+    "TestConditions": ""
+  },
+  {
+    "Id": "426",
+    "Property": "断裂应力 TPE",
+    "TestConditions": ""
+  },
+  {
+    "Id": "425",
+    "Property": "断裂应力 TPE",
+    "TestConditions": ""
+  },
+  {
+    "Id": "428",
+    "Property": "23 °C 时的压缩形变",
+    "TestConditions": "24 h"
+  },
+  {
+    "Id": "427",
+    "Property": "23 °C 时的压缩形变",
+    "TestConditions": "24 h"
+  },
+  {
+    "Id": "430",
+    "Property": "70 °C 时的压缩形变",
+    "TestConditions": "24 h"
+  },
+  {
+    "Id": "429",
+    "Property": "70 °C 时的压缩形变",
+    "TestConditions": "24 h"
+  },
+  {
+    "Id": "432",
+    "Property": "100 °C 时的压缩形变",
+    "TestConditions": "24 h"
+  },
+  {
+    "Id": "431",
+    "Property": "100 °C 时的压缩形变",
+    "TestConditions": "24 h"
+  },
+  {
+    "Id": "434",
+    "Property": "23 °C 时的压缩形变",
+    "TestConditions": ""
+  },
+  {
+    "Id": "433",
+    "Property": "23 °C 时的压缩形变",
+    "TestConditions": ""
+  },
+  {
+    "Id": "436",
+    "Property": "时间",
+    "TestConditions": ""
+  },
+  {
+    "Id": "435",
+    "Property": "时间",
+    "TestConditions": ""
+  },
+  {
+    "Id": "438",
+    "Property": "撕裂强度",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "437",
+    "Property": "撕裂强度",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "440",
+    "Property": "撕裂强度",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "439",
+    "Property": "撕裂强度",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "442",
+    "Property": "泰伯尔磨耗",
+    "TestConditions": ""
+  },
+  {
+    "Id": "441",
+    "Property": "泰伯尔磨耗",
+    "TestConditions": ""
+  },
+  {
+    "Id": "444",
+    "Property": "邵尔硬度 A",
+    "TestConditions": "15s"
+  },
+  {
+    "Id": "443",
+    "Property": "邵尔硬度 A",
+    "TestConditions": "15s"
+  },
+  {
+    "Id": "446",
+    "Property": "夏比缺口冲击强度",
+    "TestConditions": "-40 °C"
+  },
+  {
+    "Id": "445",
+    "Property": "夏比缺口冲击强度",
+    "TestConditions": "-40 °C"
+  },
+  {
+    "Id": "448",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "447",
+    "Property": "故障类型",
+    "TestConditions": ""
+  },
+  {
+    "Id": "754",
+    "Property": "拉伸模量",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "753",
+    "Property": "拉伸模量",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "756",
+    "Property": "拉伸模量",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "755",
+    "Property": "拉伸模量",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "758",
+    "Property": "拉伸模量",
+    "TestConditions": "穿过"
+  },
+  {
+    "Id": "757",
+    "Property": "拉伸模量",
+    "TestConditions": "穿过"
+  },
+  {
+    "Id": "760",
+    "Property": "断裂应力",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "759",
+    "Property": "断裂应力",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "762",
+    "Property": "断裂应力",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "761",
+    "Property": "断裂应力",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "778",
+    "Property": "断裂应力",
+    "TestConditions": "穿过"
+  },
+  {
+    "Id": "777",
+    "Property": "断裂应力",
+    "TestConditions": "穿过"
+  },
+  {
+    "Id": "764",
+    "Property": "断裂应变",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "763",
+    "Property": "断裂应变",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "766",
+    "Property": "断裂应变",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "765",
+    "Property": "断裂应变",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "780",
+    "Property": "断裂应变",
+    "TestConditions": "穿过"
+  },
+  {
+    "Id": "779",
+    "Property": "断裂应变",
+    "TestConditions": "穿过"
+  },
+  {
+    "Id": "768",
+    "Property": "泊松比",
+    "TestConditions": ""
+  },
+  {
+    "Id": "767",
+    "Property": "泊松比",
+    "TestConditions": ""
+  },
+  {
+    "Id": "770",
+    "Property": "面内剪切模量",
+    "TestConditions": ""
+  },
+  {
+    "Id": "769",
+    "Property": "面内剪切模量",
+    "TestConditions": ""
+  },
+  {
+    "Id": "772",
+    "Property": "面内剪切强度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "771",
+    "Property": "面内剪切强度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "773",
+    "Property": "载荷下的挠曲温度",
+    "TestConditions": "1.80 MPa"
+  },
+  {
+    "Id": "774",
+    "Property": "载荷下的挠曲温度",
+    "TestConditions": "0.45 MPa"
+  },
+  {
+    "Id": "775",
+    "Property": "纤维体积含量",
+    "TestConditions": ""
+  },
+  {
+    "Id": "776",
+    "Property": "铺层厚度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "781",
+    "Property": "成型温度",
+    "TestConditions": "试板"
+  },
+  {
+    "Id": "782",
+    "Property": "成型时间",
+    "TestConditions": "试板"
+  },
+  {
+    "Id": "783",
+    "Property": "冷却速率",
+    "TestConditions": "试板"
+  },
+  {
+    "Id": "784",
+    "Property": "脱模温度",
+    "TestConditions": "试板"
+  },
+  {
+    "Id": "785",
+    "Property": "成型压力",
+    "TestConditions": "试板"
+  },
+  {
+    "Id": "655",
+    "Property": "弯曲模量",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "654",
+    "Property": "弯曲模量",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "659",
+    "Property": "弯曲模量",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "658",
+    "Property": "弯曲模量",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "672",
+    "Property": "弯曲强度",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "671",
+    "Property": "弯曲强度",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "676",
+    "Property": "弯曲强度",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "675",
+    "Property": "弯曲强度",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "704",
+    "Property": "层间剪切强度",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "686",
+    "Property": "层间剪切强度",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "731",
+    "Property": "层间剪切强度",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "705",
+    "Property": "层间剪切强度",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "170",
+    "Property": "穿刺试验 - 韧性/脆性转变温度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "171",
+    "Property": "线性热膨胀系数 -40°C 至 +100°C",
+    "TestConditions": "平行"
+  },
+  {
+    "Id": "172",
+    "Property": "线性热膨胀系数 -40°C 至 +100°C",
+    "TestConditions": "法向"
+  },
+  {
+    "Id": "108",
+    "Property": "美国汽车安全技术法规",
+    "TestConditions": ""
+  },
+  {
+    "Id": "173",
+    "Property": "燃烧速率",
+    "TestConditions": "厚度 1 mm"
+  },
+  {
+    "Id": "174",
+    "Property": "空气中的热稳定性（下降 50% 时的夏比，3000h）",
+    "TestConditions": ""
+  },
+  {
+    "Id": "175",
+    "Property": "检测试样",
+    "TestConditions": ""
+  },
+  {
+    "Id": "176",
+    "Property": "天气稳定性 delta l",
+    "TestConditions": ""
+  },
+  {
+    "Id": "177",
+    "Property": "天气稳定性 delta a",
+    "TestConditions": ""
+  },
+  {
+    "Id": "178",
+    "Property": "天气稳定性 delta b",
+    "TestConditions": ""
+  },
+  {
+    "Id": "179",
+    "Property": "天气稳定性 delta E",
+    "TestConditions": ""
+  },
+  {
+    "Id": "180",
+    "Property": "天气稳定性 灰度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "181",
+    "Property": "光稳定性 delta l",
+    "TestConditions": ""
+  },
+  {
+    "Id": "182",
+    "Property": "光稳定性 delta a",
+    "TestConditions": ""
+  },
+  {
+    "Id": "183",
+    "Property": "光稳定性 delta b",
+    "TestConditions": ""
+  },
+  {
+    "Id": "184",
+    "Property": "光稳定性 delta E",
+    "TestConditions": ""
+  },
+  {
+    "Id": "185",
+    "Property": "光稳定性 灰度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "186",
+    "Property": "有机化合物的排放",
+    "TestConditions": ""
+  },
+  {
+    "Id": "187",
+    "Property": "有机排放物的热脱附分析",
+    "TestConditions": ""
+  },
+  {
+    "Id": "188",
+    "Property": "气味测试",
+    "TestConditions": ""
+  },
+  {
+    "Id": "235",
+    "Property": "各向异性比，拉伸模量",
+    "TestConditions": ""
+  },
+  {
+    "Id": "234",
+    "Property": "各向异性比，拉伸模量",
+    "TestConditions": ""
+  },
+  {
+    "Id": "237",
+    "Property": "各向异性比，抗拉强度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "236",
+    "Property": "各向异性比，抗拉强度",
+    "TestConditions": ""
+  },
+  {
+    "Id": "99",
+    "Property": "填充物",
+    "TestConditions": ""
+  }
+]
