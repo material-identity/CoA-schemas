@@ -48,6 +48,9 @@ jobs:
             ${{ runner.OS }}-node-
             ${{ runner.OS }}-
 
+      - name: Install GraphicsMagick
+        run: sudo apt-get install -y ghostscript graphicsmagick
+
       - name: Install dependencies
         run: npm ci
 
