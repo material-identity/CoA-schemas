@@ -1,681 +1,603 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns='http://www.w3.org/1999/xhtml'>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="version" content="v1.0.0" />
-  <style rel="stylesheet" type="text/css">
-    @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta name='version' content='v1.0.0' />
+    <style rel='stylesheet' type='text/css'>
+      @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700); html { font-family: "Lato", sans-serif;
+      font-size: 14px; text-align: justify; max-width: 2480px; justify-content: center; } .main-title { font-size:
+      1.5em; border-bottom: 3px solid #0c2340; } .second-level-title { font-size: 1.25em; border-bottom: 2px solid
+      #0c2340; padding: 0px; width: 100%; } .third-level-title { font-size: 1em; } .no-border { border: none; }
+      .main-table { border: 0px solid #ccc; border-collapse: collapse; margin: 0; padding: 0; width: 100%; table-layout:
+      fixed; margin-top: 0px; /*empty-cells: show;*/ } .table-cells { padding: 0.325em; text-align: left;
+      vertical-align: top; } .table-rows { border: 0px solid #ddd; padding: 0.15em; vertical-align: top; }
+      .table-headers { font-weight: lighter; font-style: italic; padding: 0.325em; text-align: left; max-width: 40%;
+      vertical-align: top; } .second-level { margin-left: 10px; } .caption { font-weight: lighter; font-size: 11px; }
+      .element { padding: 0.325em; font-size: 12px; } em { font-style: normal; } ol { list-style-type: none; padding: 0;
+      } ul { margin: 0; padding: 0; } ul li { display: inline; } img { max-width: 20vw; padding: 0; } .ce { width: 8vw;
+      } section:not(.header) { margin-top: 10px; } .ce-table-cells { padding: 0.325em; text-align: center;
+      vertical-align: top; }
+    </style>
+  </head>
 
-    html {
-      font-family: "Lato", sans-serif;
-      font-size: 14px;
-      text-align: justify;
-      max-width: 2480px;
-      justify-content: center;
-    }
+  <body>
+    {{! Manufacturer header section }}
+    <section class='header'>
+      <table class='main-table'>
+        <tbody>
+          <tr class='table-rows'>
+            <td class='table-cells' colspan='4'>
+              <img class='image' src='{{Certificate.Logo}}' />
+            </td>
+            <td class='table-cells' colspan='6'>
+              <ol>
+                <li>
+                  <h1>{{Certificate.Parties.Manufacturer.Name}}</h1>
+                </li>
+                <li>
+                  {{Certificate.Parties.Manufacturer.AddressLine1}}
+                  {{Certificate.Parties.Manufacturer.AddressLine2}}
+                </li>
+                <li>
+                  {{Certificate.Parties.Manufacturer.ZipCode}}
+                  {{Certificate.Parties.Manufacturer.City}},
+                  {{Certificate.Parties.Manufacturer.Country}}
+                </li>
+                <li>
+                  {{Certificate.Parties.Manufacturer.Email}}
+                </li>
+              </ol>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    {{! Customer header and receiver section }}
+    <section>
+      <table class='main-table'>
+        <tbody>
+          <tr class='table-rows'>
+            <th class='table-cells' colspan='4'>
+              {{i18n 'Customer' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-cells' colspan='6'>
+              {{i18n 'Receiver' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+          </tr>
+          <tr class='table-rows'>
+            <td class='table-cells' colspan='4'>
+              <ol>
+                <li>
+                  <h3>{{Certificate.Parties.Customer.Name}}</h3>
+                </li>
+                <li>
+                  {{Certificate.Parties.Customer.AddressLine1}}&nbsp;
+                </li>
+                <li>
+                  {{Certificate.Parties.Customer.AddressLine2}}&nbsp;
+                </li>
+                <li>
+                  {{Certificate.Parties.Customer.ZipCode}}
+                  {{Certificate.Parties.Customer.City}},
+                  {{Certificate.Parties.Customer.Country}}
+                </li>
+                <li>
+                  {{Certificate.Parties.Customer.Email}}
+                </li>
+              </ol>
+            </td>
+            <td class='table-cells' colspan='6'>
+              {{#if Certificate.Parties.Receiver}}
+                <ol>
+                  <li>
+                    <h3>{{Certificate.Parties.Receiver.Name}}</h3>
+                  </li>
+                  <li>
+                    {{Certificate.Parties.Receiver.AddressLine1}}&nbsp;
+                  </li>
+                  <li>
+                    {{Certificate.Parties.Receiver.AddressLine2}}&nbsp;
+                  </li>
+                  <li>
+                    {{Certificate.Parties.Receiver.ZipCode}}
+                    {{Certificate.Parties.Receiver.City}},
+                    {{Certificate.Parties.Receiver.Country}}
+                  </li>
+                  <li>
+                    {{Certificate.Parties.Receiver.Email}}
+                  </li>
+                </ol>
+              {{/if}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    {{! Certificate header section }}
+    <section>
+      <h2 class='main-title'>{{i18n 'Certificate' 'Certificate' Certificate.CertificateLanguages}}
+        {{Certificate.Standard.Norm}}
+        {{Certificate.Standard.Type}}</h2>
+      <table class='main-table'>
+        <tbody>
+          <tr class='table-rows'>
+            <td class='table-headers' colspan='2'>{{i18n 'Id' 'Certificate' Certificate.CertificateLanguages}}</td>
+            <td class='table-cells' colspan='2'>{{Certificate.Id}}</td>
+            <td class='table-headers' colspan='2'>{{i18n 'Date' 'Certificate' Certificate.CertificateLanguages}}</td>
+            <td class='table-cells' colspan='4'>{{localizeDate Certificate.Date Certificate.CertificateLanguages}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    {{! Business Transaction}}
+    <section class='header'>
+      <h2 class='main-title'>{{i18n 'BusinessTransaction' 'Certificate' Certificate.CertificateLanguages}}</h2>
+      <table class='main-table'>
+        <tbody>
+          {{! Columns headers }}
+          <tr class='table-row'>
+            <td class='table-cells' colspan='4'>
+              <strong>{{i18n 'Order' 'Certificate' Certificate.CertificateLanguages}}</strong>
+            </td>
+            <td class='table-cells' colspan='6'>
+              <strong>{{i18n 'Delivery' 'Certificate' Certificate.CertificateLanguages}}</strong>
+            </td>
+          </tr>
+          {{! Order Id and Delivery Id }}
+          <tr class='table-row'>
+            <td class='table-headers' colspan='2'>
+              {{i18n 'OrderId' 'Certificate' Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='2'>
+              {{Certificate.BusinessTransaction.Order.Id}}
+            </td>
+            <td class='table-headers' colspan='2'>
+              {{i18n 'DeliveryId' 'Certificate' Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='2'>
+              {{Certificate.BusinessTransaction.Delivery.Id}}
+            </td>
+          </tr>
+          {{! Order Position Number and Delivery Position Number }}
+          <tr class='table-row'>
+            <td class='table-headers' colspan='2'>{{i18n
+                'OrderPosition'
+                'Certificate'
+                Certificate.CertificateLanguages
+              }}
+            </td>
+            <td class='table-cells' colspan='2'>
+              {{Certificate.BusinessTransaction.Order.Position}}
+            </td>
+            <td class='table-headers' colspan='2'>
+              {{i18n 'DeliveryPosition' 'Certificate' Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='4'>
+              {{Certificate.BusinessTransaction.Delivery.Position}}
+            </td>
+          </tr>
+          {{! Order Quantity and Delivery Quantity }}
+          <tr class='table-row'>
+            <td class='table-headers' colspan='2'>
+              {{i18n 'OrderQuantity' 'Certificate' Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='2'>
+              {{localizeNumber Certificate.BusinessTransaction.Order.Quantity Certificate.CertificateLanguages}}
+              {{Certificate.BusinessTransaction.Order.QuantityUnit}}
+            </td>
+            <td class='table-headers' colspan='2'>
+              {{i18n 'DeliveryQuantity' 'Certificate' Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='4'>
+              {{localizeNumber Certificate.BusinessTransaction.Delivery.Quantity Certificate.CertificateLanguages}}
+              {{Certificate.BusinessTransaction.Delivery.QuantityUnit}}
+            </td>
+          </tr>
+          {{! Order Date and Delivery Date }}
+          <tr class='table-row'>
+            <td class='table-headers' colspan='2'>
+              {{i18n 'OrderDate' 'Certificate' Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='2'>
+              {{#if Certificate.BusinessTransaction.Order.Date}}
+                {{localizeDate Certificate.BusinessTransaction.Order.Date Certificate.CertificateLanguages}}
+              {{/if}}
+            </td>
+            <td class='table-headers' colspan='2'>{{i18n 'DeliveryDate' 'Certificate' Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='4'>
+              {{#if Certificate.BusinessTransaction.Delivery.Date}}
+                {{localizeDate Certificate.BusinessTransaction.Delivery.Date Certificate.CertificateLanguages}}
+              {{/if}}
+            </td>
+          </tr>
+          {{! Material identifier and job identifier }}
+          <tr class='table-row'>
+            <td class='table-headers' colspan='2'>
+              {{i18n 'CustomerProductId' 'Certificate' Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='2'>
+              {{Certificate.BusinessTransaction.Order.CustomerProductId}}
+            </td>
+            <td class='table-headers' colspan='2'>
+              {{i18n 'InternalOrderId' 'Certificate' Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='4'>
+              {{Certificate.BusinessTransaction.Delivery.InternalOrderId}}
+            </td>
+          </tr>
+          {{! Material name and job position }}
+          <tr class='table-row'>
+            <td class='table-headers' colspan='2'>
+              {{i18n 'CustomerProductName' 'Certificate' Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='2'>
+              {{Certificate.BusinessTransaction.Order.CustomerProductName}}
+            </td>
+            <td class='table-headers' colspan='2'>
+              {{i18n 'InternalOrderPosition' 'Certificate' Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='4'>
+              {{Certificate.BusinessTransaction.Delivery.InternalOrderPosition}}
+            </td>
+          </tr>
+          {{! Goodsreceived number and transport number }}
+          <tr class='table-row'>
+            <td class='table-headers' colspan='2'>
+              {{i18n 'GoodsReceiptId' 'Certificate' Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='2'>
+              {{Certificate.BusinessTransaction.Order.GoodsReceiptId}}
+            </td>
+            <td class='table-headers' colspan='2'>
+              {{i18n 'Transport' 'Certificate' Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='4'>
+              {{Certificate.BusinessTransaction.Delivery.Transport}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    {{! Product }}
+    <section class='header'>
+      <h2 class='main-title'>
+        {{i18n 'Product' 'Certificate' Certificate.CertificateLanguages}}
+      </h2>
+      <table class='main-table'>
+        <tbody>
+          {{#if Certificate.Product.Id}}
+            <tr>
+              <th class='table-headers' colspan='4'>
+                {{i18n 'ProductId' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <td class='table-cells' colspan='6'>
+                {{Certificate.Product.Id}}
+              </td>
+            </tr>
+          {{/if}}
+          {{#if Certificate.Product.Name}}
+            <tr>
+              <th class='table-headers' colspan='4'>
+                {{i18n 'ProductName' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <td class='table-cells' colspan='6'>
+                {{Certificate.Product.Name}}
+              </td>
+            </tr>
+          {{/if}}
+          {{#if Certificate.Product.Standards}}
+            <tr>
+              <th class='table-headers' colspan='4'>
+                {{i18n 'Standards' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <td class='table-cells' colspan='6'>
+                {{join Certificate.Product.Standards ', ' ''}}
+              </td>
+            </tr>
+          {{/if}}
+          {{#if Certificate.Product.CountryOfOrigin}}
+            <tr>
+              <th class='table-headers' colspan='4'>
+                {{i18n 'CountryOfOrigin' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <td class='table-cells' colspan='6'>
+                {{Certificate.Product.CountryOfOrigin}}
+              </td>
+            </tr>
+          {{/if}}
+          {{#if Certificate.Product.PlaceOfOrigin}}
+            <tr>
+              <th class='table-headers' colspan='4'>
+                {{i18n 'PlaceOfOrigin' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <td class='table-cells' colspan='6'>
+                {{Certificate.Product.PlaceOfOrigin}}
+              </td>
+            </tr>
+          {{/if}}
+          {{#if Certificate.Product.FillingBatchId}}
+            <tr>
+              <th class='table-headers' colspan='4'>
+                {{i18n 'FillingBatchId' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <td class='table-cells' colspan='6'>
+                {{Certificate.Product.FillingBatchId}}
+              </td>
+            </tr>
+          {{/if}}
+          {{#if Certificate.Product.FillingBatchDate}}
+            <tr>
+              <th class='table-headers' colspan='4'>
+                {{i18n 'FillingBatchDate' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <td class='table-cells' colspan='6'>
+                {{localizeDate Certificate.Product.FillingBatchDate Certificate.CertificateLanguages}}
+              </td>
+            </tr>
+          {{/if}}
+          {{#if Certificate.Product.ProductionBatchId}}
+            <tr>
+              <th class='table-headers' colspan='4'>
+                {{i18n 'ProductionBatchId' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <td class='table-cells' colspan='6'>
+                {{Certificate.Product.ProductionBatchId}}
+              </td>
+            </tr>
+          {{/if}}
+          {{#if Certificate.Product.ProductionDate}}
+            <tr>
+              <th class='table-headers' colspan='4'>
+                {{i18n 'ProductionDate' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <td class='table-cells' colspan='6'>
+                {{localizeDate Certificate.Product.ProductionDate Certificate.CertificateLanguages}}
+              </td>
+            </tr>
+          {{/if}}
+          {{#if Certificate.Product.ExpirationDate}}
+            <tr>
+              <th class='table-headers' colspan='4'>
+                {{i18n 'ExpirationDate' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <td class='table-cells' colspan='6'>
+                {{localizeDate Certificate.Product.ExpirationDate Certificate.CertificateLanguages}}
+              </td>
+            </tr>
+          {{/if}}
+          {{#if Certificate.Product.AdditionalInformation}}
+            <tr>
+              <th class='table-headers' colspan='4'>
+                {{i18n 'AdditionalInformation' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <td class='table-cells' colspan='6'>
+                {{join Certificate.Product.AdditionalInformation '<br>' ''}}
+              </td>
+            </tr>
+          {{/if}}
+        </tbody>
+      </table>
+    </section>
 
-    .main-title {
-      font-size: 1.5em;
-      border-bottom: 3px solid #0c2340;
-    }
+    {{! INSPECTIONS }}
+    <section class='header'>
+      <h2 class='main-title'>
+        {{i18n 'Inspections' 'Certificate' Certificate.CertificateLanguages}}
+      </h2>
+      {{#if Certificate.Analysis.LotId}}
+        <table class='main-table'>
+          <tbody>
+            <tr class='table-rows'>
+              <th class='table-cells' colspan='4'>
+                <strong>{{i18n 'LotId' 'Certificate' Certificate.CertificateLanguages}}</strong>
+              </th>
+              <td class='table-cells' colspan='6'>
+                {{Certificate.Analysis.LotId}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      {{/if}}
+      <table class='main-table'>
+        <tbody>
+          <tr class='table-rows'>
+            <th class='table-headers' colspan='2'>
+              {{i18n 'Property' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers' colspan='2'>
+              {{i18n 'Method' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers'>
+              {{i18n 'Value' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers'>
+              {{i18n 'Minimum' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers'>
+              {{i18n 'Maximum' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers'>
+              {{i18n 'TestConditions' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+          </tr>
+          {{#each Certificate.Analysis.Inspections}}
+            <tr class='table-rows'>
+              <td class='table-cells' colspan='2'>
+                {{extraI18n
+                  ../Certificate.Analysis.PropertiesStandard
+                  ../this.Certificate.CertificateLanguages
+                  this.PropertyId
+                  'Property'
+                  this.Property
+                }}
+              </td>
+              <td class='table-cells' colspan='2'>
+                {{this.Method}}
+              </td>
+              <td class='table-cells'>
+                {{localizeValue this.Value this.ValueType Certificate.CertificateLanguages}}
+                {{this.Unit}}
+              </td>
+              <td class='table-cells'>
+                {{localizeNumber this.Minimum Certificate.CertificateLanguages}}
+              </td>
+              <td class='table-cells'>
+                {{localizeNumber this.Maximum Certificate.CertificateLanguages}}
+              </td>
+              <td class='table-cells' colspan='2'>
+                {{extraI18n
+                  ../Certificate.Analysis.PropertiesStandard
+                  ../this.Certificate.CertificateLanguages
+                  this.PropertyId
+                  'TestConditions'
+                  this.TestConditions
+                }}
+              </td>
+            </tr>
+          {{/each}}
+          {{#if Certificate.Analysis.AdditionalInformation}}
+            <tr class='table-rows'>
+              <td class='table-cells' colspan='10'>
+                <strong>{{i18n 'AdditionalInformation' 'Certificate' Certificate.CertificateLanguages}}</strong>
+              </td>
+            </tr>
+            <tr class='table-rows'>
+              <td class='table-cells' colspan='10'>
+                {{join Certificate.Analysis.AdditionalInformation '<br>' ''}}
+              </td>
+            </tr>
+          {{/if}}
+        </tbody>
+      </table>
+    </section>
+    <section>
 
-    .second-level-title {
-      font-size: 1.25em;
-      border-bottom: 2px solid #0c2340;
-      padding: 0px;
-      width: 100%;
-    }
+    </section>
+    {{! DECLARATION OF CONFORMITY }}
+    <section>
+      <h2 class='main-title'>
+        {{i18n 'DeclarationOfConformity' 'Certificate' Certificate.CertificateLanguages}}</h2>
+      {{#if Certificate.DeclarationOfConformity.CE}}
+        <table class='main-table'>
+          <tbody>
+            <tr class='table-rows'>
+              <td class='table-cells' colspan='6' rowspan='5'>
+                {{Certificate.DeclarationOfConformity.Declaration}}
+              </td>
+            </tr>
+            <tr class='table-rows'>
+              <td class='ce-table-cells' colspan='4' text-align='center'>
+                <img class='ce' alt='Company CE' src='{{Certificate.DeclarationOfConformity.CE.CE_Image}}' />
+              </td>
+            </tr>
+            <tr class='table-rows'>
+              <td class='ce-table-cells' colspan='4' text-align='center'>
+                {{Certificate.DeclarationOfConformity.CE.NotifiedBodyNumber}}
+              </td>
+            </tr>
+            <tr class='table-rows'>
+              <td class='ce-table-cells' colspan='4' text-align='center'>
+                {{Certificate.DeclarationOfConformity.CE.YearDocumentIssued}}
+              </td>
+            </tr>
+            <tr class='table-rows'>
+              <td class='ce-table-cells' colspan='4' text-align='center'>
+                {{Certificate.DeclarationOfConformity.CE.DocumentNumber}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      {{else}}
+        <table class='main-table'>
+          <tbody>
+            <tr class='table-rows'>
+              <td class='table-cells' colspan='10'>
+                {{Certificate.DeclarationOfConformity.Declaration}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      {{/if}}
+    </section>
 
-    .third-level-title {
-      font-size: 1em;
-    }
-
-    .no-border {
-      border: none;
-    }
-
-    .main-table {
-      border: 0px solid #ccc;
-      border-collapse: collapse;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      table-layout: fixed;
-      margin-top: 0px;
-      /*empty-cells: show;*/
-    }
-
-    .table-cells {
-      padding: 0.325em;
-      text-align: left;
-      vertical-align: top;
-    }
-
-    .table-rows {
-      border: 0px solid #ddd;
-      padding: 0.15em;
-      vertical-align: top;
-    }
-
-    .table-headers {
-      font-weight: lighter;
-      font-style: italic;
-      padding: 0.325em;
-      text-align: left;
-      max-width: 40%;
-      vertical-align: top;
-    }
-
-    .second-level {
-      margin-left: 10px;
-    }
-
-    .caption {
-      font-weight: lighter;
-      font-size: 11px;
-    }
-
-    .element {
-      padding: 0.325em;
-      font-size: 12px;
-    }
-
-    em {
-      font-style: normal;
-    }
-
-    ol {
-      list-style-type: none;
-      padding: 0;
-
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-    }
-
-    ul li {
-      display: inline;
-    }
-
-    img {
-      max-width: 20vw;
-      padding: 0;
-    }
-
-    .ce {
-      width: 8vw;
-    }
-
-    section:not(.header) {
-      margin-top: 10px;
-    }
-    
-    .ce-table-cells {
-      padding: 0.325em;
-      text-align: center;
-      vertical-align: top;
-    }
-  </style>
-</head>
-
-<body>
-  {{! Manufacturer header section }}
-  <section class="header">
-    <table class="main-table">
-      <tbody>
-        <tr class="table-rows">
-          <td class="table-cells" colspan="4">
-            <img class="image" src="{{Certificate.Logo}}" />
-          </td>
-          <td class="table-cells" colspan="6">
-            <ol>
-              <li>
-                <h1>{{Certificate.Parties.Manufacturer.Name}}</h1>
-              </li>
-              <li>
-                {{Certificate.Parties.Manufacturer.AddressLine1}}
-                {{Certificate.Parties.Manufacturer.AddressLine2}}
-              </li>
-              <li>
-                {{Certificate.Parties.Manufacturer.ZipCode}} {{Certificate.Parties.Manufacturer.City}},
-                {{Certificate.Parties.Manufacturer.Country}}
-              </li>
-              <li>
-                {{Certificate.Parties.Manufacturer.Email}}
-              </li>
-            </ol>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  {{! Customer header and receiver section }}
-  <section>
-    <table class="main-table">
-      <tbody>   
-        <tr class="table-rows">
-          <th class="table-cells" colspan="4">
-            {{i18n "Customer" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <th class="table-cells" colspan="6">
-            {{i18n "Receiver" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-        </tr>
-        <tr class="table-rows">
-          <td class="table-cells" colspan="4">
-            <ol>
-              <li>
-                <h3>{{Certificate.Parties.Customer.Name}}</h3>
-              </li>
-              <li>
-                {{Certificate.Parties.Customer.AddressLine1}}&nbsp;
-              </li>
-              <li>
-                {{Certificate.Parties.Customer.AddressLine2}}&nbsp;
-              </li>
-              <li>
-                {{Certificate.Parties.Customer.ZipCode}} {{Certificate.Parties.Customer.City}},
-                {{Certificate.Parties.Customer.Country}}
-              </li>
-              <li>
-                {{Certificate.Parties.Customer.Email}}
-              </li>
-            </ol>
-          </td>
-          <td class="table-cells" colspan="6">
-            {{#if Certificate.Parties.Receiver}}
-            <ol>
-              <li>
-                <h3>{{Certificate.Parties.Receiver.Name}}</h3>
-              </li>
-              <li>
-                {{Certificate.Parties.Receiver.AddressLine1}}&nbsp;
-              </li>
-              <li>
-                {{Certificate.Parties.Receiver.AddressLine2}}&nbsp;
-              </li>
-              <li>
-                {{Certificate.Parties.Receiver.ZipCode}} {{Certificate.Parties.Receiver.City}},
-                {{Certificate.Parties.Receiver.Country}}
-              </li>
-              <li>
-                {{Certificate.Parties.Receiver.Email}}
-              </li>
-            </ol>
-            {{/if}}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  {{! Certificate header section }}
-  <section>
-    <h2 class="main-title">{{i18n "Certificate" "Certificate" Certificate.CertificateLanguages}} {{Certificate.Standard.Norm}} {{Certificate.Standard.Type}}</h2>
-    <table class="main-table">
-      <tbody>
-        <tr class="table-rows">
-          <td class="table-headers" colspan="2">{{i18n "Id" "Certificate" Certificate.CertificateLanguages}}</td>
-          <td class="table-cells" colspan="2">{{Certificate.Id}}</td>
-          <td class="table-headers" colspan="2">{{i18n "Date" "Certificate" Certificate.CertificateLanguages}}</td>
-          <td class="table-cells" colspan="4">{{localizeDate Certificate.Date Certificate.CertificateLanguages}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  {{! Business Transaction}}
-  <section class="header">
-    <h2 class="main-title">{{i18n "BusinessTransaction" "Certificate" Certificate.CertificateLanguages}}</h2>
-    <table class="main-table">
-      <tbody>
-        {{! Columns headers }}
-        <tr class="table-row">
-          <td class="table-cells" colspan="4">
-            <strong>{{i18n "Order" "Certificate" Certificate.CertificateLanguages}}</strong>
-          </td>
-          <td class="table-cells" colspan="6">
-            <strong>{{i18n "Delivery" "Certificate" Certificate.CertificateLanguages}}</strong>
-          </td>
-        </tr>
-        {{! Order Id and Delivery Id }}
-        <tr class="table-row">
-          <td class="table-headers" colspan="2">
-            {{i18n "OrderId" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="2">
-            {{Certificate.BusinessTransaction.Order.Id}}
-          </td>
-          <td class="table-headers" colspan="2">
-            {{i18n "DeliveryId" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="2">
-            {{Certificate.BusinessTransaction.Delivery.Id}}
-          </td>
-        </tr>
-        {{! Order Position Number and Delivery Position Number }}
-        <tr class="table-row">
-          <td class="table-headers" colspan="2">{{i18n "OrderPosition" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="2">
-            {{Certificate.BusinessTransaction.Order.Position}}
-          </td>
-          <td class="table-headers" colspan="2">
-            {{i18n "DeliveryPosition" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="4">
-            {{Certificate.BusinessTransaction.Delivery.Position}}
-          </td>
-        </tr>
-        {{! Order Quantity and Delivery Quantity }}
-        <tr class="table-row">
-          <td class="table-headers" colspan="2">
-            {{i18n "OrderQuantity" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="2">
-            {{localizeNumber Certificate.BusinessTransaction.Order.Quantity Certificate.CertificateLanguages}} {{
-            Certificate.BusinessTransaction.Order.QuantityUnit}}
-          </td>
-          <td class="table-headers" colspan="2">
-            {{i18n "DeliveryQuantity" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="4">
-            {{localizeNumber Certificate.BusinessTransaction.Delivery.Quantity Certificate.CertificateLanguages}} {{
-            Certificate.BusinessTransaction.Delivery.QuantityUnit}}
-          </td>
-        </tr>
-        {{! Order Date and Delivery Date }}
-        <tr class="table-row">
-          <td class="table-headers" colspan="2">
-            {{i18n "OrderDate" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="2">
-            {{#if Certificate.BusinessTransaction.Order.Date}}
-            {{localizeDate Certificate.BusinessTransaction.Order.Date Certificate.CertificateLanguages}}
-            {{/if}}
-          </td>
-          <td class="table-headers" colspan="2">{{i18n "DeliveryDate" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="4">
-            {{#if Certificate.BusinessTransaction.Delivery.Date}}
-            {{localizeDate Certificate.BusinessTransaction.Delivery.Date Certificate.CertificateLanguages}}
-            {{/if}}
-          </td>
-        </tr>
-        {{! Material identifier and job identifier }}
-        <tr class="table-row">
-          <td class="table-headers" colspan="2">
-            {{i18n "CustomerProductId" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="2">
-            {{Certificate.BusinessTransaction.Order.CustomerProductId}}
-          </td>
-           <td class="table-headers" colspan="2">
-            {{i18n "InternalOrderId" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="4">
-            {{Certificate.BusinessTransaction.Delivery.InternalOrderId}}
-          </td>
-        </tr>
-        {{! Material name and job position }}
-         <tr class="table-row">
-          <td class="table-headers" colspan="2">
-            {{i18n "CustomerProductName" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="2">
-            {{Certificate.BusinessTransaction.Order.CustomerProductName}}
-          </td>
-          <td class="table-headers" colspan="2">
-            {{i18n "InternalOrderPosition" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="4">
-            {{Certificate.BusinessTransaction.Delivery.InternalOrderPosition}}
-          </td>
-        </tr>
-        {{! Goodsreceived number and transport number }}
-        <tr class="table-row">
-          <td class="table-headers" colspan="2">
-            {{i18n "GoodsReceiptId" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="2">
-            {{Certificate.BusinessTransaction.Order.GoodsReceiptId}}
-          </td>
-          <td class="table-headers" colspan="2">
-            {{i18n "Transport" "Certificate" Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="4">
-            {{Certificate.BusinessTransaction.Delivery.Transport}}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  {{! Product }}
-  <section class="header">
-    <h2 class="main-title">
-      {{i18n "Product" "Certificate" Certificate.CertificateLanguages}}
-    </h2>
-    <table class="main-table">
-      <tbody>
-        {{#if Certificate.Product.Id}}
-        <tr>
-          <th class="table-headers" colspan="4">
-            {{i18n "ProductId" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <td class="table-cells" colspan="6">
-            {{Certificate.Product.Id}}
-          </td>
-        </tr>
-        {{/if}}
-        {{#if Certificate.Product.Name}}
-        <tr>
-          <th class="table-headers" colspan="4">
-            {{i18n "ProductName" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <td class="table-cells" colspan="6">
-            {{Certificate.Product.Name}}
-          </td>
-        </tr>
-        {{/if}}
-        {{#if Certificate.Product.Standards}}
-        <tr>
-          <th class="table-headers" colspan="4">
-            {{i18n "Standards" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <td class="table-cells" colspan="6">
-            {{join Certificate.Product.Standards ", " ""}}
-          </td>
-        </tr>
-        {{/if}}
-        {{#if Certificate.Product.CountryOfOrigin}}
-        <tr>
-          <th class="table-headers" colspan="4">
-            {{i18n "CountryOfOrigin" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <td class="table-cells" colspan="6">
-            {{Certificate.Product.CountryOfOrigin}}
-          </td>
-        </tr>
-        {{/if}}
-        {{#if Certificate.Product.PlaceOfOrigin}}
-        <tr>
-          <th class="table-headers" colspan="4">
-            {{i18n "PlaceOfOrigin" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <td class="table-cells" colspan="6">
-            {{Certificate.Product.PlaceOfOrigin}}
-          </td>
-        </tr>
-        {{/if}}
-        {{#if Certificate.Product.FillingBatchId}}
-        <tr>
-          <th class="table-headers" colspan="4">
-            {{i18n "FillingBatchId" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <td class="table-cells" colspan="6">
-            {{Certificate.Product.FillingBatchId}}
-          </td>
-        </tr>
-        {{/if}}
-        {{#if Certificate.Product.FillingBatchDate}}
-        <tr>
-          <th class="table-headers" colspan="4">
-            {{i18n "FillingBatchDate" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <td class="table-cells" colspan="6">
-            {{localizeDate Certificate.Product.FillingBatchDate Certificate.CertificateLanguages}}
-          </td>
-        </tr>
-        {{/if}}
-        {{#if Certificate.Product.ProductionBatchId}}
-        <tr>
-          <th class="table-headers" colspan="4">
-            {{i18n "ProductionBatchId" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <td class="table-cells" colspan="6">
-            {{Certificate.Product.ProductionBatchId}}
-          </td>
-        </tr>
-        {{/if}}
-        {{#if Certificate.Product.ProductionDate}}
-        <tr>
-          <th class="table-headers" colspan="4">
-            {{i18n "ProductionDate" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <td class="table-cells" colspan="6">
-            {{localizeDate Certificate.Product.ProductionDate Certificate.CertificateLanguages}}
-          </td>
-        </tr>
-        {{/if}}
-        {{#if Certificate.Product.ExpirationDate}}
-        <tr>
-          <th class="table-headers" colspan="4">
-            {{i18n "ExpirationDate" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <td class="table-cells" colspan="6">
-            {{localizeDate Certificate.Product.ExpirationDate Certificate.CertificateLanguages}}
-          </td>
-        </tr>
-        {{/if}}
-        {{#if Certificate.Product.AdditionalInformation}}
-        <tr>
-          <th class="table-headers" colspan="4">
-            {{i18n "AdditionalInformation" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <td class="table-cells" colspan="6">
-            {{join Certificate.Product.AdditionalInformation "<br>" ""}}
-          </td>
-        </tr>
-        {{/if}}
-      </tbody>
-    </table>
-  </section>
-
-  {{! INSPECTIONS }}
-  <section class="header">
-    <h2 class="main-title">
-      {{i18n "Inspections" "Certificate" Certificate.CertificateLanguages}}
-    </h2>
-    {{#if Certificate.Analysis.LotId}}
-    <table class="main-table">
-      <tbody>
-        <tr class="table-rows">
-          <th class="table-cells" colspan="4">
-            <strong>{{i18n "LotId" "Certificate" Certificate.CertificateLanguages}}</strong>
-          </th>
-          <td class="table-cells" colspan="6">
-            {{Certificate.Analysis.LotId}}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    {{/if}}
-    <table class="main-table">
-      <tbody>
-        <tr class="table-rows">
-          <th class="table-headers" colspan="2">
-            {{i18n "Property" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <th class="table-headers" colspan="2">
-            {{i18n "Method" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <th class="table-headers">
-            {{i18n "Value" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <th class="table-headers">
-            {{i18n "Minimum" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <th class="table-headers">
-            {{i18n "Maximum" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <th class="table-headers">
-            {{i18n "TestConditions" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-        </tr>
-        {{#each Certificate.Analysis.Inspections}}
-        <tr class="table-rows">
-          <td class="table-cells" colspan="2">
-            {{this.Property}}
-          </td>
-          <td class="table-cells" colspan="2">
-            {{this.Method}}
-          </td>
-          <td class="table-cells">
-            {{localizeValue this.Value this.ValueType Certificate.CertificateLanguages}}  {{this.Unit}}
-          </td>
-          <td class="table-cells">
-            {{localizeNumber this.Minimum Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells">
-            {{localizeNumber this.Maximum Certificate.CertificateLanguages}}
-          </td>
-          <td class="table-cells" colspan="2">
-            {{this.TestConditions}}
-          </td>
-        </tr>
-        {{/each}}
-        {{#if Certificate.Analysis.AdditionalInformation}}
-        <tr class="table-rows">
-          <td class="table-cells" colspan="10">
-            <strong>{{i18n "AdditionalInformation" "Certificate" Certificate.CertificateLanguages}}</strong>
-          </td>
-        </tr>
-        <tr class="table-rows">
-          <td class="table-cells" colspan="10">
-            {{join Certificate.Analysis.AdditionalInformation "<br>" ""}}
-          </td>
-        </tr>
-        {{/if}}
-      </tbody>
-    </table>
-  </section>
-  <section>
- 
-  </section>
-  {{! DECLARATION OF CONFORMITY }}
-  <section>
-    <h2 class="main-title">
-      {{i18n "DeclarationOfConformity" "Certificate" Certificate.CertificateLanguages}}</h2>
-    {{#if Certificate.DeclarationOfConformity.CE}}
-    <table class="main-table" >
-      <tbody>
-        <tr class="table-rows">
-          <td class="table-cells" colspan="6" rowspan="5" >
-            {{Certificate.DeclarationOfConformity.Declaration}}
-          </td>
-        </tr>
-        <tr class="table-rows">
-          <td class="ce-table-cells" colspan="4" text-align="center">
-            <img class="ce" alt="Company CE" src="{{Certificate.DeclarationOfConformity.CE.CE_Image}}"/>
-          </td>
-        </tr>
-        <tr class="table-rows">
-          <td class="ce-table-cells" colspan="4" text-align="center">
-            {{Certificate.DeclarationOfConformity.CE.NotifiedBodyNumber}}
-          </td>
-        </tr>
-        <tr class="table-rows">
-          <td class="ce-table-cells" colspan="4" text-align="center">
-            {{Certificate.DeclarationOfConformity.CE.YearDocumentIssued}}
-          </td>
-        </tr>
-        <tr class="table-rows" >
-          <td class="ce-table-cells" colspan="4" text-align="center">
-            {{Certificate.DeclarationOfConformity.CE.DocumentNumber}}
-          </td>
-        </tr>
-      </tbody>
-    </table> 
-    {{else}}
-    <table class="main-table">
-      <tbody>
-        <tr class="table-rows">
-          <td class="table-cells" colspan="10">
-            {{Certificate.DeclarationOfConformity.Declaration}}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    {{/if}}
-  </section>
-
-  {{! CONTACTS }}
-  {{#if Certificate.Contacts}}
-  <section>
-    <h2 class="main-title">
-      {{i18n "Contacts" "Certificate" Certificate.CertificateLanguages}}
-    </h2>
-    <table class="main-table">
-      <tbody>
-        <tr class="table-rows">
-          <th class="table-headers">
-            {{i18n "ContactName" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <th class="table-headers">
-            {{i18n "ContactRole" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <th class="table-headers">
-            {{i18n "ContactDepartment" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <th class="table-headers">
-            {{i18n "ContactEmail" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-          <th class="table-headers">
-            {{i18n "ContactPhone" "Certificate" Certificate.CertificateLanguages}}
-          </th>
-        </tr>
-        {{#each Certificate.Contacts}}
-        <tr class="table-rows">
-          <td class="table-cells">
-            {{this.Name}}
-          </td>
-          <td class="table-cells">
-            {{this.Role}}
-          </td>
-          <td class="table-cells">
-            {{this.Department}}
-          </td>
-          <td class="table-cells">
-            {{this.Email}}
-          </td>
-          <td class="table-cells">
-            {{this.Phone}}
-          </td>
-        </tr>
-        {{/each}}
-      </tbody>
-    </table>
-  </section>
-  {{/if}}
-
-  {{! ATTACHEMENTS}}
-  {{#if Certificate.Attachments}}
-  <section>
-    <h2 class="main-title">
-      {{i18n "Attachments" "Certificate" Certificate.CertificateLanguages}}
-    </h2>
-    <table class="main-table">
-      <tbody>
-        <tr class="table-rows">
-          <td class="table-cells" colspan="10">
-            {{#each Certificate.Attachments}}
-            {{this.FileName}}<br>
+    {{! CONTACTS }}
+    {{#if Certificate.Contacts}}
+      <section>
+        <h2 class='main-title'>
+          {{i18n 'Contacts' 'Certificate' Certificate.CertificateLanguages}}
+        </h2>
+        <table class='main-table'>
+          <tbody>
+            <tr class='table-rows'>
+              <th class='table-headers'>
+                {{i18n 'ContactName' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <th class='table-headers'>
+                {{i18n 'ContactRole' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <th class='table-headers'>
+                {{i18n 'ContactDepartment' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <th class='table-headers'>
+                {{i18n 'ContactEmail' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+              <th class='table-headers'>
+                {{i18n 'ContactPhone' 'Certificate' Certificate.CertificateLanguages}}
+              </th>
+            </tr>
+            {{#each Certificate.Contacts}}
+              <tr class='table-rows'>
+                <td class='table-cells'>
+                  {{this.Name}}
+                </td>
+                <td class='table-cells'>
+                  {{this.Role}}
+                </td>
+                <td class='table-cells'>
+                  {{this.Department}}
+                </td>
+                <td class='table-cells'>
+                  {{this.Email}}
+                </td>
+                <td class='table-cells'>
+                  {{this.Phone}}
+                </td>
+              </tr>
             {{/each}}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  {{/if}}
+          </tbody>
+        </table>
+      </section>
+    {{/if}}
 
-  <footer>
-    <p>
-      <em class="caption">Powered by <a href="https://s1seven.com">s1seven.com</a></em>
-      <em style="color: lightgray; margin-left: 35%" class="caption">{{RefSchemaUrl}}</em>
-      <br>
-    </p>
-  </footer>
-</body>
+    {{! ATTACHEMENTS}}
+    {{#if Certificate.Attachments}}
+      <section>
+        <h2 class='main-title'>
+          {{i18n 'Attachments' 'Certificate' Certificate.CertificateLanguages}}
+        </h2>
+        <table class='main-table'>
+          <tbody>
+            <tr class='table-rows'>
+              <td class='table-cells' colspan='10'>
+                {{#each Certificate.Attachments}}
+                  {{this.FileName}}<br />
+                {{/each}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    {{/if}}
+
+    <footer>
+      <p>
+        <em class='caption'>Powered by <a href='https://s1seven.com'>s1seven.com</a></em>
+        <em style='color: lightgray; margin-left: 35%' class='caption'>{{RefSchemaUrl}}</em>
+        <br />
+      </p>
+    </footer>
+  </body>
 
 </html>

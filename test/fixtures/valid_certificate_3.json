@@ -101,7 +101,7 @@
           "TestConditions": "According customer specification"
         },
         {
-          "PropertyId": "1039",
+          "PropertyId": "51",
           "Property": "Density",
           "Method": "DIN EN ISO 1183-1A",
           "Unit": "g/cm³",

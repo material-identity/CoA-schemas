@@ -1,283 +1,1387 @@
-﻿[
-  { "Id": "38", "Property": "Schmelzvolumen-Flussrate", "TestConditions": "MVR" },
-  { "Id": "39", "Property": " Temperatur", "TestConditions": "" },
-  { "Id": "40", "Property": " Last", "TestConditions": "" },
-  { "Id": "44", "Property": "Schrumpfung der Gussform", "TestConditions": "parallel" },
-  { "Id": "45", "Property": "Schrumpfung der Gussform", "TestConditions": "normal" },
-  { "Id": "107", "Property": "Elastizitätsmodul", "TestConditions": "" },
-  { "Id": "7", "Property": "Elastizitätsmodul", "TestConditions": "" },
-  { "Id": "101", "Property": "Streckspannung", "TestConditions": "" },
-  { "Id": "1", "Property": "Streckspannung", "TestConditions": "" },
-  { "Id": "102", "Property": "Streckdehnung", "TestConditions": "" },
-  { "Id": "2", "Property": "Streckdehnung", "TestConditions": "" },
-  { "Id": "103", "Property": "Nominale Dehnung bei Bruch", "TestConditions": "" },
-  { "Id": "3", "Property": "Nominale Dehnung bei Bruch", "TestConditions": "" },
-  { "Id": "104", "Property": "Spannung bei 50 % Dehnung", "TestConditions": "" },
-  { "Id": "4", "Property": "Spannung bei 50 % Dehnung", "TestConditions": "" },
-  { "Id": "105", "Property": "Spannung bei Bruch", "TestConditions": "" },
-  { "Id": "5", "Property": "Spannung bei Bruch", "TestConditions": "" },
-  { "Id": "106", "Property": "Dehnung bei Bruch", "TestConditions": "" },
-  { "Id": "6", "Property": "Dehnung bei Bruch", "TestConditions": "" },
-  { "Id": "8", "Property": "Elastizitätskriechmodul", "TestConditions": "1 h" },
-  { "Id": "9", "Property": "Elastizitätskriechmodul", "TestConditions": "1000 h" },
-  { "Id": "111", "Property": "Charpy-Schlagzähigkeit", "TestConditions": "+23 °C" },
-  { "Id": "11", "Property": "Charpy-Schlagzähigkeit", "TestConditions": "+23 °C" },
-  { "Id": "239", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "543", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "112", "Property": "Charpy-Schlagzähigkeit", "TestConditions": "-30 °C" },
-  { "Id": "12", "Property": "Charpy-Schlagzähigkeit", "TestConditions": "-30 °C" },
-  { "Id": "546", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "544", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "113", "Property": "Charpy-Kerbschlagzähigkeit", "TestConditions": "+23 °C" },
-  { "Id": "13", "Property": "Charpy-Kerbschlagzähigkeit", "TestConditions": "+23 °C" },
-  { "Id": "548", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "547", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "114", "Property": "Charpy-Kerbschlagzähigkeit", "TestConditions": "-30 °C" },
-  { "Id": "14", "Property": "Charpy-Kerbschlagzähigkeit", "TestConditions": "-30 °C" },
-  { "Id": "550", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "549", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "110", "Property": "Elastizitäts-Kerbschlagzähigkeit", "TestConditions": "+23 °C" },
-  { "Id": "10", "Property": "Elastizitäts-Kerbschlagzähigkeit", "TestConditions": "+23 °C" },
-  { "Id": "165", "Property": "Einstich – maximale Kraft", "TestConditions": "+23 °C" },
-  { "Id": "65", "Property": "Einstich – maximale Kraft", "TestConditions": "+23 °C" },
-  { "Id": "167", "Property": "Einstich – maximale Kraft", "TestConditions": "-30 °C" },
-  { "Id": "67", "Property": "Einstich – maximale Kraft", "TestConditions": "-30 °C" },
-  { "Id": "166", "Property": "Einstichenergie", "TestConditions": "+23 °C" },
-  { "Id": "66", "Property": "Einstichenergie", "TestConditions": "+23 °C" },
-  { "Id": "168", "Property": "Einstichenergie", "TestConditions": "-30 °C" },
-  { "Id": "68", "Property": "Einstichenergie", "TestConditions": "-30 °C" },
-  { "Id": "15", "Property": "Schmelztemperatur", "TestConditions": "10 °C/min" },
-  { "Id": "16", "Property": "Glasübergangstemperatur", "TestConditions": "10 °C/min" },
-  { "Id": "17", "Property": "Temp. bei Durchbiegung unter Last", "TestConditions": "1,80 MPa" },
-  { "Id": "18", "Property": "Temp. bei Durchbiegung unter Last", "TestConditions": "0,45 MPa" },
-  { "Id": "19", "Property": "Temp. bei Durchbiegung unter Last", "TestConditions": "8,00 MPa" },
-  { "Id": "20", "Property": "Vicat-Erweichungstemperatur", "TestConditions": "50 °C/h 50 N" },
-  { "Id": "191", "Property": "Vicat-Erweichungstemperatur", "TestConditions": "50 °C/h 10 N" },
-  { "Id": "121", "Property": "Koeff. der linearen therm. Ausdehnung, 23 °C bis 55 °C", "TestConditions": "parallel" },
-  { "Id": "122", "Property": "Koeff. der linearen therm. Ausdehnung, 23 °C bis 55 °C", "TestConditions": "normal" },
-  { "Id": "23", "Property": "Brennverh. bei 1,5 mm nom. Dicke", "TestConditions": "" },
-  { "Id": "24", "Property": " Getestete Dicke", "TestConditions": "" },
-  { "Id": "62", "Property": "      Yellow Card verfügbar", "TestConditions": "" },
-  { "Id": "25", "Property": "Brennverh. bei Dicke h", "TestConditions": "" },
-  { "Id": "26", "Property": " Getestete Dicke", "TestConditions": "" },
-  { "Id": "63", "Property": "      Yellow Card verfügbar", "TestConditions": "" },
-  { "Id": "27", "Property": "Brennverh. 5 V bei Dicke h", "TestConditions": "" },
-  { "Id": "28", "Property": " Getestete Dicke", "TestConditions": "" },
-  { "Id": "64", "Property": "Yellow Card verfügbar", "TestConditions": "" },
-  { "Id": "29", "Property": "Sauerstoffindex", "TestConditions": "" },
-  { "Id": "130", "Property": "Relative Permittivität", "TestConditions": "100 Hz" },
-  { "Id": "30", "Property": "Relative Permittivität", "TestConditions": "100 Hz" },
-  { "Id": "131", "Property": "Relative Permittivität", "TestConditions": "1 MHz" },
-  { "Id": "31", "Property": "Relative Permittivität", "TestConditions": "1 MHz" },
-  { "Id": "132", "Property": "Dissipationsfaktor", "TestConditions": "100 Hz" },
-  { "Id": "32", "Property": "Dissipationsfaktor", "TestConditions": "100 Hz" },
-  { "Id": "133", "Property": "Dissipationsfaktor", "TestConditions": "1 MHz" },
-  { "Id": "33", "Property": "Dissipationsfaktor", "TestConditions": "1 MHz" },
-  { "Id": "136", "Property": "Volumenwiderstand", "TestConditions": "" },
-  { "Id": "36", "Property": "Volumenwiderstand", "TestConditions": "" },
-  { "Id": "37", "Property": "Oberflächenwiderstand", "TestConditions": "" },
-  { "Id": "134", "Property": "Spannungsfestigkeit", "TestConditions": "" },
-  { "Id": "34", "Property": "Spannungsfestigkeit", "TestConditions": "" },
-  { "Id": "135", "Property": "Vergleichender Tracking-Index", "TestConditions": "" },
-  { "Id": "35", "Property": "Vergleichender Tracking-Index", "TestConditions": "" },
-  { "Id": "49", "Property": "Wasserabsorption", "TestConditions": "" },
-  { "Id": "50", "Property": "Feuchteabsorption", "TestConditions": "" },
-  { "Id": "151", "Property": "Dichte", "TestConditions": "" },
-  { "Id": "51", "Property": "Dichte", "TestConditions": "" },
-  { "Id": "46", "Property": "Viskositätszahl", "TestConditions": "" },
-  { "Id": "47", "Property": "Indikative Dichte", "TestConditions": "Nur PE" },
-  { "Id": "41", "Property": "Lichtdurchlässigkeit", "TestConditions": "" },
-  { "Id": "83", "Property": "Charpy-Kerbschlagzähigkeit", "TestConditions": "+23 °C, 3 mm" },
-  { "Id": "551", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "84", "Property": "Charpy-Kerbschlagzähigkeit", "TestConditions": "-30 °C, 3 mm" },
-  { "Id": "553", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "85", "Property": "Izod-Schlagzähigkeit", "TestConditions": "+23 °C, 4 mm" },
-  { "Id": "555", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "90", "Property": "Izod-Schlagzähigkeit", "TestConditions": "-30 °C, 4 mm" },
-  { "Id": "557", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "120", "Property": "Izod-Kerbschlagzähigkeit", "TestConditions": "+23 °C, 4 mm" },
-  { "Id": "559", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "97", "Property": "Izod-Kerbschlagzähigkeit", "TestConditions": "-30 °C, 4 mm" },
-  { "Id": "561", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "98", "Property": "Izod-Kerbschlagzähigkeit", "TestConditions": "+23 °C, 3 mm" },
-  { "Id": "563", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "100", "Property": "Izod-Kerbschlagzähigkeit", "TestConditions": "-30 °C, 3 mm" },
-  { "Id": "565", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "79", "Property": "Dichte der Schmelze", "TestConditions": "" },
-  { "Id": "78", "Property": "Wärmeleitfähigkeit der Schmelze", "TestConditions": "" },
-  { "Id": "77", "Property": "Spez. Wärmekapazität der Schmelze", "TestConditions": "" },
-  { "Id": "76", "Property": "Eff. thermische Diffusionsfähigkeit", "TestConditions": "" },
-  { "Id": "75", "Property": "Auswurftemperatur", "TestConditions": "" },
-  { "Id": "230", "Property": "Min. Gussformtemperatur", "TestConditions": "" },
-  { "Id": "231", "Property": "Max. Gussformtemperatur", "TestConditions": "" },
-  { "Id": "232", "Property": "Min. Schmelztemperatur", "TestConditions": "" },
-  { "Id": "233", "Property": "Max. Schmelztemperatur", "TestConditions": "" },
-  { "Id": "52", "Property": "Prüfbedingungen nach ISO", "TestConditions": "" },
-  { "Id": "53", "Property": "Spritzgießen, Schmelztemperatur", "TestConditions": "" },
-  { "Id": "54", "Property": "Gussformtemperatur", "TestConditions": "" },
-  { "Id": "55", "Property": " Injektionsgeschwindigkeit", "TestConditions": "" },
-  { "Id": "60", "Property": " Haltedruck", "TestConditions": "" },
-  { "Id": "56", "Property": "Formpressen, Presstemperatur", "TestConditions": "" },
-  { "Id": "57", "Property": " Abkühlungsrate", "TestConditions": "" },
-  { "Id": "58", "Property": " Formzeit", "TestConditions": "" },
-  { "Id": "59", "Property": " Entformungstemperatur", "TestConditions": "" },
-  { "Id": "48", "Property": "Prüfbedingungen nach ISO", "TestConditions": "" },
-  { "Id": "61", "Property": "Spritzgießen, Injektionstemperatur", "TestConditions": "" },
-  { "Id": "69", "Property": "Gussformtemperatur", "TestConditions": "" },
-  { "Id": "70", "Property": "Injektionsgeschwindigkeit", "TestConditions": "" },
-  { "Id": "71", "Property": "Haltedruck", "TestConditions": "" },
-  { "Id": "72", "Property": "Aushärtungszeit", "TestConditions": "" },
-  { "Id": "73", "Property": "Formpressen, Gussformtemperatur", "TestConditions": "" },
-  { "Id": "74", "Property": "Aushärtungszeit", "TestConditions": "" },
-  { "Id": "196", "Property": "Spannung bei Streckung", "TestConditions": "parallel" },
-  { "Id": "197", "Property": "Spannung bei Streckung", "TestConditions": "normal" },
-  { "Id": "198", "Property": "Dehnung bei Streckung", "TestConditions": "parallel" },
-  { "Id": "199", "Property": "Dehnung bei Streckung", "TestConditions": "normal" },
-  { "Id": "200", "Property": "Max. Spannung", "TestConditions": "parallel" },
-  { "Id": "201", "Property": "Max. Spannung", "TestConditions": "normal" },
-  { "Id": "202", "Property": "Max. Dehnung", "TestConditions": "parallel" },
-  { "Id": "203", "Property": "Max. Dehnung", "TestConditions": "normal" },
-  { "Id": "204", "Property": "Elmendorf-Reißfestigkeit", "TestConditions": "parallel" },
-  { "Id": "205", "Property": "Elmendorf-Reißfestigkeit", "TestConditions": "normal" },
-  { "Id": "206", "Property": "Trouser-Reißfestigkeit", "TestConditions": "parallel" },
-  { "Id": "207", "Property": "Trouser-Reißfestigkeit", "TestConditions": "normal" },
-  { "Id": "208", "Property": "Fallhammerprüfung A", "TestConditions": "" },
-  { "Id": "209", "Property": "Fallhammerprüfung B", "TestConditions": "" },
-  { "Id": "210", "Property": "Dynamischer Reibungskoeffizient", "TestConditions": "" },
-  { "Id": "211", "Property": "Glanz, 20°", "TestConditions": "" },
-  { "Id": "212", "Property": "Glanz, 45°", "TestConditions": "" },
-  { "Id": "213", "Property": "Glanz, 60°", "TestConditions": "" },
-  { "Id": "214", "Property": "Trübung", "TestConditions": "" },
-  { "Id": "215", "Property": "WVTR", "TestConditions": "23 °C/85 % RF" },
-  { "Id": "216", "Property": "Sauerstoffübertragungsrate", "TestConditions": "23 °C/0 % RF" },
-  { "Id": "217", "Property": "Sauerstoffübertragungsrate", "TestConditions": "23 °C/85 % RF" },
-  { "Id": "218", "Property": "Kohlendioxid-Übertragungsrate", "TestConditions": "23 °C/0 % RF" },
-  { "Id": "219", "Property": "Kohlendioxid-Übertragungsrate", "TestConditions": "23 °C/85 % RF" },
-  { "Id": "220", "Property": "Minimal erreichbare Dicke", "TestConditions": "" },
-  { "Id": "221", "Property": "Art der Extrusion", "TestConditions": "" },
-  { "Id": "222", "Property": "Dicke des Prüfkörpers", "TestConditions": "" },
-  { "Id": "80", "Property": "Spannung bei 10 % Streckung", "TestConditions": "" },
-  { "Id": "81", "Property": "Spannung bei 100 % Streckung", "TestConditions": "" },
-  { "Id": "82", "Property": "Spannung bei 300 % Streckung", "TestConditions": "" },
-  { "Id": "86", "Property": "Dehnung bei Bruch TPE", "TestConditions": "" },
-  { "Id": "96", "Property": "Spannung bei Bruch TPE", "TestConditions": "" },
-  { "Id": "87", "Property": "Kompression eingestellt auf 23 °C, 24 h", "TestConditions": "" },
-  { "Id": "88", "Property": "Kompression eingestellt auf 70 °C, 24 h", "TestConditions": "" },
-  { "Id": "89", "Property": "Kompression eingestellt auf 100 °C, 24 h", "TestConditions": "" },
-  { "Id": "94", "Property": "Reißfestigkeit", "TestConditions": "" },
-  { "Id": "95", "Property": "Abriebfestigkeit", "TestConditions": "" },
-  { "Id": "92", "Property": "Shore A-Härte", "TestConditions": "3s" },
-  { "Id": "93", "Property": "Shore D-Härte", "TestConditions": "15s" },
-  { "Id": "412", "Property": "Spannung bei 5 % Streckung", "TestConditions": "" },
-  { "Id": "411", "Property": "Spannung bei 5 % Streckung", "TestConditions": "" },
-  { "Id": "414", "Property": "Spannung bei 10 % Streckung", "TestConditions": "" },
-  { "Id": "413", "Property": "Spannung bei 10 % Streckung", "TestConditions": "" },
-  { "Id": "416", "Property": "Spannung bei 20 % Streckung", "TestConditions": "" },
-  { "Id": "415", "Property": "Spannung bei 20 % Streckung", "TestConditions": "" },
-  { "Id": "418", "Property": "Spannung bei 50 % Streckung", "TestConditions": "" },
-  { "Id": "417", "Property": "Spannung bei 50 % Streckung", "TestConditions": "" },
-  { "Id": "420", "Property": "Spannung bei 100 % Streckung", "TestConditions": "" },
-  { "Id": "419", "Property": "Spannung bei 100 % Streckung", "TestConditions": "" },
-  { "Id": "422", "Property": "Spannung bei 300 % Streckung", "TestConditions": "" },
-  { "Id": "421", "Property": "Spannung bei 300 % Streckung", "TestConditions": "" },
-  { "Id": "424", "Property": "Dehnung bei Bruch TPE", "TestConditions": "" },
-  { "Id": "423", "Property": "Dehnung bei Bruch TPE", "TestConditions": "" },
-  { "Id": "426", "Property": "Spannung bei Bruch TPE", "TestConditions": "" },
-  { "Id": "425", "Property": "Spannung bei Bruch TPE", "TestConditions": "" },
-  { "Id": "428", "Property": "Kompression eingestellt auf 23 °C", "TestConditions": "24 h" },
-  { "Id": "427", "Property": "Kompression eingestellt auf 23 °C", "TestConditions": "24 h" },
-  { "Id": "430", "Property": "Kompression eingestellt auf 70 °C", "TestConditions": "24 h" },
-  { "Id": "429", "Property": "Kompression eingestellt auf 70 °C", "TestConditions": "24 h" },
-  { "Id": "432", "Property": "Kompression eingestellt auf 100 °C", "TestConditions": "24 h" },
-  { "Id": "431", "Property": "Kompression eingestellt auf 100 °C", "TestConditions": "24 h" },
-  { "Id": "434", "Property": "Kompression eingestellt auf 23 °C", "TestConditions": "" },
-  { "Id": "433", "Property": "Kompression eingestellt auf 23 °C", "TestConditions": "" },
-  { "Id": "436", "Property": "Zeit", "TestConditions": "" },
-  { "Id": "435", "Property": "Zeit", "TestConditions": "" },
-  { "Id": "438", "Property": "Reißfestigkeit", "TestConditions": "parallel" },
-  { "Id": "437", "Property": "Reißfestigkeit", "TestConditions": "parallel" },
-  { "Id": "440", "Property": "Reißfestigkeit", "TestConditions": "normal" },
-  { "Id": "439", "Property": "Reißfestigkeit", "TestConditions": "normal" },
-  { "Id": "442", "Property": "Taber-Abrieb", "TestConditions": "" },
-  { "Id": "441", "Property": "Taber-Abrieb", "TestConditions": "" },
-  { "Id": "444", "Property": "Shore A-Härte", "TestConditions": "15s" },
-  { "Id": "443", "Property": "Shore A-Härte", "TestConditions": "15s" },
-  { "Id": "446", "Property": "Charpy-Kerbschlagzähigkeit", "TestConditions": "-40 °C" },
-  { "Id": "445", "Property": "Charpy-Kerbschlagzähigkeit", "TestConditions": "-40 °C" },
-  { "Id": "448", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "447", "Property": "Art des Versagens", "TestConditions": "" },
-  { "Id": "754", "Property": "Elastizitätsmodul", "TestConditions": "parallel" },
-  { "Id": "753", "Property": "Elastizitätsmodul", "TestConditions": "parallel" },
-  { "Id": "756", "Property": "Elastizitätsmodul", "TestConditions": "normal" },
-  { "Id": "755", "Property": "Elastizitätsmodul", "TestConditions": "normal" },
-  { "Id": "758", "Property": "Elastizitätsmodul", "TestConditions": "quer" },
-  { "Id": "757", "Property": "Elastizitätsmodul", "TestConditions": "quer" },
-  { "Id": "760", "Property": "Spannung bei Bruch", "TestConditions": "parallel" },
-  { "Id": "759", "Property": "Spannung bei Bruch", "TestConditions": "parallel" },
-  { "Id": "762", "Property": "Spannung bei Bruch", "TestConditions": "normal" },
-  { "Id": "761", "Property": "Spannung bei Bruch", "TestConditions": "normal" },
-  { "Id": "778", "Property": "Spannung bei Bruch", "TestConditions": "quer" },
-  { "Id": "777", "Property": "Spannung bei Bruch", "TestConditions": "quer" },
-  { "Id": "764", "Property": "Dehnung bei Bruch", "TestConditions": "parallel" },
-  { "Id": "763", "Property": "Dehnung bei Bruch", "TestConditions": "parallel" },
-  { "Id": "766", "Property": "Dehnung bei Bruch", "TestConditions": "normal" },
-  { "Id": "765", "Property": "Dehnung bei Bruch", "TestConditions": "normal" },
-  { "Id": "780", "Property": "Dehnung bei Bruch", "TestConditions": "quer" },
-  { "Id": "779", "Property": "Dehnung bei Bruch", "TestConditions": "quer" },
-  { "Id": "768", "Property": "Poissonzahl", "TestConditions": "" },
-  { "Id": "767", "Property": "Poissonzahl", "TestConditions": "" },
-  { "Id": "770", "Property": "Schermodul in der Ebene", "TestConditions": "" },
-  { "Id": "769", "Property": "Schermodul in der Ebene", "TestConditions": "" },
-  { "Id": "772", "Property": "Scherfestigkeit in der Ebene", "TestConditions": "" },
-  { "Id": "771", "Property": "Scherfestigkeit in der Ebene", "TestConditions": "" },
-  { "Id": "773", "Property": "Temp. bei Durchbiegung unter Last", "TestConditions": "1,80 MPa" },
-  { "Id": "774", "Property": "Temp. bei Durchbiegung unter Last", "TestConditions": "0,45 MPa" },
-  { "Id": "775", "Property": "Faservolumengehalt", "TestConditions": "" },
-  { "Id": "776", "Property": "Schichtdicke", "TestConditions": "" },
-  { "Id": "781", "Property": "Formtemperatur", "TestConditions": "der Testplatte" },
-  { "Id": "782", "Property": "Formzeit", "TestConditions": "der Testplatte" },
-  { "Id": "783", "Property": "Abkühlungsrate", "TestConditions": "der Testplatte" },
-  { "Id": "784", "Property": "Entformungstemperatur", "TestConditions": "der Testplatte" },
-  { "Id": "785", "Property": "Pressdruck", "TestConditions": "der Testplatte" },
-  { "Id": "655", "Property": "Biegemodul", "TestConditions": "parallel" },
-  { "Id": "654", "Property": "Biegemodul", "TestConditions": "parallel" },
-  { "Id": "659", "Property": "Biegemodul", "TestConditions": "normal" },
-  { "Id": "658", "Property": "Biegemodul", "TestConditions": "normal" },
-  { "Id": "672", "Property": "Biegefestigkeit", "TestConditions": "parallel" },
-  { "Id": "671", "Property": "Biegefestigkeit", "TestConditions": "parallel" },
-  { "Id": "676", "Property": "Biegefestigkeit", "TestConditions": "normal" },
-  { "Id": "675", "Property": "Biegefestigkeit", "TestConditions": "normal" },
-  { "Id": "704", "Property": "Interlaminare Scherfestigkeit", "TestConditions": "parallel" },
-  { "Id": "686", "Property": "Interlaminare Scherfestigkeit", "TestConditions": "parallel" },
-  { "Id": "731", "Property": "Interlaminare Scherfestigkeit", "TestConditions": "normal" },
-  { "Id": "705", "Property": "Interlaminare Scherfestigkeit", "TestConditions": "normal" },
-  { "Id": "170", "Property": "Durchstichprüfung – Übergangstemperatur duktil/spröde", "TestConditions": "" },
+[
   {
-    "Id": "171",
-    "Property": "Koeff. der linearen therm. Ausdehnung, -40 °C bis +100 °C",
-    "TestConditions": "parallel"
+    "Id":"38",
+    "Property":"Schmelzvolumen-Flussrate",
+    "TestConditions":"MVR"
   },
-  { "Id": "172", "Property": "Koeff. der linearen therm. Ausdehnung, -40 °C bis +100 °C", "TestConditions": "normal" },
-  { "Id": "108", "Property": "FMVSS", "TestConditions": "" },
-  { "Id": "173", "Property": "Brennrate", "TestConditions": "Dicke 1 mm" },
-  { "Id": "174", "Property": "Thermische Stabilität in Luft (Charpy bei 50 % Abnahme, 3000 h)", "TestConditions": "" },
-  { "Id": "175", "Property": "Prüfkörper", "TestConditions": "" },
-  { "Id": "176", "Property": "Wetterstabilität Delta l", "TestConditions": "" },
-  { "Id": "177", "Property": "Wetterstabilität Delta a", "TestConditions": "" },
-  { "Id": "178", "Property": "Wetterstabilität Delta b", "TestConditions": "" },
-  { "Id": "179", "Property": "Wetterstabilität Delta E", "TestConditions": "" },
-  { "Id": "180", "Property": "Wetterstabilität Grauskala", "TestConditions": "" },
-  { "Id": "181", "Property": "Lichtstabilität Delta l", "TestConditions": "" },
-  { "Id": "182", "Property": "Lichtstabilität Delta a", "TestConditions": "" },
-  { "Id": "183", "Property": "Lichtstabilität Delta b", "TestConditions": "" },
-  { "Id": "184", "Property": "Lichtstabilität Delta E", "TestConditions": "" },
-  { "Id": "185", "Property": "Lichtstabilität Grauskala", "TestConditions": "" },
-  { "Id": "186", "Property": "Emission von organischen Verbindungen", "TestConditions": "" },
-  { "Id": "187", "Property": "Thermische Desorptionsanalyse von organischen Emissionen", "TestConditions": "" },
-  { "Id": "188", "Property": "Geruchstest", "TestConditions": "" },
-  { "Id": "235", "Property": "Anisotropie-Verhältnis, Elastizitätsmodul", "TestConditions": "" },
-  { "Id": "234", "Property": "Anisotropie-Verhältnis, Elastizitätsmodul", "TestConditions": "" },
-  { "Id": "237", "Property": "Anisotropie-Verhältnis, Zugfestigkeit", "TestConditions": "" },
-  { "Id": "236", "Property": "Anisotropie-Verhältnis, Zugfestigkeit", "TestConditions": "" },
-  { "Id": "99", "Property": "Füllstoff", "TestConditions": "" }
+  {
+    "Id":"39",
+    "Property":" Temperatur",
+    "TestConditions":""
+  },
+  {
+    "Id":"40",
+    "Property":" Last",
+    "TestConditions":""
+  },
+  {
+    "Id":"44",
+    "Property":"Schrumpfung der Gussform",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"45",
+    "Property":"Schrumpfung der Gussform",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"107",
+    "Property":"Elastizitätsmodul",
+    "TestConditions":""
+  },
+  {
+    "Id":"7",
+    "Property":"Elastizitätsmodul",
+    "TestConditions":""
+  },
+  {
+    "Id":"101",
+    "Property":"Streckspannung",
+    "TestConditions":""
+  },
+  {
+    "Id":"1",
+    "Property":"Streckspannung",
+    "TestConditions":""
+  },
+  {
+    "Id":"102",
+    "Property":"Streckdehnung",
+    "TestConditions":""
+  },
+  {
+    "Id":"2",
+    "Property":"Streckdehnung",
+    "TestConditions":""
+  },
+  {
+    "Id":"103",
+    "Property":"Nominale Dehnung bei Bruch",
+    "TestConditions":""
+  },
+  {
+    "Id":"3",
+    "Property":"Nominale Dehnung bei Bruch",
+    "TestConditions":""
+  },
+  {
+    "Id":"104",
+    "Property":"Spannung bei 50 % Dehnung",
+    "TestConditions":""
+  },
+  {
+    "Id":"4",
+    "Property":"Spannung bei 50 % Dehnung",
+    "TestConditions":""
+  },
+  {
+    "Id":"105",
+    "Property":"Spannung bei Bruch",
+    "TestConditions":""
+  },
+  {
+    "Id":"5",
+    "Property":"Spannung bei Bruch",
+    "TestConditions":""
+  },
+  {
+    "Id":"106",
+    "Property":"Dehnung bei Bruch",
+    "TestConditions":""
+  },
+  {
+    "Id":"6",
+    "Property":"Dehnung bei Bruch",
+    "TestConditions":""
+  },
+  {
+    "Id":"8",
+    "Property":"Elastizitätskriechmodul",
+    "TestConditions":"1 h"
+  },
+  {
+    "Id":"9",
+    "Property":"Elastizitätskriechmodul",
+    "TestConditions":"1000 h"
+  },
+  {
+    "Id":"111",
+    "Property":"Charpy-Schlagzähigkeit",
+    "TestConditions":"+23 °C"
+  },
+  {
+    "Id":"11",
+    "Property":"Charpy-Schlagzähigkeit",
+    "TestConditions":"+23 °C"
+  },
+  {
+    "Id":"239",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"543",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"112",
+    "Property":"Charpy-Schlagzähigkeit",
+    "TestConditions":"-30 °C"
+  },
+  {
+    "Id":"12",
+    "Property":"Charpy-Schlagzähigkeit",
+    "TestConditions":"-30 °C"
+  },
+  {
+    "Id":"546",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"544",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"113",
+    "Property":"Charpy-Kerbschlagzähigkeit",
+    "TestConditions":"+23 °C"
+  },
+  {
+    "Id":"13",
+    "Property":"Charpy-Kerbschlagzähigkeit",
+    "TestConditions":"+23 °C"
+  },
+  {
+    "Id":"548",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"547",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"114",
+    "Property":"Charpy-Kerbschlagzähigkeit",
+    "TestConditions":"-30 °C"
+  },
+  {
+    "Id":"14",
+    "Property":"Charpy-Kerbschlagzähigkeit",
+    "TestConditions":"-30 °C"
+  },
+  {
+    "Id":"550",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"549",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"110",
+    "Property":"Elastizitäts-Kerbschlagzähigkeit",
+    "TestConditions":"+23 °C"
+  },
+  {
+    "Id":"10",
+    "Property":"Elastizitäts-Kerbschlagzähigkeit",
+    "TestConditions":"+23 °C"
+  },
+  {
+    "Id":"165",
+    "Property":"Einstich – maximale Kraft",
+    "TestConditions":"+23 °C"
+  },
+  {
+    "Id":"65",
+    "Property":"Einstich – maximale Kraft",
+    "TestConditions":"+23 °C"
+  },
+  {
+    "Id":"167",
+    "Property":"Einstich – maximale Kraft",
+    "TestConditions":"-30 °C"
+  },
+  {
+    "Id":"67",
+    "Property":"Einstich – maximale Kraft",
+    "TestConditions":"-30 °C"
+  },
+  {
+    "Id":"166",
+    "Property":"Einstichenergie",
+    "TestConditions":"+23 °C"
+  },
+  {
+    "Id":"66",
+    "Property":"Einstichenergie",
+    "TestConditions":"+23 °C"
+  },
+  {
+    "Id":"168",
+    "Property":"Einstichenergie",
+    "TestConditions":"-30 °C"
+  },
+  {
+    "Id":"68",
+    "Property":"Einstichenergie",
+    "TestConditions":"-30 °C"
+  },
+  {
+    "Id":"15",
+    "Property":"Schmelztemperatur",
+    "TestConditions":"10 °C/min"
+  },
+  {
+    "Id":"16",
+    "Property":"Glasübergangstemperatur",
+    "TestConditions":"10 °C/min"
+  },
+  {
+    "Id":"17",
+    "Property":"Temp. bei Durchbiegung unter Last",
+    "TestConditions":"1,80 MPa"
+  },
+  {
+    "Id":"18",
+    "Property":"Temp. bei Durchbiegung unter Last",
+    "TestConditions":"0,45 MPa"
+  },
+  {
+    "Id":"19",
+    "Property":"Temp. bei Durchbiegung unter Last",
+    "TestConditions":"8,00 MPa"
+  },
+  {
+    "Id":"20",
+    "Property":"Vicat-Erweichungstemperatur",
+    "TestConditions":"50 °C/h 50 N"
+  },
+  {
+    "Id":"191",
+    "Property":"Vicat-Erweichungstemperatur",
+    "TestConditions":"50 °C/h 10 N"
+  },
+  {
+    "Id":"121",
+    "Property":"Koeff. der linearen therm. Ausdehnung, 23 °C bis 55 °C",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"122",
+    "Property":"Koeff. der linearen therm. Ausdehnung, 23 °C bis 55 °C",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"23",
+    "Property":"Brennverh. bei 1,5 mm nom. Dicke",
+    "TestConditions":""
+  },
+  {
+    "Id":"24",
+    "Property":" Getestete Dicke",
+    "TestConditions":""
+  },
+  {
+    "Id":"62",
+    "Property":"      Yellow Card verfügbar",
+    "TestConditions":""
+  },
+  {
+    "Id":"25",
+    "Property":"Brennverh. bei Dicke h",
+    "TestConditions":""
+  },
+  {
+    "Id":"26",
+    "Property":" Getestete Dicke",
+    "TestConditions":""
+  },
+  {
+    "Id":"63",
+    "Property":"      Yellow Card verfügbar",
+    "TestConditions":""
+  },
+  {
+    "Id":"27",
+    "Property":"Brennverh. 5 V bei Dicke h",
+    "TestConditions":""
+  },
+  {
+    "Id":"28",
+    "Property":" Getestete Dicke",
+    "TestConditions":""
+  },
+  {
+    "Id":"64",
+    "Property":"Yellow Card verfügbar",
+    "TestConditions":""
+  },
+  {
+    "Id":"29",
+    "Property":"Sauerstoffindex",
+    "TestConditions":""
+  },
+  {
+    "Id":"130",
+    "Property":"Relative Permittivität",
+    "TestConditions":"100 Hz"
+  },
+  {
+    "Id":"30",
+    "Property":"Relative Permittivität",
+    "TestConditions":"100 Hz"
+  },
+  {
+    "Id":"131",
+    "Property":"Relative Permittivität",
+    "TestConditions":"1 MHz"
+  },
+  {
+    "Id":"31",
+    "Property":"Relative Permittivität",
+    "TestConditions":"1 MHz"
+  },
+  {
+    "Id":"132",
+    "Property":"Dissipationsfaktor",
+    "TestConditions":"100 Hz"
+  },
+  {
+    "Id":"32",
+    "Property":"Dissipationsfaktor",
+    "TestConditions":"100 Hz"
+  },
+  {
+    "Id":"133",
+    "Property":"Dissipationsfaktor",
+    "TestConditions":"1 MHz"
+  },
+  {
+    "Id":"33",
+    "Property":"Dissipationsfaktor",
+    "TestConditions":"1 MHz"
+  },
+  {
+    "Id":"136",
+    "Property":"Volumenwiderstand",
+    "TestConditions":""
+  },
+  {
+    "Id":"36",
+    "Property":"Volumenwiderstand",
+    "TestConditions":""
+  },
+  {
+    "Id":"37",
+    "Property":"Oberflächenwiderstand",
+    "TestConditions":""
+  },
+  {
+    "Id":"134",
+    "Property":"Spannungsfestigkeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"34",
+    "Property":"Spannungsfestigkeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"135",
+    "Property":"Vergleichender Tracking-Index",
+    "TestConditions":""
+  },
+  {
+    "Id":"35",
+    "Property":"Vergleichender Tracking-Index",
+    "TestConditions":""
+  },
+  {
+    "Id":"49",
+    "Property":"Wasserabsorption",
+    "TestConditions":""
+  },
+  {
+    "Id":"50",
+    "Property":"Feuchteabsorption",
+    "TestConditions":""
+  },
+  {
+    "Id":"151",
+    "Property":"Dichte",
+    "TestConditions":""
+  },
+  {
+    "Id":"51",
+    "Property":"Dichte",
+    "TestConditions":""
+  },
+  {
+    "Id":"46",
+    "Property":"Viskositätszahl",
+    "TestConditions":""
+  },
+  {
+    "Id":"47",
+    "Property":"Indikative Dichte",
+    "TestConditions":"Nur PE"
+  },
+  {
+    "Id":"41",
+    "Property":"Lichtdurchlässigkeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"83",
+    "Property":"Charpy-Kerbschlagzähigkeit",
+    "TestConditions":"+23 °C, 3 mm"
+  },
+  {
+    "Id":"551",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"84",
+    "Property":"Charpy-Kerbschlagzähigkeit",
+    "TestConditions":"-30 °C, 3 mm"
+  },
+  {
+    "Id":"553",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"85",
+    "Property":"Izod-Schlagzähigkeit",
+    "TestConditions":"+23 °C, 4 mm"
+  },
+  {
+    "Id":"555",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"90",
+    "Property":"Izod-Schlagzähigkeit",
+    "TestConditions":"-30 °C, 4 mm"
+  },
+  {
+    "Id":"557",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"120",
+    "Property":"Izod-Kerbschlagzähigkeit",
+    "TestConditions":"+23 °C, 4 mm"
+  },
+  {
+    "Id":"559",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"97",
+    "Property":"Izod-Kerbschlagzähigkeit",
+    "TestConditions":"-30 °C, 4 mm"
+  },
+  {
+    "Id":"561",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"98",
+    "Property":"Izod-Kerbschlagzähigkeit",
+    "TestConditions":"+23 °C, 3 mm"
+  },
+  {
+    "Id":"563",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"100",
+    "Property":"Izod-Kerbschlagzähigkeit",
+    "TestConditions":"-30 °C, 3 mm"
+  },
+  {
+    "Id":"565",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"79",
+    "Property":"Dichte der Schmelze",
+    "TestConditions":""
+  },
+  {
+    "Id":"78",
+    "Property":"Wärmeleitfähigkeit der Schmelze",
+    "TestConditions":""
+  },
+  {
+    "Id":"77",
+    "Property":"Spez. Wärmekapazität der Schmelze",
+    "TestConditions":""
+  },
+  {
+    "Id":"76",
+    "Property":"Eff. thermische Diffusionsfähigkeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"75",
+    "Property":"Auswurftemperatur",
+    "TestConditions":""
+  },
+  {
+    "Id":"230",
+    "Property":"Min. Gussformtemperatur",
+    "TestConditions":""
+  },
+  {
+    "Id":"231",
+    "Property":"Max. Gussformtemperatur",
+    "TestConditions":""
+  },
+  {
+    "Id":"232",
+    "Property":"Min. Schmelztemperatur",
+    "TestConditions":""
+  },
+  {
+    "Id":"233",
+    "Property":"Max. Schmelztemperatur",
+    "TestConditions":""
+  },
+  {
+    "Id":"52",
+    "Property":"Prüfbedingungen nach ISO",
+    "TestConditions":""
+  },
+  {
+    "Id":"53",
+    "Property":"Spritzgießen, Schmelztemperatur",
+    "TestConditions":""
+  },
+  {
+    "Id":"54",
+    "Property":"Gussformtemperatur",
+    "TestConditions":""
+  },
+  {
+    "Id":"55",
+    "Property":" Injektionsgeschwindigkeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"60",
+    "Property":" Haltedruck",
+    "TestConditions":""
+  },
+  {
+    "Id":"56",
+    "Property":"Formpressen, Presstemperatur",
+    "TestConditions":""
+  },
+  {
+    "Id":"57",
+    "Property":" Abkühlungsrate",
+    "TestConditions":""
+  },
+  {
+    "Id":"58",
+    "Property":" Formzeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"59",
+    "Property":" Entformungstemperatur",
+    "TestConditions":""
+  },
+  {
+    "Id":"48",
+    "Property":"Prüfbedingungen nach ISO",
+    "TestConditions":""
+  },
+  {
+    "Id":"61",
+    "Property":"Spritzgießen, Injektionstemperatur",
+    "TestConditions":""
+  },
+  {
+    "Id":"69",
+    "Property":"Gussformtemperatur",
+    "TestConditions":""
+  },
+  {
+    "Id":"70",
+    "Property":"Injektionsgeschwindigkeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"71",
+    "Property":"Haltedruck",
+    "TestConditions":""
+  },
+  {
+    "Id":"72",
+    "Property":"Aushärtungszeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"73",
+    "Property":"Formpressen, Gussformtemperatur",
+    "TestConditions":""
+  },
+  {
+    "Id":"74",
+    "Property":"Aushärtungszeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"196",
+    "Property":"Spannung bei Streckung",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"197",
+    "Property":"Spannung bei Streckung",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"198",
+    "Property":"Dehnung bei Streckung",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"199",
+    "Property":"Dehnung bei Streckung",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"200",
+    "Property":"Max. Spannung",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"201",
+    "Property":"Max. Spannung",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"202",
+    "Property":"Max. Dehnung",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"203",
+    "Property":"Max. Dehnung",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"204",
+    "Property":"Elmendorf-Reißfestigkeit",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"205",
+    "Property":"Elmendorf-Reißfestigkeit",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"206",
+    "Property":"Trouser-Reißfestigkeit",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"207",
+    "Property":"Trouser-Reißfestigkeit",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"208",
+    "Property":"Fallhammerprüfung A",
+    "TestConditions":""
+  },
+  {
+    "Id":"209",
+    "Property":"Fallhammerprüfung B",
+    "TestConditions":""
+  },
+  {
+    "Id":"210",
+    "Property":"Dynamischer Reibungskoeffizient",
+    "TestConditions":""
+  },
+  {
+    "Id":"211",
+    "Property":"Glanz, 20°",
+    "TestConditions":""
+  },
+  {
+    "Id":"212",
+    "Property":"Glanz, 45°",
+    "TestConditions":""
+  },
+  {
+    "Id":"213",
+    "Property":"Glanz, 60°",
+    "TestConditions":""
+  },
+  {
+    "Id":"214",
+    "Property":"Trübung",
+    "TestConditions":""
+  },
+  {
+    "Id":"215",
+    "Property":"WVTR",
+    "TestConditions":"23 °C/85 % RF"
+  },
+  {
+    "Id":"216",
+    "Property":"Sauerstoffübertragungsrate",
+    "TestConditions":"23 °C/0 % RF"
+  },
+  {
+    "Id":"217",
+    "Property":"Sauerstoffübertragungsrate",
+    "TestConditions":"23 °C/85 % RF"
+  },
+  {
+    "Id":"218",
+    "Property":"Kohlendioxid-Übertragungsrate",
+    "TestConditions":"23 °C/0 % RF"
+  },
+  {
+    "Id":"219",
+    "Property":"Kohlendioxid-Übertragungsrate",
+    "TestConditions":"23 °C/85 % RF"
+  },
+  {
+    "Id":"220",
+    "Property":"Minimal erreichbare Dicke",
+    "TestConditions":""
+  },
+  {
+    "Id":"221",
+    "Property":"Art der Extrusion",
+    "TestConditions":""
+  },
+  {
+    "Id":"222",
+    "Property":"Dicke des Prüfkörpers",
+    "TestConditions":""
+  },
+  {
+    "Id":"80",
+    "Property":"Spannung bei 10 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"81",
+    "Property":"Spannung bei 100 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"82",
+    "Property":"Spannung bei 300 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"86",
+    "Property":"Dehnung bei Bruch TPE",
+    "TestConditions":""
+  },
+  {
+    "Id":"96",
+    "Property":"Spannung bei Bruch TPE",
+    "TestConditions":""
+  },
+  {
+    "Id":"87",
+    "Property":"Kompression eingestellt auf 23 °C, 24 h",
+    "TestConditions":""
+  },
+  {
+    "Id":"88",
+    "Property":"Kompression eingestellt auf 70 °C, 24 h",
+    "TestConditions":""
+  },
+  {
+    "Id":"89",
+    "Property":"Kompression eingestellt auf 100 °C, 24 h",
+    "TestConditions":""
+  },
+  {
+    "Id":"94",
+    "Property":"Reißfestigkeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"95",
+    "Property":"Abriebfestigkeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"92",
+    "Property":"Shore A-Härte",
+    "TestConditions":"3s"
+  },
+  {
+    "Id":"93",
+    "Property":"Shore D-Härte",
+    "TestConditions":"15s"
+  },
+  {
+    "Id":"412",
+    "Property":"Spannung bei 5 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"411",
+    "Property":"Spannung bei 5 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"414",
+    "Property":"Spannung bei 10 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"413",
+    "Property":"Spannung bei 10 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"416",
+    "Property":"Spannung bei 20 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"415",
+    "Property":"Spannung bei 20 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"418",
+    "Property":"Spannung bei 50 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"417",
+    "Property":"Spannung bei 50 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"420",
+    "Property":"Spannung bei 100 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"419",
+    "Property":"Spannung bei 100 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"422",
+    "Property":"Spannung bei 300 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"421",
+    "Property":"Spannung bei 300 % Streckung",
+    "TestConditions":""
+  },
+  {
+    "Id":"424",
+    "Property":"Dehnung bei Bruch TPE",
+    "TestConditions":""
+  },
+  {
+    "Id":"423",
+    "Property":"Dehnung bei Bruch TPE",
+    "TestConditions":""
+  },
+  {
+    "Id":"426",
+    "Property":"Spannung bei Bruch TPE",
+    "TestConditions":""
+  },
+  {
+    "Id":"425",
+    "Property":"Spannung bei Bruch TPE",
+    "TestConditions":""
+  },
+  {
+    "Id":"428",
+    "Property":"Kompression eingestellt auf 23 °C",
+    "TestConditions":"24 h"
+  },
+  {
+    "Id":"427",
+    "Property":"Kompression eingestellt auf 23 °C",
+    "TestConditions":"24 h"
+  },
+  {
+    "Id":"430",
+    "Property":"Kompression eingestellt auf 70 °C",
+    "TestConditions":"24 h"
+  },
+  {
+    "Id":"429",
+    "Property":"Kompression eingestellt auf 70 °C",
+    "TestConditions":"24 h"
+  },
+  {
+    "Id":"432",
+    "Property":"Kompression eingestellt auf 100 °C",
+    "TestConditions":"24 h"
+  },
+  {
+    "Id":"431",
+    "Property":"Kompression eingestellt auf 100 °C",
+    "TestConditions":"24 h"
+  },
+  {
+    "Id":"434",
+    "Property":"Kompression eingestellt auf 23 °C",
+    "TestConditions":""
+  },
+  {
+    "Id":"433",
+    "Property":"Kompression eingestellt auf 23 °C",
+    "TestConditions":""
+  },
+  {
+    "Id":"436",
+    "Property":"Zeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"435",
+    "Property":"Zeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"438",
+    "Property":"Reißfestigkeit",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"437",
+    "Property":"Reißfestigkeit",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"440",
+    "Property":"Reißfestigkeit",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"439",
+    "Property":"Reißfestigkeit",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"442",
+    "Property":"Taber-Abrieb",
+    "TestConditions":""
+  },
+  {
+    "Id":"441",
+    "Property":"Taber-Abrieb",
+    "TestConditions":""
+  },
+  {
+    "Id":"444",
+    "Property":"Shore A-Härte",
+    "TestConditions":"15s"
+  },
+  {
+    "Id":"443",
+    "Property":"Shore A-Härte",
+    "TestConditions":"15s"
+  },
+  {
+    "Id":"446",
+    "Property":"Charpy-Kerbschlagzähigkeit",
+    "TestConditions":"-40 °C"
+  },
+  {
+    "Id":"445",
+    "Property":"Charpy-Kerbschlagzähigkeit",
+    "TestConditions":"-40 °C"
+  },
+  {
+    "Id":"448",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"447",
+    "Property":"Art des Versagens",
+    "TestConditions":""
+  },
+  {
+    "Id":"754",
+    "Property":"Elastizitätsmodul",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"753",
+    "Property":"Elastizitätsmodul",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"756",
+    "Property":"Elastizitätsmodul",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"755",
+    "Property":"Elastizitätsmodul",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"758",
+    "Property":"Elastizitätsmodul",
+    "TestConditions":"quer"
+  },
+  {
+    "Id":"757",
+    "Property":"Elastizitätsmodul",
+    "TestConditions":"quer"
+  },
+  {
+    "Id":"760",
+    "Property":"Spannung bei Bruch",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"759",
+    "Property":"Spannung bei Bruch",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"762",
+    "Property":"Spannung bei Bruch",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"761",
+    "Property":"Spannung bei Bruch",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"778",
+    "Property":"Spannung bei Bruch",
+    "TestConditions":"quer"
+  },
+  {
+    "Id":"777",
+    "Property":"Spannung bei Bruch",
+    "TestConditions":"quer"
+  },
+  {
+    "Id":"764",
+    "Property":"Dehnung bei Bruch",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"763",
+    "Property":"Dehnung bei Bruch",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"766",
+    "Property":"Dehnung bei Bruch",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"765",
+    "Property":"Dehnung bei Bruch",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"780",
+    "Property":"Dehnung bei Bruch",
+    "TestConditions":"quer"
+  },
+  {
+    "Id":"779",
+    "Property":"Dehnung bei Bruch",
+    "TestConditions":"quer"
+  },
+  {
+    "Id":"768",
+    "Property":"Poissonzahl",
+    "TestConditions":""
+  },
+  {
+    "Id":"767",
+    "Property":"Poissonzahl",
+    "TestConditions":""
+  },
+  {
+    "Id":"770",
+    "Property":"Schermodul in der Ebene",
+    "TestConditions":""
+  },
+  {
+    "Id":"769",
+    "Property":"Schermodul in der Ebene",
+    "TestConditions":""
+  },
+  {
+    "Id":"772",
+    "Property":"Scherfestigkeit in der Ebene",
+    "TestConditions":""
+  },
+  {
+    "Id":"771",
+    "Property":"Scherfestigkeit in der Ebene",
+    "TestConditions":""
+  },
+  {
+    "Id":"773",
+    "Property":"Temp. bei Durchbiegung unter Last",
+    "TestConditions":"1,80 MPa"
+  },
+  {
+    "Id":"774",
+    "Property":"Temp. bei Durchbiegung unter Last",
+    "TestConditions":"0,45 MPa"
+  },
+  {
+    "Id":"775",
+    "Property":"Faservolumengehalt",
+    "TestConditions":""
+  },
+  {
+    "Id":"776",
+    "Property":"Schichtdicke",
+    "TestConditions":""
+  },
+  {
+    "Id":"781",
+    "Property":"Formtemperatur",
+    "TestConditions":"der Testplatte"
+  },
+  {
+    "Id":"782",
+    "Property":"Formzeit",
+    "TestConditions":"der Testplatte"
+  },
+  {
+    "Id":"783",
+    "Property":"Abkühlungsrate",
+    "TestConditions":"der Testplatte"
+  },
+  {
+    "Id":"784",
+    "Property":"Entformungstemperatur",
+    "TestConditions":"der Testplatte"
+  },
+  {
+    "Id":"785",
+    "Property":"Pressdruck",
+    "TestConditions":"der Testplatte"
+  },
+  {
+    "Id":"655",
+    "Property":"Biegemodul",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"654",
+    "Property":"Biegemodul",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"659",
+    "Property":"Biegemodul",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"658",
+    "Property":"Biegemodul",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"672",
+    "Property":"Biegefestigkeit",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"671",
+    "Property":"Biegefestigkeit",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"676",
+    "Property":"Biegefestigkeit",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"675",
+    "Property":"Biegefestigkeit",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"704",
+    "Property":"Interlaminare Scherfestigkeit",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"686",
+    "Property":"Interlaminare Scherfestigkeit",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"731",
+    "Property":"Interlaminare Scherfestigkeit",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"705",
+    "Property":"Interlaminare Scherfestigkeit",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"170",
+    "Property":"Durchstichprüfung – Übergangstemperatur duktil/spröde",
+    "TestConditions":""
+  },
+  {
+    "Id":"171",
+    "Property":"Koeff. der linearen therm. Ausdehnung, -40 °C bis +100 °C",
+    "TestConditions":"parallel"
+  },
+  {
+    "Id":"172",
+    "Property":"Koeff. der linearen therm. Ausdehnung, -40 °C bis +100 °C",
+    "TestConditions":"normal"
+  },
+  {
+    "Id":"108",
+    "Property":"FMVSS",
+    "TestConditions":""
+  },
+  {
+    "Id":"173",
+    "Property":"Brennrate",
+    "TestConditions":"Dicke 1 mm"
+  },
+  {
+    "Id":"174",
+    "Property":"Thermische Stabilität in Luft (Charpy bei 50 % Abnahme, 3000 h)",
+    "TestConditions":""
+  },
+  {
+    "Id":"175",
+    "Property":"Prüfkörper",
+    "TestConditions":""
+  },
+  {
+    "Id":"176",
+    "Property":"Wetterstabilität Delta l",
+    "TestConditions":""
+  },
+  {
+    "Id":"177",
+    "Property":"Wetterstabilität Delta a",
+    "TestConditions":""
+  },
+  {
+    "Id":"178",
+    "Property":"Wetterstabilität Delta b",
+    "TestConditions":""
+  },
+  {
+    "Id":"179",
+    "Property":"Wetterstabilität Delta E",
+    "TestConditions":""
+  },
+  {
+    "Id":"180",
+    "Property":"Wetterstabilität Grauskala",
+    "TestConditions":""
+  },
+  {
+    "Id":"181",
+    "Property":"Lichtstabilität Delta l",
+    "TestConditions":""
+  },
+  {
+    "Id":"182",
+    "Property":"Lichtstabilität Delta a",
+    "TestConditions":""
+  },
+  {
+    "Id":"183",
+    "Property":"Lichtstabilität Delta b",
+    "TestConditions":""
+  },
+  {
+    "Id":"184",
+    "Property":"Lichtstabilität Delta E",
+    "TestConditions":""
+  },
+  {
+    "Id":"185",
+    "Property":"Lichtstabilität Grauskala",
+    "TestConditions":""
+  },
+  {
+    "Id":"186",
+    "Property":"Emission von organischen Verbindungen",
+    "TestConditions":""
+  },
+  {
+    "Id":"187",
+    "Property":"Thermische Desorptionsanalyse von organischen Emissionen",
+    "TestConditions":""
+  },
+  {
+    "Id":"188",
+    "Property":"Geruchstest",
+    "TestConditions":""
+  },
+  {
+    "Id":"235",
+    "Property":"Anisotropie-Verhältnis, Elastizitätsmodul",
+    "TestConditions":""
+  },
+  {
+    "Id":"234",
+    "Property":"Anisotropie-Verhältnis, Elastizitätsmodul",
+    "TestConditions":""
+  },
+  {
+    "Id":"237",
+    "Property":"Anisotropie-Verhältnis, Zugfestigkeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"236",
+    "Property":"Anisotropie-Verhältnis, Zugfestigkeit",
+    "TestConditions":""
+  },
+  {
+    "Id":"99",
+    "Property":"Füllstoff",
+    "TestConditions":""
+  }
 ]
