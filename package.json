@@ -22,8 +22,7 @@
     "release": "read -p 'GITHUB_TOKEN: ' GITHUB_TOKEN && export GITHUB_TOKEN=$GITHUB_TOKEN && release-it",
     "generate-html": "node ./utils/generate-html-cli",
     "generate-pdf": "node ./utils/generate-pdf-cli",
-    "transform-campus-files": "node edit-all-campus-script.js",
-    "transform-campus-file": "node edit-one-campus-script.js"
+    "transform-campus-file": "node edit-campus-script.js"
   },
   "devDependencies": {
     "@markedjs/html-differ": "^3.0.4",
