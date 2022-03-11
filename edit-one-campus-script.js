@@ -1,24 +1,23 @@
 const fs = require('fs');
-const filePath = './CAMPUS/EN.json';
-const outputFilePath = './CAMPUS-edited/EN.json';
+const defaultFilePath = './CAMPUS/EN.json';
+const defaultOutputFilePath = './CAMPUS-edited/EN.json';
 
-let translation = fs.readFileSync(filePath).toString();
-const newTranslationObject = {};
+(async function (argv) {
+  try {
+    const filePath = argv[2] || defaultFilePath;
+    const outputFilePath = argv[3] || defaultOutputFilePath;
 
-try {
-  translation = JSON.parse(translation);
+    const translation = JSON.parse(fs.readFileSync(filePath).toString());
+    const newTranslationObject = {};
 
-  translation.forEach((obj) => {
-    const { Id, ...rest } = obj;
-    newTranslationObject[Id] = rest;
-  });
+    translation.forEach((obj) => {
+      const { Id, ...rest } = obj;
+      newTranslationObject[Id] = rest;
+    });
 
-  fs.writeFile(outputFilePath, JSON.stringify(newTranslationObject), (err) => {
-    if (err) console.log(err);
-    else {
-      console.log('File written successfully\n');
-    }
-  });
-} catch (error) {
-  console.log(error);
-}
+    fs.writeFileSync(outputFilePath, JSON.stringify(newTranslationObject));
+    console.log('File written successfully\n');
+  } catch (error) {
+    console.error(error.message);
+  }
+})(process.argv);
