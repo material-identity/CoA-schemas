@@ -39,6 +39,14 @@ const translations = languages.reduce((acc, ln) => {
   return acc;
 }, {});
 
+const extraTranslations = languages.reduce(
+  (acc, ln) => {
+    acc['CAMPUS'][ln] = JSON.parse(readFileSync(resolve(`CAMPUS/${ln}.json`), 'utf-8'));
+    return acc;
+  },
+  { CAMPUS: {} },
+);
+
 const translationProperties = {
   Certificate: [
     'Customer',
@@ -97,6 +105,7 @@ const translationProperties = {
 
 module.exports = {
   defaultServerUrl,
+  extraTranslations,
   htmlTemplatePath,
   languages,
   pdfDocDefinition,
