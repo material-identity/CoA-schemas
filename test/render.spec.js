@@ -7,7 +7,7 @@ const { HtmlDiffer } = require('@markedjs/html-differ');
 const logger = require('@markedjs/html-differ/lib/logger');
 const { resolve } = require('path');
 const { fromBuffer } = require('pdf2pic');
-const { translations } = require('../utils/constants');
+const { translations, extraTranslations } = require('../utils/constants');
 
 describe('Render', function () {
   const testSuitesMap = [
@@ -40,6 +40,7 @@ describe('Render', function () {
         templatePath,
         templateType: 'hbs',
         translations,
+        extraTranslations,
       });
       const isEqual = await htmlDiffer.isEqual(expectedHTML, html);
       if (!isEqual) {
