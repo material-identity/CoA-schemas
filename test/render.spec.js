@@ -20,6 +20,15 @@ describe('Render', function () {
     {
       certificateName: `valid_certificate_3`,
     },
+    {
+      certificateName: `valid_certificate_4`,
+    },
+    {
+      certificateName: `valid_certificate_5`,
+    },
+    {
+      certificateName: `valid_certificate_6`,
+    },
   ];
 
   testSuitesMap.forEach(({ certificateName }) => {
@@ -83,6 +92,7 @@ describe('Render', function () {
         outputType: 'buffer',
         generatorPath,
         translations,
+        extraTranslations,
       });
       const result = await fromBuffer(buffer, options)(1, true);
       expect(buffer instanceof Buffer).toEqual(true);

@@ -17,12 +17,12 @@
     "lint": "eslint ./*.js",
     "lint:staged": "lint-staged",
     "format": "prettier --write \"**/*.{js,json}\"",
-    "test": "jest --runInBand",
+    "test": "jest --runInBand --verbose",
     "update-version": "node ./utils/update-version.js",
     "release": "read -p 'GITHUB_TOKEN: ' GITHUB_TOKEN && export GITHUB_TOKEN=$GITHUB_TOKEN && release-it",
     "generate-html": "node ./utils/generate-html-cli",
     "generate-pdf": "node ./utils/generate-pdf-cli",
-    "transform-campus-file": "node edit-campus-script.js"
+    "transform-campus-file": "node ./utils/edit-campus-script.js"
   },
   "devDependencies": {
     "@markedjs/html-differ": "^3.0.4",
