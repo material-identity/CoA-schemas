@@ -4,7 +4,7 @@ const Ajv = require('ajv');
 const addFormats = require('ajv-formats');
 const { readFileSync } = require('fs');
 const { resolve } = require('path');
-const { languages, translationProperties } = require('../utils/constants');
+const { campusTranslationProperties, languages, translationProperties } = require('../utils/constants');
 
 const createAjvInstance = () => {
   const ajv = new Ajv({
@@ -32,6 +32,15 @@ describe('Validate', function () {
     },
     {
       certificateName: `valid_certificate_3`,
+    },
+    {
+      certificateName: `valid_certificate_4`,
+    },
+    {
+      certificateName: `valid_certificate_5`,
+    },
+    {
+      certificateName: `valid_certificate_6`,
     },
   ];
   const invalidCertTestSuitesMap = [
@@ -123,6 +132,16 @@ describe('Validate', function () {
       const certificateProperties = Object.keys(translations.Certificate);
       //
       expect(certificateProperties).toEqual(translationProperties.Certificate);
+    });
+  });
+
+  languages.forEach((language) => {
+    it(`CAMPUS ${language} translations should contain all required properties`, () => {
+      const translationsPath = resolve(__dirname, `../CAMPUS/${language}.json`);
+      const translations = JSON.parse(readFileSync(translationsPath, 'utf8'));
+      const certificateProperties = Object.keys(translations);
+      //
+      expect(certificateProperties).toEqual(campusTranslationProperties);
     });
   });
 });

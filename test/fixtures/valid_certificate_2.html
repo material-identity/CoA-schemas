@@ -5,7 +5,6 @@
     <meta name="version" content="v1.0.0" />
     <style rel="stylesheet" type="text/css">
       @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
-
       html {
         font-family: "Lato", sans-serif;
         font-size: 14px;
@@ -13,27 +12,22 @@
         max-width: 2480px;
         justify-content: center;
       }
-
       .main-title {
         font-size: 1.5em;
         border-bottom: 3px solid #0c2340;
       }
-
       .second-level-title {
         font-size: 1.25em;
         border-bottom: 2px solid #0c2340;
         padding: 0px;
         width: 100%;
       }
-
       .third-level-title {
         font-size: 1em;
       }
-
       .no-border {
         border: none;
       }
-
       .main-table {
         border: 0px solid #ccc;
         border-collapse: collapse;
@@ -41,22 +35,18 @@
         padding: 0;
         width: 100%;
         table-layout: fixed;
-        margin-top: 0px;
-        /*empty-cells: show;*/
+        margin-top: 0px; /*empty-cells: show;*/
       }
-
       .table-cells {
         padding: 0.325em;
         text-align: left;
         vertical-align: top;
       }
-
       .table-rows {
         border: 0px solid #ddd;
         padding: 0.15em;
         vertical-align: top;
       }
-
       .table-headers {
         font-weight: lighter;
         font-style: italic;
@@ -65,52 +55,41 @@
         max-width: 40%;
         vertical-align: top;
       }
-
       .second-level {
         margin-left: 10px;
       }
-
       .caption {
         font-weight: lighter;
         font-size: 11px;
       }
-
       .element {
         padding: 0.325em;
         font-size: 12px;
       }
-
       em {
         font-style: normal;
       }
-
       ol {
         list-style-type: none;
         padding: 0;
       }
-
       ul {
         margin: 0;
         padding: 0;
       }
-
       ul li {
         display: inline;
       }
-
       img {
         max-width: 20vw;
         padding: 0;
       }
-
       .ce {
         width: 8vw;
       }
-
       section:not(.header) {
         margin-top: 10px;
       }
-
       .ce-table-cells {
         padding: 0.325em;
         text-align: center;
@@ -149,7 +128,7 @@
         <tbody>
           <tr class="table-rows">
             <th class="table-cells" colspan="4">Customer</th>
-            <th class="table-cells" colspan="6">Receiver of goods</th>
+            <th class="table-cells" colspan="6">Recipient</th>
           </tr>
           <tr class="table-rows">
             <td class="table-cells" colspan="4">
@@ -173,7 +152,7 @@
       <table class="main-table">
         <tbody>
           <tr class="table-rows">
-            <td class="table-headers" colspan="2">Certificate number</td>
+            <td class="table-headers" colspan="2">Certificate ID</td>
             <td class="table-cells" colspan="2">43</td>
             <td class="table-headers" colspan="2">Date</td>
             <td class="table-cells" colspan="4">12/12/2021</td>
@@ -182,7 +161,7 @@
       </table>
     </section>
     <section class="header">
-      <h2 class="main-title">Business transaction</h2>
+      <h2 class="main-title">Business data</h2>
       <table class="main-table">
         <tbody>
           <tr class="table-row">
@@ -194,15 +173,15 @@
             </td>
           </tr>
           <tr class="table-row">
-            <td class="table-headers" colspan="2">Number</td>
+            <td class="table-headers" colspan="2">ID</td>
             <td class="table-cells" colspan="2">100000 10</td>
-            <td class="table-headers" colspan="2">Number</td>
+            <td class="table-headers" colspan="2">ID</td>
             <td class="table-cells" colspan="2">300000 30</td>
           </tr>
           <tr class="table-row">
-            <td class="table-headers" colspan="2">Position</td>
+            <td class="table-headers" colspan="2">Item no.</td>
             <td class="table-cells" colspan="2"></td>
-            <td class="table-headers" colspan="2">Position</td>
+            <td class="table-headers" colspan="2">Item no.</td>
             <td class="table-cells" colspan="4"></td>
           </tr>
           <tr class="table-row">
@@ -218,19 +197,19 @@
             <td class="table-cells" colspan="4">12/31/2020</td>
           </tr>
           <tr class="table-row">
-            <td class="table-headers" colspan="2">Product number</td>
+            <td class="table-headers" colspan="2">Product ID</td>
             <td class="table-cells" colspan="2"></td>
-            <td class="table-headers" colspan="2">Job number</td>
+            <td class="table-headers" colspan="2">Order ID</td>
             <td class="table-cells" colspan="4"></td>
           </tr>
           <tr class="table-row">
             <td class="table-headers" colspan="2">Product name</td>
             <td class="table-cells" colspan="2"></td>
-            <td class="table-headers" colspan="2">Job position</td>
+            <td class="table-headers" colspan="2">Order item no.</td>
             <td class="table-cells" colspan="4"></td>
           </tr>
           <tr class="table-row">
-            <td class="table-headers" colspan="2">Goods receipt number</td>
+            <td class="table-headers" colspan="2">Goods receipt ID</td>
             <td class="table-cells" colspan="2"></td>
             <td class="table-headers" colspan="2">Transport</td>
             <td class="table-cells" colspan="4"></td>
@@ -243,15 +222,15 @@
       <table class="main-table">
         <tbody>
           <tr>
-            <th class="table-headers" colspan="4">Product number</th>
+            <th class="table-headers" colspan="4">Product ID</th>
             <td class="table-cells" colspan="6">20000 20</td>
           </tr>
           <tr>
-            <th class="table-headers" colspan="4">Trade name</th>
+            <th class="table-headers" colspan="4">Product designation</th>
             <td class="table-cells" colspan="6">Super duper plastic</td>
           </tr>
           <tr>
-            <th class="table-headers" colspan="4">Filling charge</th>
+            <th class="table-headers" colspan="4">Filling batch ID</th>
             <td class="table-cells" colspan="6">210000</td>
           </tr>
         </tbody>
@@ -268,7 +247,7 @@
             <th class="table-headers">Value</th>
             <th class="table-headers">Minimum</th>
             <th class="table-headers">Maximum</th>
-            <th class="table-headers">Test conditions</th>
+            <th class="table-headers" colspan="2">Inspection conditions</th>
           </tr>
           <tr class="table-rows">
             <td class="table-cells" colspan="2">MFR</td>

@@ -490,7 +490,7 @@
       "type": "object",
       "properties": {
         "Norm": {
-          "description": "The standard on which the certificate is based. Not rendered on the certificate.",
+          "description": "The standard on which the certificate is based.",
           "type": "string",
           "examples": ["EN 10204", "DIN 55350-18-4.2.2"]
         },

@@ -1,7 +1,7 @@
 {
   "RefSchemaUrl": "https://schemas.s1seven.com/coa-schemas/v0.1.0/schema.json",
   "Certificate": {
-    "CertificateLanguages": ["EN", "DE"],
+    "CertificateLanguages": ["IT", "TR"],
     "Id": "43",
     "Date": "2021-12-12",
     "Standard": {
@@ -101,7 +101,7 @@
           "TestConditions": "According customer specification"
         },
         {
-          "PropertyId": "51",
+          "PropertyId": "1039",
           "Property": "Density",
           "Method": "DIN EN ISO 1183-1A",
           "Unit": "g/cm³",

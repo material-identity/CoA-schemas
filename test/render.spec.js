@@ -7,7 +7,7 @@ const { HtmlDiffer } = require('@markedjs/html-differ');
 const logger = require('@markedjs/html-differ/lib/logger');
 const { resolve } = require('path');
 const { fromBuffer } = require('pdf2pic');
-const { translations } = require('../utils/constants');
+const { translations, extraTranslations } = require('../utils/constants');
 
 describe('Render', function () {
   const testSuitesMap = [
@@ -19,6 +19,15 @@ describe('Render', function () {
     },
     {
       certificateName: `valid_certificate_3`,
+    },
+    {
+      certificateName: `valid_certificate_4`,
+    },
+    {
+      certificateName: `valid_certificate_5`,
+    },
+    {
+      certificateName: `valid_certificate_6`,
     },
   ];
 
@@ -40,6 +49,7 @@ describe('Render', function () {
         templatePath,
         templateType: 'hbs',
         translations,
+        extraTranslations,
       });
       const isEqual = await htmlDiffer.isEqual(expectedHTML, html);
       if (!isEqual) {
@@ -82,6 +92,7 @@ describe('Render', function () {
         outputType: 'buffer',
         generatorPath,
         translations,
+        extraTranslations,
       });
       const result = await fromBuffer(buffer, options)(1, true);
       expect(buffer instanceof Buffer).toEqual(true);
