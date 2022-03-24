@@ -8,6 +8,7 @@ const {
   pdfFonts,
   pdfGeneratorPath,
   translations,
+  extraTranslations,
 } = require('./constants');
 
 const schemaFilePaths = [{ filePath: 'schema.json', properties: [{ path: '$id', value: 'schema.json' }] }];
@@ -25,7 +26,15 @@ function stageAndCommitChanges(version) {
 
 (async function (argv) {
   const version = argv[2] || pkgVersion;
-  const updater = new SchemaRepositoryVersion(defaultServerUrl, schemaFilePaths, version, translations, 'schema.json');
+  console.log(`Updating files to version : ${version}`);
+  const updater = new SchemaRepositoryVersion(
+    defaultServerUrl,
+    schemaFilePaths,
+    version,
+    translations,
+    extraTranslations,
+    'schema.json',
+  );
   await updater.updateSchemasVersion();
   await updater.updateJsonFixturesVersion(jsonFixturesPattern);
   await updater.updateHtmlFixturesVersion(validCertificateFixturesPattern, htmlTemplatePath);
