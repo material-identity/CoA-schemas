@@ -35,10 +35,7 @@
     },
     "BusinessTransaction": {
       "Order": {
-        "Id": "100000 10",
-        "Quantity": 1000,
-        "QuantityUnit": "kg",
-        "Date": "2020-12-12"
+        "Id": "100000 10"
       },
       "Delivery": {
         "Id": "300000 30",
