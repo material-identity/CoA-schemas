@@ -8,38 +8,6 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://schemas.s1seven.com/coa-schemas/v0.2.0/schema.json",
   "definitions": {
-    "Identifier": {
-      "title": "Identifier",
-      "description": "Identifiers for companies",
-      "type": "object",
-      "properties": {
-        "VAT": {
-          "description": "This is the unique number that identifies a taxable person (business) or non-taxable legal entity that is registered for VAT, see https://ec.europa.eu/taxation_customs/business/vat/eu-vat-rules-topic/vat-identification-numbers_en",
-          "type": "string",
-          "examples": [
-            "ATU12345678"
-          ]
-        },
-        "DUNS": {
-          "description": "The Dun & Bradstreet D-U-N-S Number is a unique nine-digit identifier for businesses, https://www.dnb.com/duns-number.html  ",
-          "type": "string",
-          "examples": [
-            "30-058-5430"
-          ]
-        },
-        "CageCode": {
-          "description": "The Commercial and Government Entity Code (short CAG), is a unique identifier assigned to suppliers to various government or defense agencies, https://en.wikipedia.org/wiki/Commercial_and_Government_Entity_code",
-          "type": "string",
-          "examples": [
-            "N1950#"
-          ]
-        }
-      },
-      "required": [
-        "VAT"
-      ],
-      "additionalProperties": false
-    },
     "CertificateLanguages": {
       "allOf": [
         {
@@ -91,65 +59,11 @@
       "title": "Company",
       "description": "A company involved in business transaction.",
       "type": "object",
-      "properties": {
-        "Name": {
-          "type": "string"
-        },
-        "AddressLine1": {
-          "type": "string"
-        },
-        "AddressLine2": {
-          "type": "string"
-        },
-        "ZipCode": {
-          "type": "string"
-        },
-        "City": {
-          "type": "string"
-        },
-        "Country": {
-          "description": "The two-letter ISO country code according https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2.",
-          "type": "string",
-          "minLength": 2,
-          "maxLength": 2,
-          "pattern": "^[A-Z]{2}$",
-          "examples": [
-            "AT",
-            "DE",
-            "FR",
-            "ES",
-            "PL",
-            "CN"
-          ]
-        },
-        "Email": {
-          "type": "string",
-          "format": "email"
-        },
-        "Identifier": {
-          "description": "One or more unique company identifiers.",
-          "$ref": "#/definitions/Identifier"
-        },
-        "AdditionalInformation": {
-          "description": "An array of additional free text information on the company.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "uniqueItems": true,
-          "minItems": 1
+      "allOf": [
+        {
+          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.5/company/company.json#/definitions/Company"
         }
-      },
-      "required": [
-        "Name",
-        "AddressLine1",
-        "ZipCode",
-        "City",
-        "Country",
-        "Email",
-        "Identifier"
-      ],
-      "additionalProperties": true
+      ]
     },
     "Parties": {
       "title": "Parties",
