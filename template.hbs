@@ -130,23 +130,7 @@
             <img class='image' src='{{Certificate.Logo}}' />
           </td>
           <td class='table-cells' colspan='6'>
-            <ol>
-              <li>
-                <h1>{{Certificate.Parties.Manufacturer.Name}}</h1>
-              </li>
-              <li>
-                {{Certificate.Parties.Manufacturer.AddressLine1}}
-                {{Certificate.Parties.Manufacturer.AddressLine2}}
-              </li>
-              <li>
-                {{Certificate.Parties.Manufacturer.ZipCode}}
-                {{Certificate.Parties.Manufacturer.City}},
-                {{Certificate.Parties.Manufacturer.Country}}
-              </li>
-              <li>
-                {{Certificate.Parties.Manufacturer.Email}}
-              </li>
-            </ol>
+            {{> company Certificate.Parties.Manufacturer }}
           </td>
         </tr>
       </tbody>
@@ -166,47 +150,11 @@
         </tr>
         <tr class='table-rows'>
           <td class='table-cells' colspan='4'>
-            <ol>
-              <li>
-                <h3>{{Certificate.Parties.Customer.Name}}</h3>
-              </li>
-              <li>
-                {{Certificate.Parties.Customer.AddressLine1}}&nbsp;
-              </li>
-              <li>
-                {{Certificate.Parties.Customer.AddressLine2}}&nbsp;
-              </li>
-              <li>
-                {{Certificate.Parties.Customer.ZipCode}}
-                {{Certificate.Parties.Customer.City}},
-                {{Certificate.Parties.Customer.Country}}
-              </li>
-              <li>
-                {{Certificate.Parties.Customer.Email}}
-              </li>
-            </ol>
+            {{> company Certificate.Parties.Customer }}
           </td>
           <td class='table-cells' colspan='6'>
             {{#if Certificate.Parties.Receiver}}
-            <ol>
-              <li>
-                <h3>{{Certificate.Parties.Receiver.Name}}</h3>
-              </li>
-              <li>
-                {{Certificate.Parties.Receiver.AddressLine1}}&nbsp;
-              </li>
-              <li>
-                {{Certificate.Parties.Receiver.AddressLine2}}&nbsp;
-              </li>
-              <li>
-                {{Certificate.Parties.Receiver.ZipCode}}
-                {{Certificate.Parties.Receiver.City}},
-                {{Certificate.Parties.Receiver.Country}}
-              </li>
-              <li>
-                {{Certificate.Parties.Receiver.Email}}
-              </li>
-            </ol>
+            {{> company Certificate.Parties.Receiver }}
             {{/if}}
           </td>
         </tr>
