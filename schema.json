@@ -22,6 +22,16 @@
         }
       ]
     },
+    "Company": {
+      "title": "Company",
+      "description": "A company involved in business transaction.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.5/company/company.json#/definitions/Company"
+        }
+      ]
+    },
     "Person": {
       "title": "Person",
       "description": "A brief description of a natural person.",
@@ -54,16 +64,6 @@
         "Phone"
       ],
       "additionalProperties": false
-    },
-    "Company": {
-      "title": "Company",
-      "description": "A company involved in business transaction.",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.5/company/company.json#/definitions/Company"
-        }
-      ]
     },
     "Parties": {
       "title": "Parties",
