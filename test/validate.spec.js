@@ -1,13 +1,14 @@
 /* eslint-disable no-undef */
 const { loadExternalFile } = require('@s1seven/schema-tools-utils');
-const Ajv = require('ajv');
+const Ajv2019 = require('ajv/dist/2019');
+const draft7MetaSchema = require('ajv/dist/refs/json-schema-draft-07.json');
 const addFormats = require('ajv-formats');
 const { readFileSync } = require('fs');
 const { resolve } = require('path');
 const { campusTranslationProperties, languages, translationProperties } = require('../utils/constants');
 
 const createAjvInstance = () => {
-  const ajv = new Ajv({
+  const ajv = new Ajv2019({
     loadSchema: (uri) => loadExternalFile(uri, 'json'),
     strictSchema: true,
     strictNumbers: true,
@@ -16,6 +17,7 @@ const createAjvInstance = () => {
     allErrors: true,
   });
   ajv.addKeyword('meta:license');
+  ajv.addMetaSchema(draft7MetaSchema);
   addFormats(ajv);
   return ajv;
 };
@@ -96,8 +98,8 @@ describe('Validate', function () {
     },
   ];
 
-  it('should validate schema', () => {
-    const validateSchema = createAjvInstance().compile(localSchema);
+  it('should validate schema', async () => {
+    const validateSchema = await createAjvInstance().compileAsync(localSchema);
     expect(() => validateSchema()).not.toThrow();
   });
 
