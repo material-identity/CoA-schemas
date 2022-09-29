@@ -11,38 +11,37 @@
     "Parties": {
       "Manufacturer": {
         "Name": "Green Plastics AG",
-        "AddressLine1": "Kunststoffgasse 1",
+        "Street": "Kunststoffgasse 1",
         "ZipCode": "10003",
         "City": "Berlin",
         "Country": "DE",
         "Email": "s1seven.certificates@gmail.com",
-        "Identifier": {
-          "VAT": "",
+        "Identifiers": {
+          "VAT": "AT123456789",
           "DUNS": "",
           "CageCode": ""
         }
       },
       "Customer": {
         "Name": "Plastic Processor SE",
-        "AddressLine1": "Plastik Street 1",
+        "Street": "Plastik Street 1",
         "ZipCode": "1230",
         "City": "Wien",
         "Country": "AT",
         "Email": "s1seven.certificates@gmail.com",
-        "Identifier": {
-          "VAT": ""
+        "Identifiers": {
+          "VAT": "AT123456789"
         }
       },
       "Receiver": {
         "Name": "Plastic Processor SE",
-        "AddressLine1": "Plastik Street 1",
-        "AddressLine2": "Werk 1",
+        "Street": ["Plastik Street 1", "Werk 1"],
         "ZipCode": "1230",
         "City": "Wien",
         "Country": "AT",
         "Email": "s1seven.certificates@gmail.com",
-        "Identifier": {
-          "VAT": ""
+        "Identifiers": {
+          "VAT": "AT123456789"
         }
       }
     },

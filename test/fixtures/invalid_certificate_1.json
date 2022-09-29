@@ -10,25 +10,25 @@
     "CertificateLanguages": ["DE"],
     "Parties": {
       "Manufacturer": {
-        "AddressLine1": "Kunststoff 1",
+        "Street": "Kunststoff 1",
         "ZipCode": "10003",
         "City": "Berlin",
         "Country": "DE",
         "Email": "hannes@s1seven.com",
-        "Identifier": {
+        "Identifiers": {
           "DUNS": "",
           "CageCode": ""
         }
       },
       "Customer": {
         "Name": "Plastic Processor SE",
-        "AddressLine1": "Plastik 1",
+        "Street": "Plastik 1",
         "ZipCode": "1230",
         "City": "Wien",
         "Country": "AT",
         "Email": "hannes@s1seven.com",
-        "Identifier": {
-          "VAT": ""
+        "Identifiers": {
+          "VAT": "AT123456789"
         }
       }
     },
