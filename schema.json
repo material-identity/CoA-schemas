@@ -41,27 +41,11 @@
       "additionalProperties": false
     },
     "CertificateLanguages": {
-      "title": "CertificateLanguages",
-      "description": "For a JSON document one or two translations used in the rendering of HTML and PDF documents can be specificed.",
-      "type": "array",
-      "items": {
-        "enum": [
-          "EN",
-          "DE",
-          "FR",
-          "ES",
-          "PL",
-          "CN",
-          "TR",
-          "IT"
-        ]
-      },
-      "minItems": 1,
-      "maxItems": 2,
-      "default": [
-        "EN"
-      ],
-      "uniqueItems": true
+      "allOf": [
+        {
+          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.5/languages/languages.json#/definitions/CertificateLanguages"
+        }
+      ]
     },
     "Hash": {
       "title": "Hash",
