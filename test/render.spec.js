@@ -8,6 +8,7 @@ const logger = require('@markedjs/html-differ/lib/logger');
 const { resolve } = require('path');
 const { fromBuffer } = require('pdf2pic');
 const { translations, extraTranslations } = require('../utils/constants');
+const partialsMap = require('../partials-map.json');
 
 describe('Render', function () {
   const testSuitesMap = [
@@ -50,6 +51,7 @@ describe('Render', function () {
         templateType: 'hbs',
         translations,
         extraTranslations,
+        partialsMap,
       });
       const isEqual = await htmlDiffer.isEqual(expectedHTML, html);
       if (!isEqual) {
