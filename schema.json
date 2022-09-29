@@ -47,86 +47,12 @@
         }
       ]
     },
-    "Hash": {
-      "title": "Hash",
-      "description": "For any attachment to the JSON document a hash must be calculated and added to the document before adding the base64 encoded data.",
-      "type": "object",
-      "properties": {
-        "Algorithm": {
-          "description": "The algorithm selected to calculate the hash value.",
-          "type": "string",
-          "enum": [
-            "SHA256",
-            "SHA3-256"
-          ],
-          "default": "SHA256"
-        },
-        "Encoding": {
-          "description": "The format in which the hash value is encoded.",
-          "type": "string",
-          "enum": [
-            "base64",
-            "hex"
-          ],
-          "default": "base64"
-        },
-        "Value": {
-          "description": "The hash value.",
-          "type": "string"
-        }
-      },
-      "required": [
-        "Algorithm",
-        "Encoding",
-        "Value"
-      ]
-    },
     "Attachment": {
-      "title": "Attachment",
-      "description": "Additional data in any kind of format attached to JSON document.",
-      "type": "object",
-      "properties": {
-        "Hash": {
-          "description": "The hash of unencoded data file.",
-          "$ref": "#/definitions/Hash"
-        },
-        "FileName": {
-          "description": "The name of the file.",
-          "type": "string",
-          "examples": [
-            "file.pdf"
-          ]
-        },
-        "MIME-Type": {
-          "description": "The MIME/Type of the data file.",
-          "type": "string",
-          "examples": [
-            "application/json",
-            "application/pdf",
-            "image/png"
-          ]
-        },
-        "Encoding": {
-          "description": "The format in which the hash value is encoded.",
-          "type": "string",
-          "examples": [
-            "base64",
-            "hex"
-          ]
-        },
-        "Data": {
-          "description": "The data encoded as defined in `Encoding`",
-          "type": "string"
+      "allOf": [
+        {
+          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.5/attachment/attachment.json#/definitions/Attachment"
         }
-      },
-      "required": [
-        "Hash",
-        "FileName",
-        "MIME-Type",
-        "Encoding",
-        "Data"
-      ],
-      "additionalProperties": false
+      ]
     },
     "Person": {
       "title": "Person",
