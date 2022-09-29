@@ -26,10 +26,10 @@
   },
   "devDependencies": {
     "@markedjs/html-differ": "^3.0.4",
-    "@s1seven/schema-tools-generate-html": "^0.2.1",
-    "@s1seven/schema-tools-generate-pdf": "^0.1.1",
-    "@s1seven/schema-tools-utils": "^0.1.1",
-    "@s1seven/schema-tools-versioning": "^0.2.2",
+    "@s1seven/schema-tools-generate-html": "^0.3.0",
+    "@s1seven/schema-tools-generate-pdf": "^0.2.0",
+    "@s1seven/schema-tools-utils": "^0.2.0",
+    "@s1seven/schema-tools-versioning": "^0.4.0",
     "ajv": "^8.11.0",
     "ajv-formats": "^2.1.0",
     "eslint": "^8.11.0",
@@ -62,7 +62,7 @@
         "npm run lint",
         "npm run test"
       ],
-      "after:bump": "npm run update-version v${version} ${name}",
+      "after:bump": "npm run update-version -- v${version} ${name}",
       "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
     }
   },
