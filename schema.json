@@ -370,18 +370,18 @@
             "date-time",
             "boolean"
           ],
-          "default": "number"
+          "default": "string"
         },
         "Minimum": {
           "description": "The lower limit according the specification. If a numeric value and not provided it can be 0 or -∞.",
-          "type": "number",
+          "type": "string",
           "examples": [
             "0.1"
           ]
         },
         "Maximum": {
           "description": "The upper limit according the specification. If a numeric value and not provided it can be ∞.",
-          "type": "number",
+          "type": "string",
           "examples": [
             "0.2"
           ]
