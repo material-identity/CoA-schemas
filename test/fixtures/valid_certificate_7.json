@@ -141,16 +141,24 @@
         {
           "Property": "Test Case 3",
           "Method": "ISO 179/1eU",
-          "Value": 4.1,
-          "ValueType": "number",
-          "Maximum": "4.0"
-        },
-        {
-          "Property": "Test Case 4",
-          "Method": "ISO 179/1eU",
           "Value": "4.0",
           "ValueType": "string",
           "Maximum": "4.9"
+        },
+        {
+          "Property": "Test Case 1 #57",
+          "Method": "ISO 179/1eU",
+          "Value": "0.08",
+          "ValueType": "number",
+          "Maximum": "0.15"
+        },
+        {
+          "Property": "Test Case 3 #57",
+          "Method": "ISO 179/1eU",
+          "Value": "49.7",
+          "ValueType": "number",
+          "Minimum": "48.0",
+          "Maximum": "52.0"
         }
       ],
       "AdditionalInformation": ["Information 1", "Information 2"]
