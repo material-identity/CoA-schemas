@@ -457,6 +457,9 @@
             {{i18n 'Method' 'Certificate' Certificate.CertificateLanguages}}
           </th>
           <th class='table-headers'>
+            {{i18n 'Unit' 'Certificate' Certificate.CertificateLanguages}}
+          </th>
+          <th class='table-headers'>
             {{i18n 'Value' 'Certificate' Certificate.CertificateLanguages}}
           </th>
           <th class='table-headers'>
@@ -484,8 +487,10 @@
             {{this.Method}}
           </td>
           <td class='table-cells'>
-            {{localizeValue this.Value this.ValueType ../Certificate.CertificateLanguages}}
             {{this.Unit}}
+          </td>
+          <td class='table-cells'>
+            {{localizeValue this.Value this.ValueType ../Certificate.CertificateLanguages}}
           </td>
           <td class='table-cells'>
             {{localizeNumber this.Minimum ../Certificate.CertificateLanguages}}
