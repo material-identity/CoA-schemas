@@ -21,12 +21,3 @@ To run the PDF rendering tests we use [pdf2image](https://github.com/yakovmeiste
 [AGPL-3.0 License](https://github.com/thematerials-network/CoA-schemas/blob/main/LICENSE)
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fthematerials-network%2FCoA-schemas.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fthematerials-network%2FCoA-schemas?ref=badge_large)
-
-## Breaking changes
-
-There are 4 breaking changes in the newest implementation:
-
-1. `AddressLine1` and `AddressLine2` have been replaced with the property `Street`, which can be either a string or an array containing between one and three strings.
-2. In `Company`, `Identifier` has been renamed `Identifiers` as more than one can be present.
-3. `VAT` now has a minimum length of 8 characters.
-4. `VAT` can be replaced with `DUNS`.
