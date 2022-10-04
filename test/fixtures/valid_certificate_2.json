@@ -56,13 +56,13 @@
           "Method": "DIN EN ISO 1133",
           "Unit": "g/10m_",
           "Value": "31",
-          "ValueType": "string"
+          "ValueType": "number"
         },
         {
           "Property": "Test Case 2 #57",
           "Method": "DIN EN ISO 1133",
           "Value": "0.00",
-          "ValueType": "string",
+          "ValueType": "number",
           "Maximum": "0.15"
         }
       ]
