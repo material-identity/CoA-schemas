@@ -369,8 +369,7 @@
             "date",
             "date-time",
             "boolean"
-          ],
-          "default": "string"
+          ]        
         },
         "Minimum": {
           "description": "The lower limit according the specification. If a numeric value and not provided it can be 0 or -∞.",
