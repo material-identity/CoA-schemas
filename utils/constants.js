@@ -2,6 +2,8 @@ const { readFileSync } = require('fs');
 const { resolve } = require('path');
 
 const defaultServerUrl = 'https://schemas.s1seven.com/coa-schemas';
+const schemaDefinitionsPath = 'schema-definitions';
+const defaultSchemaDefinitionsVersion = 'v0.0.5';
 
 const htmlTemplatePath = resolve('template.hbs');
 
@@ -385,6 +387,7 @@ const campusTranslationProperties = [
 
 module.exports = {
   campusTranslationProperties,
+  defaultSchemaDefinitionsVersion,
   defaultServerUrl,
   extraTranslations,
   htmlTemplatePath,
@@ -394,6 +397,7 @@ module.exports = {
   pdfStylesPath,
   pdfStyles,
   pdfFonts,
+  schemaDefinitionsPath,
   translationProperties,
   translations,
 };
