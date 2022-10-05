@@ -11,3 +11,4 @@ There are 4 breaking changes in the newest implementation:
 3. `VAT` now has a minimum length of 8 characters.
 4. `VAT` can be replaced with `DUNS`.
 5. The default value of `ValueType` in `Inspections` has been removed. It is now necessary to specify the type.
+6. Handlebars partials have been implemented for the html rendering. The partials that are currently used can be seen in the file `partials-map.json`, which must be kept up to date.
