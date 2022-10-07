@@ -1,12 +1,12 @@
 {
   "RefSchemaUrl": "https://schemas.s1seven.com/coa-schemas/v0.2.0/schema.json",
   "Certificate": {
-    "CertificateLanguages": ["CN", "EN"],
+    "CertificateLanguages": ["DE", "EN"],
     "Id": "43",
     "Date": "2021-12-12",
     "Standard": {
-      "Norm": "EN 10204:2004",
-      "Type": "3.1"
+      "Norm": "EN 10204",
+      "Type": "2.1"
     },
     "Parties": {
       "Manufacturer": {
