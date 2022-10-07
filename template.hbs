@@ -429,101 +429,103 @@
   </section>
 
   {{! INSPECTIONS }}
-  <section class='header'>
-    <h2 class='main-title'>
-      {{i18n 'Inspections' 'Certificate' Certificate.CertificateLanguages}}
-    </h2>
-    {{#if Certificate.Analysis.LotId}}
-    <table class='main-table'>
-      <tbody>
-        <tr class='table-rows'>
-          <th class='table-cells' colspan='4'>
-            <strong>{{i18n 'LotId' 'Certificate' Certificate.CertificateLanguages}}</strong>
-          </th>
-          <td class='table-cells' colspan='6'>
-            {{Certificate.Analysis.LotId}}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    {{/if}}
-    <table class='main-table'>
-      <tbody>
-        <tr class='table-rows'>
-          <th class='table-headers' colspan='2'>
-            {{i18n 'Property' 'Certificate' Certificate.CertificateLanguages}}
-          </th>
-          <th class='table-headers' colspan='2'>
-            {{i18n 'Method' 'Certificate' Certificate.CertificateLanguages}}
-          </th>
-          <th class='table-headers'>
-            {{i18n 'Unit' 'Certificate' Certificate.CertificateLanguages}}
-          </th>
-          <th class='table-headers'>
-            {{i18n 'Value' 'Certificate' Certificate.CertificateLanguages}}
-          </th>
-          <th class='table-headers'>
-            {{i18n 'Minimum' 'Certificate' Certificate.CertificateLanguages}}
-          </th>
-          <th class='table-headers'>
-            {{i18n 'Maximum' 'Certificate' Certificate.CertificateLanguages}}
-          </th>
-          <th class='table-headers' colspan='2'>
-            {{i18n 'TestConditions' 'Certificate' Certificate.CertificateLanguages}}
-          </th>
-        </tr>
-        {{#each Certificate.Analysis.Inspections}}
-        <tr class='table-rows'>
-          <td class='table-cells' colspan='2'>
-            {{extraI18n
-            ../Certificate.Analysis.PropertiesStandard
-            ../this.Certificate.CertificateLanguages
-            this.PropertyId
-            'Property'
-            this.Property
-            }}
-          </td>
-          <td class='table-cells' colspan='2'>
-            {{this.Method}}
-          </td>
-          <td class='table-cells'>
-            {{this.Unit}}
-          </td>
-          <td class='table-cells'>
-            {{localizeValue this.Value this.ValueType ../Certificate.CertificateLanguages}}
-          </td>
-          <td class='table-cells'>
-            {{localizeNumber this.Minimum ../Certificate.CertificateLanguages}}
-          </td>
-          <td class='table-cells'>
-            {{localizeNumber this.Maximum ../Certificate.CertificateLanguages}}
-          </td>
-          <td class='table-cells' colspan='2'>
-            {{extraI18n
-            ../Certificate.Analysis.PropertiesStandard
-            ../this.Certificate.CertificateLanguages
-            this.PropertyId
-            'TestConditions'
-            this.TestConditions
-            }}
-          </td>
-        </tr>
-        {{/each}}
-        {{#if Certificate.Analysis.AdditionalInformation}}
-        <tr class='table-rows'>
-          <td class='table-cells' colspan='10'>
-            <strong>{{i18n 'AdditionalInformation' 'Certificate' Certificate.CertificateLanguages}}</strong>
-          </td>
-        </tr>
-        <tr class='table-rows'>
-          <td class='table-cells' colspan='10'>
-            {{join Certificate.Analysis.AdditionalInformation '<br>' ''}}
-          </td>
-        </tr>
-        {{/if}}
-      </tbody>
-    </table>
-  </section>
+  {{#if Certificate.Analysis}}
+    <section class='header'>
+      <h2 class='main-title'>
+        {{i18n 'Inspections' 'Certificate' Certificate.CertificateLanguages}}
+      </h2>
+      {{#if Certificate.Analysis.LotId}}
+      <table class='main-table'>
+        <tbody>
+          <tr class='table-rows'>
+            <th class='table-cells' colspan='4'>
+              <strong>{{i18n 'LotId' 'Certificate' Certificate.CertificateLanguages}}</strong>
+            </th>
+            <td class='table-cells' colspan='6'>
+              {{Certificate.Analysis.LotId}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      {{/if}}
+      <table class='main-table'>
+        <tbody>
+          <tr class='table-rows'>
+            <th class='table-headers' colspan='2'>
+              {{i18n 'Property' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers' colspan='2'>
+              {{i18n 'Method' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers'>
+              {{i18n 'Unit' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers'>
+              {{i18n 'Value' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers'>
+              {{i18n 'Minimum' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers'>
+              {{i18n 'Maximum' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers' colspan='2'>
+              {{i18n 'TestConditions' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+          </tr>
+          {{#each Certificate.Analysis.Inspections}}
+          <tr class='table-rows'>
+            <td class='table-cells' colspan='2'>
+              {{extraI18n
+              ../Certificate.Analysis.PropertiesStandard
+              ../this.Certificate.CertificateLanguages
+              this.PropertyId
+              'Property'
+              this.Property
+              }}
+            </td>
+            <td class='table-cells' colspan='2'>
+              {{this.Method}}
+            </td>
+            <td class='table-cells'>
+              {{this.Unit}}
+            </td>
+            <td class='table-cells'>
+              {{localizeValue this.Value this.ValueType ../Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells'>
+              {{localizeNumber this.Minimum ../Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells'>
+              {{localizeNumber this.Maximum ../Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='2'>
+              {{extraI18n
+              ../Certificate.Analysis.PropertiesStandard
+              ../this.Certificate.CertificateLanguages
+              this.PropertyId
+              'TestConditions'
+              this.TestConditions
+              }}
+            </td>
+          </tr>
+          {{/each}}
+          {{#if Certificate.Analysis.AdditionalInformation}}
+          <tr class='table-rows'>
+            <td class='table-cells' colspan='10'>
+              <strong>{{i18n 'AdditionalInformation' 'Certificate' Certificate.CertificateLanguages}}</strong>
+            </td>
+          </tr>
+          <tr class='table-rows'>
+            <td class='table-cells' colspan='10'>
+              {{join Certificate.Analysis.AdditionalInformation '<br>' ''}}
+            </td>
+          </tr>
+          {{/if}}
+        </tbody>
+      </table>
+    </section>
+  {{/if}}
   <section>
 
   </section>
