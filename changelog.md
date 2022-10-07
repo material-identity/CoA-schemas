@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## 1.0.0 - Breaking changes
 
-There are 4 breaking changes in the newest implementation:
+These are the breaking changes in v1.0.0:
 
 1. `AddressLine1` and `AddressLine2` have been replaced with the property `Street`, which can be either a string or an array containing between one and three strings.
 2. In `Company`, `Identifier` has been renamed `Identifiers` as more than one can be present.
