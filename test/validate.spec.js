@@ -44,6 +44,9 @@ describe('Validate', function () {
     {
       certificateName: `valid_certificate_6`,
     },
+    {
+      certificateName: `valid_certificate_7`,
+    },
   ];
   const invalidCertTestSuitesMap = [
     {
