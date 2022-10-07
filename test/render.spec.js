@@ -104,6 +104,6 @@ describe('Render', function () {
       const resultHash = createHash('sha256').update(result.base64).digest('hex');
       const expectedHash = createHash('sha256').update(expectedPDF.base64).digest('hex');
       expect(resultHash).toEqual(expectedHash);
-    }, 8000);
+    }, 10000);
   });
 });
