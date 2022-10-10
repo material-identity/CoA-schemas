@@ -11,38 +11,37 @@
     "Parties": {
       "Manufacturer": {
         "Name": "Green Plastics AG",
-        "AddressLine1": "Kunststoffgasse 1",
+        "Street": "Kunststoffgasse 1",
         "ZipCode": "10003",
         "City": "Berlin",
         "Country": "DE",
         "Email": "s1seven.certificates@gmail.com",
-        "Identifier": {
-          "VAT": "",
+        "Identifiers": {
+          "VAT": "AT123456789",
           "DUNS": "",
           "CageCode": ""
         }
       },
       "Customer": {
         "Name": "Plastic Processor SE",
-        "AddressLine1": "Plastik Street 1",
+        "Street": "Plastik Street 1",
         "ZipCode": "1230",
         "City": "Wien",
         "Country": "AT",
         "Email": "s1seven.certificates@gmail.com",
-        "Identifier": {
-          "VAT": ""
+        "Identifiers": {
+          "VAT": "AT123456789"
         }
       },
       "Receiver": {
         "Name": "Plastic Processor SE",
-        "AddressLine1": "Plastik Street 1",
-        "AddressLine2": "Werk 1",
+        "Street": ["Plastik Street 1", "Werk 1"],
         "ZipCode": "1230",
         "City": "Wien",
         "Country": "AT",
         "Email": "s1seven.certificates@gmail.com",
-        "Identifier": {
-          "VAT": ""
+        "Identifiers": {
+          "VAT": "AT123456789"
         }
       }
     },
@@ -96,8 +95,8 @@
           "Unit": "g/10m_",
           "Value": "31",
           "ValueType": "number",
-          "Minimum": 15,
-          "Maximum": 35,
+          "Minimum": "15",
+          "Maximum": "35",
           "TestConditions": "2,16 kg 190° Celsius"
         },
         {
@@ -107,8 +106,8 @@
           "Unit": "g/cm³",
           "Value": "85",
           "ValueType": "number",
-          "Minimum": 85,
-          "Maximum": 89
+          "Minimum": "85",
+          "Maximum": "89"
         }
       ],
       "AdditionalInformation": ["Samples: tempered at 100°C for 20 hours"]
@@ -139,8 +138,8 @@
           "Encoding": "base64",
           "Value": "fa9e2171dbcf4c73e96fefed7be1582cebc3d42859df423afcea0b4439c4cc48"
         },
-        "FileName": "Curves Ultramid B3WG6.json",
-        "MIME-Type": "application/json",
+        "FileName": "logo.png",
+        "MIME-Type": "image/png",
         "Encoding": "UTF-8",
         "Data": "data:image/png;base64, wolQTkcNChoKAAAADUlIRFIAAAFAAAAAw7AIBgAAAHEtwr1rAAAAAXNSR0IAwq7DjhzDqQAAAMKQZVhJZk1NACoAAAAIAAYBBgADAAAAAQACAAABEgADAAAAAQABAAABGgAFAAAAAQAAAFYBGwAFAAAAAQAAAF4BKAADAAAAAQACAADCh2kABAAAAAEAAABmAAAAAAAAAEgAAAABAAAASAAAAAEAA8KgAQADAAAAAQABAADCoAIABAAAAAEAAAFAwqADAAQAAAABAAAAw7AAAAAAAsKeLGIAAAAJcEhZcwAACxMAAAsTAQDCmsKcGAAAAgtpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDYuMC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpQaG90b21ldHJpY0ludGVycHJldGF0aW9uPjI8L3RpZmY6UGhvdG9tZXRyaWNJbnRlcnByZXRhdGlvbj4KICAgICAgICAgPHRpZmY6T3JpZW50YXRpb24+MTwvdGlmZjpPcmllbnRhdGlvbj4KICAgICAgICAgPHRpZmY6Q29tcHJlc3Npb24+MTwvdGlmZjpDb21wcmVzc2lvbj4KICAgICAgICAgPHRpZmY6UmVzb2x1dGlvblVuaXQ+MjwvdGlmZjpSZXNvbHV0aW9uVW5pdD4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CsOtw4w+fwAAQABJREFUeAHDrH0HwoDDnUXCtcO"
       }

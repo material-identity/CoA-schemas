@@ -130,23 +130,7 @@
             <img class='image' src='{{Certificate.Logo}}' />
           </td>
           <td class='table-cells' colspan='6'>
-            <ol>
-              <li>
-                <h1>{{Certificate.Parties.Manufacturer.Name}}</h1>
-              </li>
-              <li>
-                {{Certificate.Parties.Manufacturer.AddressLine1}}
-                {{Certificate.Parties.Manufacturer.AddressLine2}}
-              </li>
-              <li>
-                {{Certificate.Parties.Manufacturer.ZipCode}}
-                {{Certificate.Parties.Manufacturer.City}},
-                {{Certificate.Parties.Manufacturer.Country}}
-              </li>
-              <li>
-                {{Certificate.Parties.Manufacturer.Email}}
-              </li>
-            </ol>
+            {{> company Certificate.Parties.Manufacturer }}
           </td>
         </tr>
       </tbody>
@@ -166,47 +150,11 @@
         </tr>
         <tr class='table-rows'>
           <td class='table-cells' colspan='4'>
-            <ol>
-              <li>
-                <h3>{{Certificate.Parties.Customer.Name}}</h3>
-              </li>
-              <li>
-                {{Certificate.Parties.Customer.AddressLine1}}&nbsp;
-              </li>
-              <li>
-                {{Certificate.Parties.Customer.AddressLine2}}&nbsp;
-              </li>
-              <li>
-                {{Certificate.Parties.Customer.ZipCode}}
-                {{Certificate.Parties.Customer.City}},
-                {{Certificate.Parties.Customer.Country}}
-              </li>
-              <li>
-                {{Certificate.Parties.Customer.Email}}
-              </li>
-            </ol>
+            {{> company Certificate.Parties.Customer }}
           </td>
           <td class='table-cells' colspan='6'>
             {{#if Certificate.Parties.Receiver}}
-            <ol>
-              <li>
-                <h3>{{Certificate.Parties.Receiver.Name}}</h3>
-              </li>
-              <li>
-                {{Certificate.Parties.Receiver.AddressLine1}}&nbsp;
-              </li>
-              <li>
-                {{Certificate.Parties.Receiver.AddressLine2}}&nbsp;
-              </li>
-              <li>
-                {{Certificate.Parties.Receiver.ZipCode}}
-                {{Certificate.Parties.Receiver.City}},
-                {{Certificate.Parties.Receiver.Country}}
-              </li>
-              <li>
-                {{Certificate.Parties.Receiver.Email}}
-              </li>
-            </ol>
+            {{> company Certificate.Parties.Receiver }}
             {{/if}}
           </td>
         </tr>
@@ -481,96 +429,103 @@
   </section>
 
   {{! INSPECTIONS }}
-  <section class='header'>
-    <h2 class='main-title'>
-      {{i18n 'Inspections' 'Certificate' Certificate.CertificateLanguages}}
-    </h2>
-    {{#if Certificate.Analysis.LotId}}
-    <table class='main-table'>
-      <tbody>
-        <tr class='table-rows'>
-          <th class='table-cells' colspan='4'>
-            <strong>{{i18n 'LotId' 'Certificate' Certificate.CertificateLanguages}}</strong>
-          </th>
-          <td class='table-cells' colspan='6'>
-            {{Certificate.Analysis.LotId}}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    {{/if}}
-    <table class='main-table'>
-      <tbody>
-        <tr class='table-rows'>
-          <th class='table-headers' colspan='2'>
-            {{i18n 'Property' 'Certificate' Certificate.CertificateLanguages}}
-          </th>
-          <th class='table-headers' colspan='2'>
-            {{i18n 'Method' 'Certificate' Certificate.CertificateLanguages}}
-          </th>
-          <th class='table-headers'>
-            {{i18n 'Value' 'Certificate' Certificate.CertificateLanguages}}
-          </th>
-          <th class='table-headers'>
-            {{i18n 'Minimum' 'Certificate' Certificate.CertificateLanguages}}
-          </th>
-          <th class='table-headers'>
-            {{i18n 'Maximum' 'Certificate' Certificate.CertificateLanguages}}
-          </th>
-          <th class='table-headers' colspan='2'>
-            {{i18n 'TestConditions' 'Certificate' Certificate.CertificateLanguages}}
-          </th>
-        </tr>
-        {{#each Certificate.Analysis.Inspections}}
-        <tr class='table-rows'>
-          <td class='table-cells' colspan='2'>
-            {{extraI18n
-            ../Certificate.Analysis.PropertiesStandard
-            ../this.Certificate.CertificateLanguages
-            this.PropertyId
-            'Property'
-            this.Property
-            }}
-          </td>
-          <td class='table-cells' colspan='2'>
-            {{this.Method}}
-          </td>
-          <td class='table-cells'>
-            {{localizeValue this.Value this.ValueType Certificate.CertificateLanguages}}
-            {{this.Unit}}
-          </td>
-          <td class='table-cells'>
-            {{localizeNumber this.Minimum Certificate.CertificateLanguages}}
-          </td>
-          <td class='table-cells'>
-            {{localizeNumber this.Maximum Certificate.CertificateLanguages}}
-          </td>
-          <td class='table-cells' colspan='2'>
-            {{extraI18n
-            ../Certificate.Analysis.PropertiesStandard
-            ../this.Certificate.CertificateLanguages
-            this.PropertyId
-            'TestConditions'
-            this.TestConditions
-            }}
-          </td>
-        </tr>
-        {{/each}}
-        {{#if Certificate.Analysis.AdditionalInformation}}
-        <tr class='table-rows'>
-          <td class='table-cells' colspan='10'>
-            <strong>{{i18n 'AdditionalInformation' 'Certificate' Certificate.CertificateLanguages}}</strong>
-          </td>
-        </tr>
-        <tr class='table-rows'>
-          <td class='table-cells' colspan='10'>
-            {{join Certificate.Analysis.AdditionalInformation '<br>' ''}}
-          </td>
-        </tr>
-        {{/if}}
-      </tbody>
-    </table>
-  </section>
+  {{#if Certificate.Analysis}}
+    <section class='header'>
+      <h2 class='main-title'>
+        {{i18n 'Inspections' 'Certificate' Certificate.CertificateLanguages}}
+      </h2>
+      {{#if Certificate.Analysis.LotId}}
+      <table class='main-table'>
+        <tbody>
+          <tr class='table-rows'>
+            <th class='table-cells' colspan='4'>
+              <strong>{{i18n 'LotId' 'Certificate' Certificate.CertificateLanguages}}</strong>
+            </th>
+            <td class='table-cells' colspan='6'>
+              {{Certificate.Analysis.LotId}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      {{/if}}
+      <table class='main-table'>
+        <tbody>
+          <tr class='table-rows'>
+            <th class='table-headers' colspan='2'>
+              {{i18n 'Property' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers' colspan='2'>
+              {{i18n 'Method' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers'>
+              {{i18n 'Unit' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers'>
+              {{i18n 'Value' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers'>
+              {{i18n 'Minimum' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers'>
+              {{i18n 'Maximum' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+            <th class='table-headers' colspan='2'>
+              {{i18n 'TestConditions' 'Certificate' Certificate.CertificateLanguages}}
+            </th>
+          </tr>
+          {{#each Certificate.Analysis.Inspections}}
+          <tr class='table-rows'>
+            <td class='table-cells' colspan='2'>
+              {{extraI18n
+              ../Certificate.Analysis.PropertiesStandard
+              ../this.Certificate.CertificateLanguages
+              this.PropertyId
+              'Property'
+              this.Property
+              }}
+            </td>
+            <td class='table-cells' colspan='2'>
+              {{this.Method}}
+            </td>
+            <td class='table-cells'>
+              {{this.Unit}}
+            </td>
+            <td class='table-cells'>
+              {{localizeValue this.Value this.ValueType ../Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells'>
+              {{localizeNumber this.Minimum ../Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells'>
+              {{localizeNumber this.Maximum ../Certificate.CertificateLanguages}}
+            </td>
+            <td class='table-cells' colspan='2'>
+              {{extraI18n
+              ../Certificate.Analysis.PropertiesStandard
+              ../this.Certificate.CertificateLanguages
+              this.PropertyId
+              'TestConditions'
+              this.TestConditions
+              }}
+            </td>
+          </tr>
+          {{/each}}
+          {{#if Certificate.Analysis.AdditionalInformation}}
+          <tr class='table-rows'>
+            <td class='table-cells' colspan='10'>
+              <strong>{{i18n 'AdditionalInformation' 'Certificate' Certificate.CertificateLanguages}}</strong>
+            </td>
+          </tr>
+          <tr class='table-rows'>
+            <td class='table-cells' colspan='10'>
+              {{join Certificate.Analysis.AdditionalInformation '<br>' ''}}
+            </td>
+          </tr>
+          {{/if}}
+        </tbody>
+      </table>
+    </section>
+  {{/if}}
   <section>
 
   </section>

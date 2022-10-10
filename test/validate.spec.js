@@ -1,13 +1,14 @@
 /* eslint-disable no-undef */
 const { loadExternalFile } = require('@s1seven/schema-tools-utils');
-const Ajv = require('ajv');
+const Ajv2019 = require('ajv/dist/2019');
+const draft7MetaSchema = require('ajv/dist/refs/json-schema-draft-07.json');
 const addFormats = require('ajv-formats');
 const { readFileSync } = require('fs');
 const { resolve } = require('path');
 const { campusTranslationProperties, languages, translationProperties } = require('../utils/constants');
 
 const createAjvInstance = () => {
-  const ajv = new Ajv({
+  const ajv = new Ajv2019({
     loadSchema: (uri) => loadExternalFile(uri, 'json'),
     strictSchema: true,
     strictNumbers: true,
@@ -16,6 +17,7 @@ const createAjvInstance = () => {
     allErrors: true,
   });
   ajv.addKeyword('meta:license');
+  ajv.addMetaSchema(draft7MetaSchema);
   addFormats(ajv);
   return ajv;
 };
@@ -42,6 +44,9 @@ describe('Validate', function () {
     {
       certificateName: `valid_certificate_6`,
     },
+    {
+      certificateName: `valid_certificate_7`,
+    },
   ];
   const invalidCertTestSuitesMap = [
     {
@@ -49,55 +54,148 @@ describe('Validate', function () {
       expectedErrors: [
         {
           instancePath: '/Certificate/Parties/Manufacturer',
+          schemaPath: '#/definitions/CompanyBase/oneOf/0/required',
           keyword: 'required',
+          params: { missingProperty: 'Name' },
           message: "must have required property 'Name'",
-          params: {
-            missingProperty: 'Name',
-          },
-          schemaPath: '#/required',
         },
         {
-          instancePath: '/Certificate/Parties/Manufacturer/Identifier',
+          instancePath: '/Certificate/Parties/Manufacturer',
+          schemaPath: '#/definitions/CompanyBase/oneOf/1/required',
           keyword: 'required',
+          params: { missingProperty: 'CompanyName' },
+          message: "must have required property 'CompanyName'",
+        },
+        {
+          instancePath: '/Certificate/Parties/Manufacturer',
+          schemaPath: '#/definitions/CompanyBase/oneOf',
+          keyword: 'oneOf',
+          params: { passingSchemas: null },
+          message: 'must match exactly one schema in oneOf',
+        },
+        {
+          instancePath: '/Certificate/Parties/Manufacturer/Identifiers',
+          schemaPath: '#/definitions/CompanyIdentifiers/anyOf/0/required',
+          keyword: 'required',
+          params: { missingProperty: 'VAT' },
           message: "must have required property 'VAT'",
-          params: {
-            missingProperty: 'VAT',
-          },
-          schemaPath: '#/definitions/Identifier/required',
+        },
+        {
+          instancePath: '/Certificate/Parties/Manufacturer/Identifiers/DUNS',
+          schemaPath: '#/definitions/CompanyIdentifiers/anyOf/1/properties/DUNS/minLength',
+          keyword: 'minLength',
+          params: { limit: 9 },
+          message: 'must NOT have fewer than 9 characters',
+        },
+        {
+          instancePath: '/Certificate/Parties/Manufacturer/Identifiers',
+          schemaPath: '#/definitions/CompanyIdentifiers/anyOf',
+          keyword: 'anyOf',
+          params: {},
+          message: 'must match a schema in anyOf',
         },
         {
           instancePath: '/Certificate/BusinessTransaction/OrderConfirmation/Date',
-          keyword: 'format',
-          message: 'must match format "date"',
-          params: {
-            format: 'date',
-          },
           schemaPath: '#/definitions/BusinessTransaction/properties/OrderConfirmation/properties/Date/format',
+          keyword: 'format',
+          params: { format: 'date' },
+          message: 'must match format "date"',
         },
         {
           instancePath: '/Certificate/BusinessTransaction/Delivery/Id',
-          keyword: 'type',
-          message: 'must be string',
-          params: {
-            type: 'string',
-          },
           schemaPath: '#/definitions/BusinessTransaction/properties/Delivery/properties/Id/type',
+          keyword: 'type',
+          params: { type: 'string' },
+          message: 'must be string',
         },
         {
           instancePath: '/Certificate/Analysis/Inspections/1',
-          keyword: 'required',
-          message: "must have required property 'Property'",
-          params: {
-            missingProperty: 'Property',
-          },
           schemaPath: '#/definitions/Inspection/required',
+          keyword: 'required',
+          params: { missingProperty: 'Property' },
+          message: "must have required property 'Property'",
+        },
+      ],
+    },
+    {
+      certificateName: `invalid_certificate_2`,
+      expectedErrors: [
+        {
+          instancePath: '/Certificate/Parties/Manufacturer',
+          schemaPath: '#/definitions/CompanyBase/oneOf/0/required',
+          keyword: 'required',
+          params: { missingProperty: 'Name' },
+          message: "must have required property 'Name'",
+        },
+        {
+          instancePath: '/Certificate/Parties/Manufacturer',
+          schemaPath: '#/definitions/CompanyBase/oneOf/1/required',
+          keyword: 'required',
+          params: { missingProperty: 'CompanyName' },
+          message: "must have required property 'CompanyName'",
+        },
+        {
+          instancePath: '/Certificate/Parties/Manufacturer',
+          schemaPath: '#/definitions/CompanyBase/oneOf',
+          keyword: 'oneOf',
+          params: { passingSchemas: null },
+          message: 'must match exactly one schema in oneOf',
+        },
+        {
+          instancePath: '/Certificate/Parties/Manufacturer',
+          schemaPath: '#/definitions/CompanyAddress/required',
+          keyword: 'required',
+          params: { missingProperty: 'Street' },
+          message: "must have required property 'Street'",
+        },
+        {
+          instancePath: '/Certificate/Parties/Manufacturer',
+          schemaPath: '#/allOf/2/required',
+          keyword: 'required',
+          params: { missingProperty: 'Identifiers' },
+          message: "must have required property 'Identifiers'",
+        },
+        {
+          instancePath: '/Certificate/Parties/Customer',
+          schemaPath: '#/definitions/CompanyAddress/required',
+          keyword: 'required',
+          params: { missingProperty: 'Street' },
+          message: "must have required property 'Street'",
+        },
+        {
+          instancePath: '/Certificate/Parties/Customer',
+          schemaPath: '#/allOf/2/required',
+          keyword: 'required',
+          params: { missingProperty: 'Identifiers' },
+          message: "must have required property 'Identifiers'",
+        },
+        {
+          instancePath: '/Certificate/BusinessTransaction/OrderConfirmation/Date',
+          schemaPath: '#/definitions/BusinessTransaction/properties/OrderConfirmation/properties/Date/format',
+          keyword: 'format',
+          params: { format: 'date' },
+          message: 'must match format "date"',
+        },
+        {
+          instancePath: '/Certificate/BusinessTransaction/Delivery/Id',
+          schemaPath: '#/definitions/BusinessTransaction/properties/Delivery/properties/Id/type',
+          keyword: 'type',
+          params: { type: 'string' },
+          message: 'must be string',
+        },
+        {
+          instancePath: '/Certificate/Analysis/Inspections/1',
+          schemaPath: '#/definitions/Inspection/required',
+          keyword: 'required',
+          params: { missingProperty: 'Property' },
+          message: "must have required property 'Property'",
         },
       ],
     },
   ];
 
-  it('should validate schema', () => {
-    const validateSchema = createAjvInstance().compile(localSchema);
+  it('should validate schema', async () => {
+    const validateSchema = await createAjvInstance().compileAsync(localSchema);
     expect(() => validateSchema()).not.toThrow();
   });
 

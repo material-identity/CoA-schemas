@@ -8,6 +8,7 @@ const logger = require('@markedjs/html-differ/lib/logger');
 const { resolve } = require('path');
 const { fromBuffer } = require('pdf2pic');
 const { translations, extraTranslations } = require('../utils/constants');
+const partialsMap = require('../partials-map.json');
 
 describe('Render', function () {
   const testSuitesMap = [
@@ -28,6 +29,9 @@ describe('Render', function () {
     },
     {
       certificateName: `valid_certificate_6`,
+    },
+    {
+      certificateName: `valid_certificate_7`,
     },
   ];
 
@@ -50,6 +54,7 @@ describe('Render', function () {
         templateType: 'hbs',
         translations,
         extraTranslations,
+        partialsMap,
       });
       const isEqual = await htmlDiffer.isEqual(expectedHTML, html);
       if (!isEqual) {
@@ -99,6 +104,6 @@ describe('Render', function () {
       const resultHash = createHash('sha256').update(result.base64).digest('hex');
       const expectedHash = createHash('sha256').update(expectedPDF.base64).digest('hex');
       expect(resultHash).toEqual(expectedHash);
-    }, 8000);
+    }, 10000);
   });
 });
