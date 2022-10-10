@@ -595,6 +595,11 @@
           "type": "string",
           "contentEncoding": "base64",
           "contentMediaType": "image/png"
+        },
+        "Disclaimer": {
+          "title": "Disclaimer",
+          "description": "A general disclaimer for the entire document",
+          "type": "string"
         }
       },
       "required": [
