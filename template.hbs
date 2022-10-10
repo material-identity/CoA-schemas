@@ -526,9 +526,7 @@
       </table>
     </section>
   {{/if}}
-  <section>
 
-  </section>
   {{! DECLARATION OF CONFORMITY }}
   <section>
     <h2 class='main-title'>
@@ -575,6 +573,22 @@
     </table>
     {{/if}}
   </section>
+
+
+  {{#if Certificate.Disclaimer}}
+  <section>
+    <table class='main-table'>
+      <tbody>
+        <tr class='table-rows'>
+          <td class='table-cells' colspan='6' rowspan='5'>
+            {{Certificate.Disclaimer}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  {{/if}}
+  
 
   {{! CONTACTS }}
   {{#if Certificate.Contacts}}
