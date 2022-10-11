@@ -2,11 +2,13 @@
 
 [![CoA Schema CI](https://github.com/thematerials-network/CoA-schemas/actions/workflows/ci.yml/badge.svg)](https://github.com/thematerials-network/CoA-schemas/actions/workflows/ci.yml)
 
-EN 10204 specifies the types of inspection certificates by which manufacturers declare the compliance of steel products to either product norms or customer specifications. In absence of norms manufacturers of other metals and plastics have adopted EN 10204.
+EN 10204 specifies the types of inspection certificates by which manufacturers declare the compliance of steel products to either product standards or customer specifications. In the absence of norms, other metals and plastics manufacturers have adopted EN 10204 to issue Certificates of Analysis, short CoA. 
 
-The main content of CoA documents are the origin of the product and its physical attributes such as dimensions, mechanical properties or chemical composition. Furthermore they contain information about the commercial transaction to enable the customer to link it to its purchase order.
+The main content of CoAs is the origin of the product and its physical attributes, such as dimensions, mechanical properties, or chemical composition. Furthermore, they contain information about the commercial transaction to enable the customer to link it to its purchase order.
 
-In this repository a data structure in JSON format is defined matching the requirements of CoA for plastic products.
+This project defines a JSON data structure for Digital Certificates of Analysis meeting the requirements of plastic products. 
+
+The complete documentation of the design and its features is available at [https://materialidentity.org](https://materialidentity.org).
 
 ## Contribution guidelines
 
