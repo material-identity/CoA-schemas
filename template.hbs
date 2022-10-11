@@ -578,22 +578,6 @@
     {{/if}}
   </section>
 
-
-  {{#if Certificate.Disclaimer}}
-  <section>
-    <table class='main-table'>
-      <tbody>
-        <tr class='table-rows'>
-          <td class='table-cells disclaimer' colspan='6' rowspan='5'>
-            {{Certificate.Disclaimer}}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  {{/if}}
-  
-
   {{! CONTACTS }}
   {{#if Certificate.Contacts}}
   <section>
@@ -643,6 +627,20 @@
   </section>
   {{/if}}
 
+  {{#if Certificate.Disclaimer}}
+  <section style="border-top: 3px solid #0c2340">
+    <table class='main-table'>
+      <tbody>
+        <tr class='table-rows'>
+          <td class='table-cells disclaimer' colspan='6' rowspan='5'>
+            {{Certificate.Disclaimer}}
+          </td>np
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  {{/if}}
+  
   {{! ATTACHEMENTS}}
   {{#if Certificate.Attachments}}
   <section>
