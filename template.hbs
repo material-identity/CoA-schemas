@@ -628,13 +628,17 @@
   {{/if}}
 
   {{#if Certificate.Disclaimer}}
-  <section style="border-top: 3px solid #0c2340">
+    {{#if Certificate.Contacts}}
+    <section style="border-top: 3px solid #0c2340">
+    {{else}}
+    <section>
+    {{/if}}
     <table class='main-table'>
       <tbody>
         <tr class='table-rows'>
           <td class='table-cells disclaimer' colspan='6' rowspan='5'>
             {{Certificate.Disclaimer}}
-          </td>np
+          </td>
         </tr>
       </tbody>
     </table>
