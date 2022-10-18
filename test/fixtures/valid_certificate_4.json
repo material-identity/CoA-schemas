@@ -1,5 +1,5 @@
 {
-  "RefSchemaUrl": "https://schemas.s1seven.com/coa-schemas/v0.2.0/schema.json",
+  "RefSchemaUrl": "https://schemas.s1seven.com/coa-schemas/v1.0.0/schema.json",
   "Certificate": {
     "CertificateLanguages": ["PL", "IT"],
     "Id": "43",

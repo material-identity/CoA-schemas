@@ -6,19 +6,19 @@
     "of the License at https://www.gnu.org/licenses/agpl-3.0.en.html"
   ],
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://schemas.s1seven.com/coa-schemas/v0.2.0/schema.json",
+  "$id": "https://schemas.s1seven.com/coa-schemas/v1.0.0/schema.json",
   "definitions": {
     "CertificateLanguages": {
       "allOf": [
         {
-          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.5/languages/languages.json#/definitions/CertificateLanguages"
+          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.6/languages/languages.json#/definitions/CertificateLanguages"
         }
       ]
     },
     "Attachment": {
       "allOf": [
         {
-          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.5/attachment/attachment.json#/definitions/Attachment"
+          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.6/attachment/attachment.json#/definitions/Attachment"
         }
       ]
     },
@@ -28,7 +28,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.5/company/company.json#/definitions/Company"
+          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.6/company/company.json#/definitions/Company"
         }
       ]
     },
@@ -56,13 +56,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "Name",
-        "Department",
-        "Role",
-        "Email",
-        "Phone"
-      ],
+      "required": ["Name", "Department", "Role", "Email", "Phone"],
       "additionalProperties": false
     },
     "Parties": {
@@ -83,10 +77,7 @@
           "$ref": "#/definitions/Company"
         }
       },
-      "required": [
-        "Manufacturer",
-        "Customer"
-      ],
+      "required": ["Manufacturer", "Customer"],
       "additionalProperties": false
     },
     "BusinessTransaction": {
@@ -111,9 +102,7 @@
               "description": "The date of issuing the order",
               "type": "string",
               "format": "date",
-              "examples": [
-                "2018-01-01"
-              ]
+              "examples": ["2018-01-01"]
             },
             "Quantity": {
               "description": "The order quantity",
@@ -122,14 +111,7 @@
             "QuantityUnit": {
               "description": "The unit of the order quantity",
               "type": "string",
-              "examples": [
-                "kg",
-                "l",
-                "m",
-                "m²",
-                "m³",
-                "t"
-              ]
+              "examples": ["kg", "l", "m", "m²", "m³", "t"]
             },
             "CustomerProductId": {
               "description": "The internal product identifer of the Customer",
@@ -144,9 +126,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "Id"
-          ],
+          "required": ["Id"],
           "additionalProperties": false
         },
         "OrderConfirmation": {
@@ -162,14 +142,10 @@
               "description": "The date of order confirmation issuance.",
               "type": "string",
               "format": "date",
-              "examples": [
-                "2018-01-01"
-              ]
+              "examples": ["2018-01-01"]
             }
           },
-          "required": [
-            "Id"
-          ],
+          "required": ["Id"],
           "additionalProperties": false
         },
         "Delivery": {
@@ -189,9 +165,7 @@
               "description": "The date of issuing the delivery note.",
               "type": "string",
               "format": "date",
-              "examples": [
-                "2018-01-01"
-              ]
+              "examples": ["2018-01-01"]
             },
             "Quantity": {
               "description": "The shipped quantity.",
@@ -200,16 +174,7 @@
             "QuantityUnit": {
               "description": "The unit of the shipped quantity.",
               "type": "string",
-              "examples": [
-                "kg",
-                "l",
-                "m",
-                "m²",
-                "m³",
-                "t",
-                "tonne",
-                "piece"
-              ]
+              "examples": ["kg", "l", "m", "m²", "m³", "t", "tonne", "piece"]
             },
             "InternalOrderId": {
               "description": "The internal order number issued at the manufacturer.",
@@ -229,18 +194,11 @@
               "minItems": 0
             }
           },
-          "required": [
-            "Id",
-            "Quantity",
-            "QuantityUnit"
-          ],
+          "required": ["Id", "Quantity", "QuantityUnit"],
           "additionalProperties": false
         }
       },
-      "required": [
-        "Order",
-        "Delivery"
-      ],
+      "required": ["Order", "Delivery"],
       "additionalProperties": false
     },
     "Product": {
@@ -262,20 +220,12 @@
           "minLength": 2,
           "maxLength": 2,
           "pattern": "^[A-Z]{2}$",
-          "examples": [
-            "DE",
-            "AT",
-            "CH"
-          ]
+          "examples": ["DE", "AT", "CH"]
         },
         "PlaceOfOrigin": {
           "description": "The location of the plant in which the product was manufactured.",
           "type": "string",
-          "examples": [
-            "Vienna",
-            "Graz",
-            "Salzburg"
-          ]
+          "examples": ["Vienna", "Graz", "Salzburg"]
         },
         "FillingBatchId": {
           "description": "The identifer of the batch/lot/charge of filling into transport.",
@@ -285,9 +235,7 @@
           "description": "The date of filling into transport container.",
           "type": "string",
           "format": "date",
-          "examples": [
-            "2018-01-01"
-          ]
+          "examples": ["2018-01-01"]
         },
         "ProductionBatchId": {
           "description": "The production batch identifer.",
@@ -297,9 +245,7 @@
           "description": "The day on which the product was manufactured.",
           "type": "string",
           "format": "date",
-          "examples": [
-            "2018-01-01"
-          ]
+          "examples": ["2018-01-01"]
         },
         "Standards": {
           "description": "The list of standards to which the product conforms.",
@@ -314,9 +260,7 @@
           "description": "The day on which the product becomes unusable.",
           "type": "string",
           "format": "date",
-          "examples": [
-            "2018-01-01"
-          ]
+          "examples": ["2018-01-01"]
         },
         "AdditionalInformation": {
           "description": "An array of additional free text information on the product.",
@@ -328,10 +272,7 @@
           "minItems": 1
         }
       },
-      "required": [
-        "Name",
-        "FillingBatchId"
-      ],
+      "required": ["Name", "FillingBatchId"],
       "additionalProperties": false
     },
     "Inspection": {
@@ -346,16 +287,12 @@
         "Property": {
           "description": "The property measured.",
           "type": "string",
-          "examples": [
-            "MVR"
-          ]
+          "examples": ["MVR"]
         },
         "Method": {
           "description": "The reference to the definition of the method such as EN, ISO or factory standards.",
           "type": "string",
-          "examples": [
-            "DIN ISO 1133"
-          ]
+          "examples": ["DIN ISO 1133"]
         },
         "Value": {
           "description": "A measured or calculated Value (e.g. mean of individual measurements).",
@@ -363,46 +300,29 @@
         },
         "ValueType": {
           "description": "The data type of the measured value.",
-          "enum": [
-            "string",
-            "number",
-            "date",
-            "date-time",
-            "boolean"
-          ]        
+          "enum": ["string", "number", "date", "date-time", "boolean"]
         },
         "Minimum": {
           "description": "The lower limit according the specification. If a numeric value and not provided it can be 0 or -∞.",
           "type": "string",
-          "examples": [
-            "0.1"
-          ]
+          "examples": ["0.1"]
         },
         "Maximum": {
           "description": "The upper limit according the specification. If a numeric value and not provided it can be ∞.",
           "type": "string",
-          "examples": [
-            "0.2"
-          ]
+          "examples": ["0.2"]
         },
         "Unit": {
           "description": "The unit of the value.",
           "type": "string",
-          "examples": [
-            "㎤/10min"
-          ]
+          "examples": ["㎤/10min"]
         },
         "TestConditions": {
           "description": "A description of the conditions under which the test was executed.",
           "type": "string"
         }
       },
-      "required": [
-        "Property",
-        "Method",
-        "Value",
-        "ValueType"
-      ],
+      "required": ["Property", "Method", "Value", "ValueType"],
       "additionalProperties": false
     },
     "DeclarationOfConformity": {
@@ -427,35 +347,23 @@
             "NotifiedBodyNumber": {
               "description": "The identification number of the Notified body. Refer to https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31993L0068:en:HTML and https://ec.europa.eu/growth/tools-databases/nando/index.cfm?fuseaction=notifiedbody.main",
               "type": "string",
-              "examples": [
-                "0780"
-              ]
+              "examples": ["0780"]
             },
             "YearDocumentIssued": {
               "description": "The year when the declaration of conformance was issued",
               "type": "string",
-              "examples": [
-                "19",
-                "20"
-              ]
+              "examples": ["19", "20"]
             },
             "DocumentNumber": {
               "description": "The declaration of conformance document number ",
               "type": "string"
             }
           },
-          "required": [
-            "CE_Image",
-            "NotifiedBodyNumber",
-            "YearDocumentIssued",
-            "DocumentNumber"
-          ],
+          "required": ["CE_Image", "NotifiedBodyNumber", "YearDocumentIssued", "DocumentNumber"],
           "additionalProperties": false
         }
       },
-      "required": [
-        "Declaration"
-      ],
+      "required": ["Declaration"],
       "additionalProperties": false
     },
     "Standard": {
@@ -466,23 +374,15 @@
         "Norm": {
           "description": "The standard on which the certificate is based.",
           "type": "string",
-          "examples": [
-            "EN 10204",
-            "DIN 55350-18-4.2.2"
-          ]
+          "examples": ["EN 10204", "DIN 55350-18-4.2.2"]
         },
         "Type": {
           "description": "In case the standard defines categories of certificates e.g. EN 10204 3.1",
           "type": "string",
-          "examples": [
-            "2.2",
-            "3.1"
-          ]
+          "examples": ["2.2", "3.1"]
         }
       },
-      "required": [
-        "Norm"
-      ]
+      "required": ["Norm"]
     }
   },
   "title": "Certificate",
@@ -507,18 +407,13 @@
         "Id": {
           "description": "The certificate identifier, usually a number.",
           "type": "string",
-          "examples": [
-            "100010",
-            "10000/11/12/2018"
-          ]
+          "examples": ["100010", "10000/11/12/2018"]
         },
         "Date": {
           "description": "The certificate issuing date.",
           "type": "string",
           "format": "date",
-          "examples": [
-            "2018-12-12"
-          ]
+          "examples": ["2018-12-12"]
         },
         "Standard": {
           "description": "The type of the certificate.",
@@ -556,9 +451,7 @@
             "PropertiesStandard": {
               "description": "The inspection properties of the certificate according to a standard. Not rendered on the certificate.",
               "type": "string",
-              "enum": [
-                "CAMPUS"
-              ]
+              "enum": ["CAMPUS"]
             },
             "Inspections": {
               "type": "array",
@@ -618,9 +511,6 @@
       "additionalProperties": false
     }
   },
-  "required": [
-    "RefSchemaUrl",
-    "Certificate"
-  ],
+  "required": ["RefSchemaUrl", "Certificate"],
   "additionalProperties": false
 }
