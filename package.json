@@ -1,6 +1,6 @@
 {
   "name": "coa-schemas",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Certificates of Analysis (CoA) as defined by EN 10204, developed by S1Seven",
   "repository": {
     "type": "git",
