@@ -33,6 +33,12 @@ const schemaFilePaths = [
         value: 'company/company.json#/definitions/Company',
       },
       {
+        path: 'properties.RefSchemaUrl.allOf.0.$ref',
+        schemaType: schemaDefinitionsPath,
+        version: defaultSchemaDefinitionsVersion,
+        value: 'ref-schema-url/ref-schema-url.json#/definitions/RefSchemaUrl',
+      },
+      {
         path: 'definitions.Attachment.allOf.0.$ref',
         schemaType: schemaDefinitionsPath,
         version: defaultSchemaDefinitionsVersion,

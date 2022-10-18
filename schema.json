@@ -490,9 +490,11 @@
   "type": "object",
   "properties": {
     "RefSchemaUrl": {
-      "description": "The URL linking to the JSON schema version the certificate JSON is based on.",
-      "type": "string",
-      "format": "uri"
+      "allOf": [
+        {
+          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.6/ref-schema-url/ref-schema-url.json#/definitions/RefSchemaUrl"
+        }
+      ]
     },
     "Certificate": {
       "description": "The certificate information object",
@@ -595,6 +597,11 @@
           "type": "string",
           "contentEncoding": "base64",
           "contentMediaType": "image/png"
+        },
+        "Disclaimer": {
+          "title": "Disclaimer",
+          "description": "A general disclaimer for the entire document",
+          "type": "string"
         }
       },
       "required": [
