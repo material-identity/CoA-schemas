@@ -149,25 +149,11 @@ describe('Validate', function () {
           message: "must have required property 'Street'",
         },
         {
-          instancePath: '/Certificate/Parties/Manufacturer',
-          schemaPath: '#/allOf/2/required',
-          keyword: 'required',
-          params: { missingProperty: 'Identifiers' },
-          message: "must have required property 'Identifiers'",
-        },
-        {
           instancePath: '/Certificate/Parties/Customer',
           schemaPath: '#/definitions/CompanyAddress/required',
           keyword: 'required',
           params: { missingProperty: 'Street' },
           message: "must have required property 'Street'",
-        },
-        {
-          instancePath: '/Certificate/Parties/Customer',
-          schemaPath: '#/allOf/2/required',
-          keyword: 'required',
-          params: { missingProperty: 'Identifiers' },
-          message: "must have required property 'Identifiers'",
         },
         {
           instancePath: '/Certificate/BusinessTransaction/OrderConfirmation/Date',
