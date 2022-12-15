@@ -1,7 +1,8 @@
 {
   "Certificate": {
     "Customer": "客户",
-    "Receiver": "货物接收方",
+    "Receiver": "证书收件人",
+    "GoodsReceiver": "货物接收方",
     "Id": "证书编号",
     "Certificate": "证书",
     "Date": "日期",

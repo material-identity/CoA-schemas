@@ -1,7 +1,8 @@
 {
   "Certificate": {
     "Customer": "Müşteri",
-    "Receiver": "Malın alıcısı",
+    "Receiver": "Sertifika alıcısı",
+    "GoodsReceiver": "Malın alıcısı",
     "Id": "Sertifika numarası",
     "Certificate": "Sertifika",
     "Date": "Tarih",

@@ -53,6 +53,7 @@ const translationProperties = {
   Certificate: [
     'Customer',
     'Receiver',
+    'GoodsReceiver',
     'Id',
     'Certificate',
     'Date',
