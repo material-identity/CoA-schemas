@@ -1,6 +1,9 @@
 module.exports = {
   verbose: true,
-  moduleFileExtensions: ['js', 'ts', 'node'],
+  rootDir: '.',
+  maxConcurrency: 2,
+  testRegex: '.*\\.spec\\.js$',
+  moduleFileExtensions: ['js', 'node'],
   moduleNameMapper: {
     // needed since axios after 1.x.x
     '^axios$': require.resolve('axios'),

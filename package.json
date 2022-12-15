@@ -65,14 +65,5 @@
       "after:bump": "npm run update-version -- v${version} ${name}",
       "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
     }
-  },
-  "jest": {
-    "rootDir": ".",
-    "maxConcurrency": 2,
-    "testRegex": ".*\\.spec\\.js$",
-    "moduleFileExtensions": [
-      "js",
-      "node"
-    ]
   }
 }
