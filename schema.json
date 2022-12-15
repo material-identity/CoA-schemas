@@ -73,7 +73,11 @@
           "$ref": "#/definitions/Company"
         },
         "Receiver": {
-          "description": "The party receiving the goods for the customer, e.g. a freight fowarding agent or a subsisduary of the customer.",
+          "description": "The party receiving the certificate for the customer, e.g. a freight fowarding agent or a subsidiary of the customer.",
+          "$ref": "#/definitions/Company"
+        },
+        "GoodsReceiver": {
+          "description": "The party receiving the goods for the customer, e.g. a freight fowarding agent or a subsidiary of the customer.",
           "$ref": "#/definitions/Company"
         }
       },
