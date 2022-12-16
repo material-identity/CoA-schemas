@@ -40,6 +40,14 @@
         "City": "Wien",
         "Country": "AT",
         "Email": "s1seven.certificates@gmail.com"
+      },
+      "GoodsReceiver": {
+        "Name": "Plastic Processor SE",
+        "Street": ["Plastik Street 1", "Werk 1"],
+        "ZipCode": "1230",
+        "City": "Wien",
+        "Country": "AT",
+        "Email": "s1seven.certificates@gmail.com"
       }
     },
     "BusinessTransaction": {
