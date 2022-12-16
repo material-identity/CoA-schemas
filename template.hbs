@@ -133,9 +133,15 @@
           <td class='table-cells' colspan='4'>
             <img class='image' src='{{Certificate.Logo}}' />
           </td>
+          {{#if Certificate.Parties.GoodsReceiver}}
           <td class='table-cells' colspan='12'>
             {{> company Certificate.Parties.Manufacturer }}
           </td>
+          {{else}}
+          <td class='table-cells' colspan='6'>
+            {{> company Certificate.Parties.Manufacturer }}
+          </td>
+          {{/if}}
         </tr>
       </tbody>
     </table>
@@ -166,11 +172,11 @@
             {{> company Certificate.Parties.Receiver }}
             {{/if}}
           </td>
+          {{#if Certificate.Parties.GoodsReceiver}}
           <td class='table-cells' colspan='6'>
-            {{#if Certificate.Parties.GoodsReceiver}}
             {{> company Certificate.Parties.GoodsReceiver }}
-            {{/if}}
           </td>
+          {{/if}}
         </tr>
       </tbody>
     </table>
