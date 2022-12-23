@@ -11,14 +11,14 @@
     "CertificateLanguages": {
       "allOf": [
         {
-          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.6/languages/languages.json#/definitions/CertificateLanguages"
+          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.7/languages/languages.json#/definitions/CertificateLanguages"
         }
       ]
     },
     "Attachment": {
       "allOf": [
         {
-          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.6/attachment/attachment.json#/definitions/Attachment"
+          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.7/attachment/attachment.json#/definitions/Attachment"
         }
       ]
     },
@@ -28,7 +28,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.6/company/company.json#/definitions/Company"
+          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.7/company/company.json#/definitions/Company"
         }
       ]
     },
@@ -396,7 +396,7 @@
     "RefSchemaUrl": {
       "allOf": [
         {
-          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.6/ref-schema-url/ref-schema-url.json#/definitions/RefSchemaUrl"
+          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.7/ref-schema-url/ref-schema-url.json#/definitions/RefSchemaUrl"
         }
       ]
     },
