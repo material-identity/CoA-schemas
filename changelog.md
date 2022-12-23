@@ -9,6 +9,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Added the property `GoodsReceiver` under the `Parties` property.
 
+### Changed
+
+- Make the property `Identifiers` optional.
+
 ## 1.0.0 - Breaking changes
 
 ### Changed
