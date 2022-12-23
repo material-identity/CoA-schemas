@@ -18,12 +18,6 @@ We use [GitHub issues](https://github.com/thematerials-network/CoA-schemas/issue
 
 To run the PDF rendering tests we use [pdf2image](https://github.com/yakovmeister/pdf2image) lib. Please refer to this [guide](https://github.com/yakovmeister/pdf2image/blob/master/docs/gm-installation.md) to install required dependencies.
 
-## License
-
-[AGPL-3.0 License](https://github.com/thematerials-network/CoA-schemas/blob/main/LICENSE)
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fthematerials-network%2FCoA-schemas.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fthematerials-network%2FCoA-schemas?ref=badge_large)
-
 ## Testing a locally updated schema definition
 
 When you update a schema definition locally, you will want to test it before releasing it. To do so, open the `schema.json` file, and change the `$id` value to `schema.json`. Then update the `$ref` of the updated definition with an absolute path to the updated definition, plus the following string: `#/definitions/<definition name>`.
@@ -58,3 +52,15 @@ If you have trouble loading the file, you can **temporarily** update the propert
       return loadExternalFile(uri, 'json');
     },
 ```
+
+## Updating the partial versions in schema.json
+
+First, update `defaultSchemaDefinitionsVersion` in `utils/constants.js` to the latest version number.
+
+Then run `npm run update-version`.
+
+## License
+
+[AGPL-3.0 License](https://github.com/thematerials-network/CoA-schemas/blob/main/LICENSE)
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fthematerials-network%2FCoA-schemas.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fthematerials-network%2FCoA-schemas?ref=badge_large)
