@@ -1,7 +1,7 @@
 {
   "Certificate": {
     "Customer": "Client",
-    "Receiver": "Réceptionnaire des certificat",
+    "Receiver": "Réceptionnaire du certificat",
     "GoodsReceiver": "Réceptionnaire des marchandises",
     "Id": "Numéro de certificat",
     "Certificate": "Certificat",
