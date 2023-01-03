@@ -135,15 +135,10 @@
           </td>
           {{#if Certificate.Parties.GoodsReceiver}}
           <td class='table-cells' colspan='6'></td>
-
-          <td class='table-cells' colspan='6'>
-            {{> company Certificate.Parties.Manufacturer }}
-          </td>
-          {{else}}
-          <td class='table-cells' colspan='6'>
-            {{> company Certificate.Parties.Manufacturer }}
-          </td>
           {{/if}}
+          <td class='table-cells' colspan='6'>
+            {{> company Certificate.Parties.Manufacturer }}
+          </td>
         </tr>
       </tbody>
     </table>
