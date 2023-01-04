@@ -3,7 +3,7 @@ const { resolve } = require('path');
 
 const defaultServerUrl = 'https://schemas.s1seven.com/coa-schemas';
 const schemaDefinitionsPath = 'schema-definitions';
-const defaultSchemaDefinitionsVersion = 'v0.0.6';
+const defaultSchemaDefinitionsVersion = 'v0.0.7';
 
 const htmlTemplatePath = resolve('template.hbs');
 
@@ -53,6 +53,7 @@ const translationProperties = {
   Certificate: [
     'Customer',
     'Receiver',
+    'GoodsReceiver',
     'Id',
     'Certificate',
     'Date',

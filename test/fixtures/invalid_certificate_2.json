@@ -27,9 +27,7 @@
         "City": "Wien",
         "Country": "AT",
         "Email": "hannes@s1seven.com",
-        "Identifier": {
-          "VAT": ""
-        }
+        "Identifier": {}
       }
     },
     "BusinessTransaction": {
