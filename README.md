@@ -1,6 +1,6 @@
 # CoA-schemas
 
-[![CoA Schema CI](https://github.com/thematerials-network/CoA-schemas/actions/workflows/ci.yml/badge.svg)](https://github.com/thematerials-network/CoA-schemas/actions/workflows/ci.yml)
+[![CoA Schema CI](https://github.com/material-identity/CoA-schemas/actions/workflows/ci.yml/badge.svg)](https://github.com/material-identity/CoA-schemas/actions/workflows/ci.yml)
 
 EN 10204 specifies the types of inspection certificates by which manufacturers declare the compliance of steel products to either product standards or customer specifications. In the absence of norms, other metals and plastics manufacturers have adopted EN 10204 to issue Certificates of Analysis, short CoA.
 
@@ -12,7 +12,7 @@ The complete documentation of the design and its features is available at [https
 
 ## Contribution guidelines
 
-We use [GitHub issues](https://github.com/thematerials-network/CoA-schemas/issues/) for tracking enhancement requests and bugs, please see [Github Discussions](https://github.com/thematerials-network/CoA-schemas/discussions) for general questions and discussion.
+We use [GitHub issues](https://github.com/material-identity/CoA-schemas/issues/) for tracking enhancement requests and bugs, please see [Github Discussions](https://github.com/material-identity/CoA-schemas/discussions) for general questions and discussion.
 
 ### Tests
 
@@ -61,6 +61,6 @@ Then run `npm run update-version`.
 
 ## License
 
-[AGPL-3.0 License](https://github.com/thematerials-network/CoA-schemas/blob/main/LICENSE)
+[AGPL-3.0 License](https://github.com/material-identity/CoA-schemas/blob/main/LICENSE)
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fthematerials-network%2FCoA-schemas.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fthematerials-network%2FCoA-schemas?ref=badge_large)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmaterial-identity%2FCoA-schemas.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmaterial-identity%2FCoA-schemas?ref=badge_large)
