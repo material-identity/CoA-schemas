@@ -4,14 +4,14 @@
   "description": "Certificates of Analysis (CoA) as defined by EN 10204, developed by S1Seven",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/s1seven/CoA-schemas.git"
+    "url": "git+https://github.com/material-identity/CoA-schemas.git"
   },
   "author": "",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/s1seven/CoA-schemas/issues"
+    "url": "https://github.com/material-identity/CoA-schemas/issues"
   },
-  "homepage": "https://github.com/s1seven/CoA-schemas#readme",
+  "homepage": "https://github.com/material-identity/CoA-schemas#readme",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./*.js",
