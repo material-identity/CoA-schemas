@@ -1,6 +1,7 @@
 # CoA-schemas
 
 [![CoA Schema CI](https://github.com/material-identity/CoA-schemas/actions/workflows/ci.yml/badge.svg)](https://github.com/material-identity/CoA-schemas/actions/workflows/ci.yml)
+[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B18065%2Fgithub.com%2Fmaterial-identity%2FCoA-schemas.svg?type=shield)](https://app.fossa.com/projects/custom%2B18065%2Fgithub.com%2Fmaterial-identity%2FCoA-schemas?ref=badge_shield)
 
 EN 10204 specifies the types of inspection certificates by which manufacturers declare the compliance of steel products to either product standards or customer specifications. In the absence of norms, other metals and plastics manufacturers have adopted EN 10204 to issue Certificates of Analysis, short CoA.
 
@@ -63,4 +64,4 @@ Then run `npm run update-version`.
 
 [AGPL-3.0 License](https://github.com/material-identity/CoA-schemas/blob/main/LICENSE)
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmaterial-identity%2FCoA-schemas.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmaterial-identity%2FCoA-schemas?ref=badge_large)
+[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B18065%2Fgithub.com%2Fmaterial-identity%2FCoA-schemas.svg?type=large)](https://app.fossa.com/projects/custom%2B18065%2Fgithub.com%2Fmaterial-identity%2FCoA-schemas?ref=badge_large)
