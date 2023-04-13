@@ -25,6 +25,9 @@
     "generate-pdf": "DEBUG=schema-tools-* node ./utils/generate-pdf-cli",
     "transform-campus-file": "node ./utils/edit-campus-script.js"
   },
+  "dependencies": {
+    "@s1seven/schema-tools-generate-coa-pdf-template": "0.5.1"
+  },
   "devDependencies": {
     "@markedjs/html-differ": "^3.0.4",
     "@s1seven/schema-tools-generate-html": "^0.4.2",
