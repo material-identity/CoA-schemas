@@ -1,0 +1,11 @@
+version: 3
+
+server: https://app.fossa.com
+
+project:
+  id: github.com/material-identity/CoA-schemas
+  name: CoA-schemas
+  link: https://materialidentity.org/
+  url: https://github.com/material-identity/CoA-schemas
+  labels:
+    - schemas
