@@ -23,6 +23,7 @@
     "release:dry-run": "read -p 'GITHUB_TOKEN: ' GITHUB_TOKEN && export GITHUB_TOKEN=$GITHUB_TOKEN && release-it --dry-run",
     "generate-html": "DEBUG=schema-tools-* node ./utils/generate-html-cli",
     "generate-pdf": "DEBUG=schema-tools-* node ./utils/generate-pdf-cli",
+    "readable-schema": "DEBUG=schema-tools-* node ./utils/generate-readable-schema-cli",
     "transform-campus-file": "node ./utils/edit-campus-script.js"
   },
   "dependencies": {
