@@ -24,6 +24,40 @@
         }
       ]
     },
+    "Hash": {
+      "title": "Hash",
+      "description": "For any attachment to the JSON document a hash must be calculated and added to the document before adding the base64 encoded data.",
+      "type": "object",
+      "properties": {
+        "Algorithm": {
+          "description": "The algorithm selected to calculate the hash value.",
+          "type": "string",
+          "enum": [
+            "SHA256",
+            "SHA3-256"
+          ],
+          "default": "SHA256"
+        },
+        "Encoding": {
+          "description": "The format in which the hash value is encoded.",
+          "type": "string",
+          "enum": [
+            "base64",
+            "hex"
+          ],
+          "default": "base64"
+        },
+        "Value": {
+          "description": "The hash value.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "Algorithm",
+        "Encoding",
+        "Value"
+      ]
+    },
     "Attachment": {
       "allOf": [
         {
@@ -32,28 +66,7 @@
           "type": "object",
           "properties": {
             "Hash": {
-              "title": "Hash",
-              "description": "The hash of unencoded data file.",
-              "type": "object",
-              "properties": {
-                "Algorithm": {
-                  "description": "The algorithm selected to calculate the hash value.",
-                  "type": "string",
-                  "enum": ["SHA256", "SHA3-256"],
-                  "default": "SHA256"
-                },
-                "Encoding": {
-                  "description": "The format in which the hash value is encoded.",
-                  "type": "string",
-                  "enum": ["base64", "hex"],
-                  "default": "base64"
-                },
-                "Value": {
-                  "description": "The hash value.",
-                  "type": "string"
-                }
-              },
-              "required": ["Algorithm", "Encoding", "Value"]
+              "$ref": "#/definitions/Hash"
             },
             "FileName": {
               "description": "The name of the file.",
@@ -82,124 +95,126 @@
     },
     "Company": {
       "title": "Company",
-      "description": "A company involved in business transaction.",
       "type": "object",
       "allOf": [
         {
-          "title": "Company",
-          "type": "object",
-          "allOf": [
+          "$ref": "#/definitions/CompanyBase"
+        },
+        {
+          "$ref": "#/definitions/CompanyAddress"
+        },
+        {
+          "properties": {
+            "Identifiers": {
+              "$ref": "#/definitions/CompanyIdentifiers"
+            }
+          }
+        }
+      ]
+    },
+    "CompanyBase": {
+      "type": "object",
+      "properties": {
+        "ZipCode": {
+          "type": "string"
+        },
+        "City": {
+          "type": "string"
+        },
+        "Country": {
+          "description": "The two-letter ISO country code according https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2.",
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2,
+          "pattern": "^[A-Z]{2}$",
+          "examples": ["AT", "DE", "FR", "ES", "PL", "CN"]
+        },
+        "Email": {
+          "type": "string",
+          "format": "email"
+        },
+        "AdditionalInformation": {
+          "description": "An array of additional free text information on the company.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "Name": {
+              "type": "string"
+            }
+          },
+          "required": ["Name"]
+        },
+        {
+          "properties": {
+            "CompanyName": {
+              "type": "string"
+            }
+          },
+          "required": ["CompanyName"]
+        }
+      ],
+      "required": ["ZipCode", "City", "Country"],
+      "additionalProperties": true
+    },
+    "CompanyAddress": {
+      "type": "object",
+      "properties": {
+        "Street": {
+          "description": "Address of the company",
+          "anyOf": [
             {
-              "type": "object",
-              "properties": {
-                "ZipCode": {
-                  "type": "string"
-                },
-                "City": {
-                  "type": "string"
-                },
-                "Country": {
-                  "description": "The two-letter ISO country code according https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2.",
-                  "type": "string",
-                  "minLength": 2,
-                  "maxLength": 2,
-                  "pattern": "^[A-Z]{2}$",
-                  "examples": ["AT", "DE", "FR", "ES", "PL", "CN"]
-                },
-                "Email": {
-                  "type": "string",
-                  "format": "email"
-                },
-                "AdditionalInformation": {
-                  "description": "An array of additional free text information on the company.",
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  },
-                  "uniqueItems": true,
-                  "minItems": 1
-                }
+              "type": "array",
+              "items": {
+                "type": "string"
               },
-              "oneOf": [
-                {
-                  "properties": {
-                    "Name": {
-                      "type": "string"
-                    }
-                  },
-                  "required": ["Name"]
-                },
-                {
-                  "properties": {
-                    "CompanyName": {
-                      "type": "string"
-                    }
-                  },
-                  "required": ["CompanyName"]
-                }
-              ],
-              "required": ["ZipCode", "City", "Country"],
-              "additionalProperties": true
+              "minItems": 1,
+              "maxItems": 3
             },
             {
-              "type": "object",
-              "properties": {
-                "Street": {
-                  "description": "Address of the company",
-                  "anyOf": [
-                    {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "minItems": 1,
-                      "maxItems": 3
-                    },
-                    {
-                      "type": "string"
-                    }
-                  ]
-                }
-              },
-              "required": ["Street"]
-            },
-            {
-              "properties": {
-                "Identifiers": {
-                  "type": "object",
-                  "properties": {
-                    "CageCode": {
-                      "description": "The Commercial and Government Entity Code (short CAG), is a unique identifier assigned to suppliers to various government or defense agencies, https://en.wikipedia.org/wiki/Commercial_and_Government_Entity_code",
-                      "type": "string",
-                      "examples": ["N1950#"]
-                    }
-                  },
-                  "anyOf": [
-                    {
-                      "properties": {
-                        "VAT": {
-                          "type": "string",
-                          "minLength": 8,
-                          "maxLength": 15
-                        }
-                      },
-                      "required": ["VAT"]
-                    },
-                    {
-                      "properties": {
-                        "DUNS": {
-                          "type": "string",
-                          "minLength": 9,
-                          "maxLength": 9
-                        }
-                      },
-                      "required": ["DUNS"]
-                    }
-                  ]
-                }
-              }
+              "type": "string"
             }
           ]
+        }
+      },
+      "required": ["Street"]
+    },
+    "CompanyIdentifiers": {
+      "type": "object",
+      "properties": {
+        "CageCode": {
+          "description": "The Commercial and Government Entity Code (short CAG), is a unique identifier assigned to suppliers to various government or defense agencies, https://en.wikipedia.org/wiki/Commercial_and_Government_Entity_code",
+          "type": "string",
+          "examples": ["N1950#"]
+        }
+      },
+      "anyOf": [
+        {
+          "properties": {
+            "VAT": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 15
+            }
+          },
+          "required": ["VAT"]
+        },
+        {
+          "properties": {
+            "DUNS": {
+              "type": "string",
+              "minLength": 9,
+              "maxLength": 9
+            }
+          },
+          "required": ["DUNS"]
         }
       ]
     },
