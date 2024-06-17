@@ -38,10 +38,9 @@ describe('Validate', function () {
     {
       certificateName: `valid_certificate_4`,
     },
-    // temporarily disabled: refer to: https://github.com/material-identity/CoA-schemas/issues/74
-    // {
-    //   certificateName: `valid_certificate_5`,
-    // },
+    {
+      certificateName: `valid_certificate_5`,
+    },
     {
       certificateName: `valid_certificate_6`,
     },
