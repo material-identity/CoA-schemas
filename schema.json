@@ -32,19 +32,13 @@
         "Algorithm": {
           "description": "The algorithm selected to calculate the hash value.",
           "type": "string",
-          "enum": [
-            "SHA256",
-            "SHA3-256"
-          ],
+          "enum": ["SHA256", "SHA3-256"],
           "default": "SHA256"
         },
         "Encoding": {
           "description": "The format in which the hash value is encoded.",
           "type": "string",
-          "enum": [
-            "base64",
-            "hex"
-          ],
+          "enum": ["base64", "hex"],
           "default": "base64"
         },
         "Value": {
@@ -52,11 +46,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "Algorithm",
-        "Encoding",
-        "Value"
-      ]
+      "required": ["Algorithm", "Encoding", "Value"]
     },
     "Attachment": {
       "allOf": [
@@ -582,7 +572,8 @@
     "RefSchemaUrl": {
       "allOf": [
         {
-          "$ref": "https://schemas.s1seven.com/schema-definitions/v0.0.7/ref-schema-url/ref-schema-url.json#/definitions/RefSchemaUrl"
+          "type": "string",
+          "pattern": "(https?://[a-z0-9/\\.\\-]+[\\.a-z+])/([a-z0-9\\-]+)/(v\\d+\\.\\d+\\.\\d+(-\\d+)?)/([a-z\\./\\-]+.json)"
         }
       ]
     },
