@@ -1,7 +1,6 @@
-# CoA-schemas
+**The code and schema definitions from this repository have been migrated to https://github.com/material-identity/schemas.**
 
-[![CoA Schema CI](https://github.com/material-identity/CoA-schemas/actions/workflows/ci.yml/badge.svg)](https://github.com/material-identity/CoA-schemas/actions/workflows/ci.yml)
-[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B18065%2Fgithub.com%2Fmaterial-identity%2FCoA-schemas.svg?type=shield)](https://app.fossa.com/projects/custom%2B18065%2Fgithub.com%2Fmaterial-identity%2FCoA-schemas?ref=badge_shield)
+# CoA-schemas
 
 EN 10204 specifies the types of inspection certificates by which manufacturers declare the compliance of steel products to either product standards or customer specifications. In the absence of norms, other metals and plastics manufacturers have adopted EN 10204 to issue Certificates of Analysis, short CoA.
 
